@@ -2,7 +2,7 @@
  * 出门攻略：在活动卡上点「生成攻略」才做，不自动批量生成。
  *
  * 脚本抓这个活动的官方页 → 判断模型只根据页面文字写攻略（页面没写的标明「官方页面未写」）→ 校验 → 写成
- * 80_生活事务/日本游玩攻略/AI攻略/<date>_<id>.md。这是持久化派生物：frontmatter 记来源链接与生成时刻，可删可重生。
+ * 80_生活事务/出行攻略/AI攻略/<date>_<id>.md。这是持久化派生物：frontmatter 记来源链接与生成时刻，可删可重生。
  *
  * 防重复：每个活动一个锁键（guide-<哈希>），点一次之后再点直接告知「正在生成」；同一时间最多生成一份。
  */
@@ -20,7 +20,7 @@ import { readSettings } from "./workbench-settings.mjs";
 import { DIR_LIFE } from "./vault-paths.mjs";
 
 export const JOB = "guide";
-export const AI_GUIDES_REL = path.posix.join(DIR_LIFE, "日本游玩攻略", "AI攻略");
+export const AI_GUIDES_REL = path.posix.join(DIR_LIFE, "出行攻略", "AI攻略");
 const PAGE_TEXT_MAX = 20_000;
 const GUIDE_MIN_CHARS = 200;
 const GUIDE_MAX_CHARS = 8000;

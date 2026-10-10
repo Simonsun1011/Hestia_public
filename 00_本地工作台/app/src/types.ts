@@ -7,269 +7,6 @@ export type TrainingSession = {
   status: string;
   exercises: Array<{ name: string; topSet: string; rpe?: number | null; rir?: number | null }>;
 };
-export type JapaneseLevelProgress = {
-  name: string;
-  total: number;
-  learned: number;
-  status: string;
-  /** Anki 中的完整牌组路径；旧快照可以没有，由界面按既有名称兼容。 */
-  deck?: string;
-};
-export type JapaneseExplorationTrack = {
-  tier: number;
-  label?: string;
-  learned?: number;
-  total?: number;
-  lit?: number;
-  verified?: number;
-  milestones?: string[];
-  progress?: number;
-  avgCorrect?: number;
-  stageLabel?: string;
-};
-
-export type JapaneseExplorationLevel = {
-  level: "N5" | "N4" | "N3" | "N2";
-  vocab: JapaneseExplorationTrack;
-  grammar: JapaneseExplorationTrack;
-  reading: JapaneseExplorationTrack;
-};
-
-export type JapaneseExamKind = "formal" | "bank_quiz" | "special" | "mistake" | "reading";
-
-export type JapaneseExplorationScores = {
-  total: number;
-  vocab: number;
-  grammar: number;
-  mock: number;
-  vocabBase: number;
-  grammarBase: number;
-  vocabClearance: number;
-  grammarClearance: number;
-  mockCount: number;
-  ceiling: number;
-  mistakeAligned: boolean;
-  mdActiveMistakes: number;
-  stateActiveMistakes: number;
-};
-
-export type JapaneseCourseProgressStatus = "not-started" | "in-progress" | "mastered" | "unknown";
-
-export type JapaneseCourseProgress = {
-  books: Array<{
-    id: "beginner" | "intermediate";
-    label: string;
-    lessonTotal: number;
-    stTotal: number;
-    stWithEvidence: number;
-    masteredSt: number;
-    lessons: Array<{
-      lesson: number;
-      lessonId: string;
-      title: string;
-      status: JapaneseCourseProgressStatus;
-      isCurrentSelection: boolean;
-      stItems: Array<{
-        st: number;
-        stId: string;
-        status: JapaneseCourseProgressStatus;
-        level: number | null;
-        recordIds: string[];
-        modalities: { speaking: boolean; listening: boolean; output: boolean };
-      }>;
-    }>;
-  }>;
-  summary: {
-    lessonTotal: number;
-    stTotal: number;
-    stWithEvidence: number;
-    masteredSt: number;
-    validRecordCount: number;
-    excludedRecordCount: number;
-    speakingSt: number;
-    listeningSt: number;
-    outputSt: number;
-  };
-  currentSelection: {
-    lessonId: string;
-    book: "beginner" | "intermediate";
-    lesson: number;
-    title: string;
-    evidenceKind: "selection-only";
-  } | null;
-  recentEvidence: Array<{
-    recordId: string;
-    sessionId: string;
-    lessonId: string;
-    stId: string;
-    st: number;
-    level: number;
-    status: "in-progress" | "mastered";
-    date: string;
-    verifiedAt: string;
-    sourcePath: string;
-    modalities: { speaking: boolean; listening: boolean; output: boolean };
-  }>;
-  oralSessions: Array<{
-    sessionId: string;
-    date: string;
-    durationMinutes: number;
-    estimated: boolean;
-    practiceSurface: string;
-    sourcePath: string;
-  }>;
-  paths: { structure: string; coverage: string; records: string; currentStatus: string };
-  evidenceRule: string;
-};
-
-export type JapaneseExploration = {
-  courseProgress: JapaneseCourseProgress;
-  levels: JapaneseExplorationLevel[];
-  grammarDetail: Record<string, {
-    tier?: number;
-    lit: number;
-    verified: number;
-    total: number;
-    cells: Array<{ id: string; title: string; lv?: number; score?: number; evidence: string | null }>;
-    groups: Array<{ id: string; title: string; points: Array<{ id: string; title: string; lv?: number; correctTotal?: number; score?: number; evidence: string | null }> }>;
-  }>;
-  recentSessions: Array<{ at: string; level: string; track: string; correct: number | null; total: number | null; durationMinutes: number | null; verified: string[]; missed: string[] }>;
-  studySessions: Array<{ at: string; level: string; track: string; correct: number | null; total: number | null; durationMinutes: number | null; verified: string[]; missed: string[] }>;
-  recentMistakes: Array<{ at: string; level: string; track: string; nodeId: string; body: string }>;
-  paths: { progress: string; mistakes: string; skill: string; mistakeState?: string; mastery?: string; mockSnapshot?: string };
-  skillAvailable: boolean;
-  suggestedDefault: { level: string; track: string; label: string };
-  examModes?: Array<{ kind: JapaneseExamKind; label: string; blurb: string }>;
-  examHallUrl?: string;
-  scores?: JapaneseExplorationScores;
-  readingMileage?: { totalPassages: number; totalQuestions: number; recent7Days: string[] };
-  masterySummary?: { pointCount: number; practiced: number };
-};
-
-export type JapaneseExamQuestion = {
-  id: string;
-  type: "mcq" | "passage";
-  prompt: string;
-  choices: string[];
-  nodeIds: string[];
-};
-
-export type JapaneseExamPaper = {
-  sessionId?: string;
-  kind?: JapaneseExamKind;
-  level: string;
-  track: string;
-  mode: string;
-  label: string;
-  notes?: string[];
-  timeLimitSeconds?: number;
-  examHallUrl?: string;
-  questionCount: number;
-  questions: JapaneseExamQuestion[];
-  suggestion?: { mode: string; level: string; track: string; label: string };
-};
-
-export type JapaneseExamResult = {
-  sessionId: string;
-  kind?: JapaneseExamKind;
-  level: string;
-  track: string;
-  label: string;
-  notes?: string[];
-  correct: number;
-  total: number;
-  durationMinutes: number;
-  uniqueVerified: string[];
-  uniqueMissed: string[];
-  written?: string[];
-  clearedMistakes?: string[];
-  progressPath: string;
-  mistakesPath: string;
-  mistakeStatePath?: string;
-};
-
-export type JapaneseStudySummary = {
-  date: string;
-  totalDurationMinutes: number;
-  oral: { durationMinutes: number; sessionCount: number; estimated: boolean };
-  anki: { durationMinutes: number | null; reviewCount: number | null; source: "live" | "snapshot" | "none" };
-  special: JapaneseStudyActivitySummary | null;
-  reading: JapaneseStudyActivitySummary | null;
-  exam: JapaneseStudyActivitySummary | null;
-};
-
-export type JapaneseStudyActivitySummary = {
-    at: string;
-    sameDay: boolean;
-    durationMinutes: number | null;
-    sessionCount: number;
-    correct: number | null;
-    total: number | null;
-    label: string;
-};
-export type GrammarPoint = {
-  id: string;
-  title: string;
-  mastery: number;
-  review: string;
-  connection: string;
-  meaning: string;
-  examples: string[];
-  distinctions: string[];
-  notes: string[];
-  oral?: {
-    status: "not-practiced" | "prompted" | "independent" | "stable";
-    label: string;
-    evidence: string;
-    note: string;
-    nextReview: string;
-  };
-};
-export type GrammarGroup = { id: string; title: string; note: string; points: GrammarPoint[] };
-export type GrammarLevel = {
-  level: "N5" | "N4" | "N3" | "N2";
-  total: number;
-  diagnosed: number;
-  mastered: number;
-  groups: GrammarGroup[];
-  source: SourceMeta;
-};
-export type LanguageReactorItem = {
-  id: string;
-  type: "phrase" | "word";
-  language: string;
-  translationLanguage: string;
-  sentence: string;
-  translation: string;
-  transliteration: string;
-  word: string;
-  wordTransliteration: string;
-  wordTranslations: string[];
-  previous: string;
-  previousTranslation: string;
-  next: string;
-  nextTranslation: string;
-  source: string;
-  sourceTitle: string;
-  sourceId: string;
-  subtitleIndex: number | null;
-  startTimeMs: number | null;
-  endTimeMs: number | null;
-  learningStage: string;
-  tags: string[];
-  createdAt: string | null;
-  modifiedAt: string | null;
-};
-export type LanguageReactorCollection = {
-  schemaVersion: number;
-  importedAt: string;
-  exportFile: string;
-  import: { received: number; recognized: number; added: number; updated: number; preserved: number };
-  stats: { total: number; phrases: number; words: number; sources: number; languages: string[] };
-  media: { audioOmitted: number; screenshotsOmitted: number };
-  note: string;
-  items: LanguageReactorItem[];
-};
 export type ProjectTaskPriority = "S" | "A" | "B" | "C" | null;
 
 export type ProjectManagementTask = {
@@ -668,22 +405,6 @@ export type LibraryItem = {
   archived?: boolean;
   readTime?: number;
   openable?: boolean;
-};
-
-export type DomainResearchLine = {
-  id: string;
-  title: string;
-  questions: string[];
-};
-
-export type DomainResearchSummary = {
-  id: "game";
-  title: string;
-  description: string;
-  overviewId: string | null;
-  sourcePath: string;
-  updatedAt: string | null;
-  researchLines: DomainResearchLine[];
 };
 
 export type DomainKnowledgeSource = {
@@ -2218,28 +1939,6 @@ export type WorkbenchSnapshot = {
     }>;
     sources: SourceMeta[];
   };
-  japanese: {
-    updatedAt: string;
-    stage: string;
-    progress: { learned: number; total: number } | null;
-    queue: number | null;
-    streak: number | null;
-    pace7: number | null;
-    pace14: number | null;
-    reviewPace7: number | null;
-    newCardPace7: number | null;
-    newCardPace14: number | null;
-    ankiSource: "live" | "snapshot" | null;
-    latestDaily: string;
-    note: string;
-    levels: JapaneseLevelProgress[];
-    grammar: GrammarLevel[];
-    decisions: string[];
-    languageReactor: LanguageReactorCollection | null;
-    exploration: JapaneseExploration;
-    studySummary: JapaneseStudySummary;
-    sources: SourceMeta[];
-  };
   library: {
     books: number;
     completedBooks: number;
@@ -2250,7 +1949,7 @@ export type WorkbenchSnapshot = {
     writing: { count: number; updatedAt: string | null };
     learning: { count: number; updatedAt: string | null };
     cultureArchive: CultureArchive;
-    domainResearch: { game: DomainResearchSummary; knowledgeNodes: DomainKnowledgeNode[] };
+    domainResearch: { knowledgeNodes: DomainKnowledgeNode[] };
     items: LibraryItem[];
     sources: SourceMeta[];
   };
@@ -2260,7 +1959,6 @@ export type WorkbenchSnapshot = {
 
 export type WorkbenchWarning = WorkbenchSnapshot["warnings"][number];
 export type HealthSectionData = WorkbenchSnapshot["health"];
-export type LanguagesSectionData = WorkbenchSnapshot["japanese"];
 export type LibrarySectionData = WorkbenchSnapshot["library"];
 export type MarketsSectionData = WorkbenchSnapshot["market"];
 
@@ -2277,10 +1975,6 @@ export const SECTION_DATA_KEYS = {
     "sessions", "strength", "todayPlan", "weekPlan", "staleMuscles", "coachHints", "appleHealth",
     "trainingVolume", "strengthBaseline", "intensity", "progressionAdvice", "muscleBalance", "recoveryLoad", "mesocycle", "mind", "life", "interventionCards", "sources",
   ] as const),
-  languages: exactKeys<LanguagesSectionData>()([
-    "updatedAt", "stage", "progress", "queue", "streak", "pace7", "pace14", "reviewPace7", "newCardPace7", "newCardPace14", "ankiSource",
-    "latestDaily", "note", "levels", "decisions", "grammar", "languageReactor", "exploration", "studySummary", "sources",
-  ] as const),
   library: exactKeys<LibrarySectionData>()([
     "books", "completedBooks", "courses", "games", "animation", "screen", "writing", "learning", "cultureArchive", "domainResearch", "items", "sources",
   ] as const),
@@ -2293,15 +1987,6 @@ export const SECTION_DATA_KEYS = {
 export type WorkbenchSummary = Pick<WorkbenchSnapshot, "version" | "generatedAt" | "identity" | "todo" | "projects" | "projectManagement" | "warnings"> & {
   health: Pick<HealthSectionData, "baselineDate" | "weight" | "latestTraining" | "todayPlan" | "staleMuscles"> & {
     life: Pick<HealthSectionData["life"], "overdueWeeks">;
-  };
-  japanese: Pick<LanguagesSectionData, "updatedAt" | "stage" | "progress" | "queue" | "streak" | "pace7" | "pace14" | "reviewPace7" | "newCardPace7" | "newCardPace14" | "ankiSource" | "studySummary"> & {
-    dailySentence: {
-      id: string;
-      sentence: string;
-      transliteration: string;
-      translation: string;
-      sourceTitle: string;
-    } | null;
   };
   library: Pick<LibrarySectionData, "books" | "completedBooks" | "courses" | "games" | "writing" | "learning"> & {
     latestWriting: LibraryItem | null;

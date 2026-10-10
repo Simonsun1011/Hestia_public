@@ -3,7 +3,7 @@ import { LoaderCircle, LockKeyhole, Target } from "lucide-react";
 import { formatHomeTodoSummary, stripTodoMetaPrefixes } from "../gantt-model";
 import { projectWindowSwipeStep, projectWindowWheelStep } from "../project-workbench-model";
 import { buildAiExecutionRows, buildCurrentExecutionRows, isTodoInNextTwoTokyoDays } from "../schedule-todo-model";
-import { CardLink, Empty, Kicker, ProgressRing, fmtTime, formatNearTermEventWhen, isNearTermTokyoInstant, jsonFetch, softNavigate, tokyoDateKey } from "../page-shared";
+import { CardLink, Empty, Kicker, fmtTime, formatNearTermEventWhen, isNearTermTokyoInstant, jsonFetch, softNavigate, tokyoDateKey } from "../page-shared";
 import { invalidateSection } from "../workbench-data-cache";
 import type { CalendarEvent, CalendarSnapshot, HomePins, MarketLiveSnapshot, WorkbenchSummary } from "../types";
 import { isResearchDomainId, RESEARCH_DOMAIN_HOME_META } from "./topics/domain-research-home";
@@ -16,15 +16,6 @@ const BRIEF_STALE_CHECK_MS = 60 * 60_000;
 function clipText(text: string, max = 22) {
   const next = text.replace(/\s+/g, " ").trim();
   return next.length <= max ? next : `${next.slice(0, max)}…`;
-}
-
-function formatStudyDuration(value: number | null | undefined) {
-  if (value == null || !Number.isFinite(value)) return "未同步";
-  const minutes = Math.max(0, Math.round(value));
-  if (minutes < 60) return `${minutes} 分钟`;
-  const hours = Math.floor(minutes / 60);
-  const remainder = minutes % 60;
-  return remainder ? `${hours}小时 ${remainder}分` : `${hours} 小时`;
 }
 
 function formatMarketPercent(value: number | null) {
@@ -45,26 +36,6 @@ function formatMarketPriceParts(value: number | null, currency: string) {
     amount: value == null ? "—" : parts.filter((part) => part.type !== "currency").map((part) => part.value).join("").trim(),
     label: value == null ? `${currencyLabel} —` : formatter.format(value),
   };
-}
-
-function StudyDuration({ value, compact = false }: { value: number | null | undefined; compact?: boolean }) {
-  if (value == null || !Number.isFinite(value)) return <span className={`jp-duration ${compact ? "is-compact" : ""}`}>未同步</span>;
-  const minutes = Math.max(0, Math.round(value));
-  const hours = Math.floor(minutes / 60);
-  const remainder = minutes % 60;
-  return <span className={`jp-duration ${compact ? "is-compact" : ""}`} aria-label={formatStudyDuration(value)}>
-    {hours ? <><b>{hours}</b><i>小时</i></> : null}
-    {remainder || !hours ? <><b>{remainder}</b><i>分钟</i></> : null}
-  </span>;
-}
-
-function ankiSourceLabel(source: WorkbenchSummary["japanese"]["ankiSource"], updatedAt: string) {
-  if (source === "live") return "Anki 实时";
-  if (source === "snapshot") {
-    const day = updatedAt.match(/\d{4}-(\d{2})-(\d{2})/u);
-    return day ? `快照 ${Number(day[1])}/${Number(day[2])}` : "Anki 快照";
-  }
-  return "没有可用数据";
 }
 
 function HomeCardHeading({
@@ -289,11 +260,6 @@ function HomeStockWindow({ live, liveStamp }: { live: MarketLiveSnapshot | null;
 }
 
 export default function HomePage({ data, calendar, secretaryName, active = true, refreshSummary, onAskSecretary }: { data: WorkbenchSummary; calendar: CalendarSnapshot; secretaryName: string; active?: boolean; refreshSummary?: () => void; onAskSecretary?: (seedUser: string) => void }) {
-  const jp = data.japanese.progress?.total
-    ? data.japanese.progress.learned / data.japanese.progress.total * 100
-    : null;
-  const japaneseStudy = data.japanese.studySummary;
-  const hasDailyAnkiActivity = (japaneseStudy.anki.reviewCount || 0) > 0 || (japaneseStudy.anki.durationMinutes || 0) > 0;
   const todayKey = tokyoDateKey(new Date());
   const activeTodos = data.projectManagement
     ? [...buildCurrentExecutionRows(data.projectManagement.currentTodos), ...buildAiExecutionRows(data.projectManagement.currentTodos)].slice(0, 4)
@@ -384,58 +350,6 @@ export default function HomePage({ data, calendar, secretaryName, active = true,
     </section>
     <section className="home-signal-grid">
       <HomeProjectWindow data={data} />
-      <CardLink className="jp-pulse home-quiet" href="/languages" label="打开语言学习">
-        <HomeCardHeading eyebrow="语言学习" title="日语 · N2备考" />
-        <div className="jp-pulse-top">
-          <ProgressRing value={jp} />
-          <div className="jp-today-total">
-            <span>练习总时长</span>
-            <strong><StudyDuration value={japaneseStudy.totalDurationMinutes} /></strong>
-            <small>其中口语 <StudyDuration value={japaneseStudy.oral.durationMinutes} compact /></small>
-          </div>
-        </div>
-        <div className="jp-source-ledger">
-          <div>
-            <span>Anki</span>
-            <strong>{!hasDailyAnkiActivity
-              ? (data.japanese.progress ? `${data.japanese.progress.learned} / ${data.japanese.progress.total}` : "未同步")
-              : <StudyDuration value={japaneseStudy.anki.durationMinutes} compact />}</strong>
-            <small>{!hasDailyAnkiActivity
-              ? [ankiSourceLabel(data.japanese.ankiSource, data.japanese.updatedAt), data.japanese.queue == null ? null : `待复习 ${data.japanese.queue} 张`].filter(Boolean).join(" · ")
-              : `作答 ${japaneseStudy.anki.reviewCount} 次`}</small>
-          </div>
-          <div>
-            <span>专项</span>
-            <strong>{japaneseStudy.special?.durationMinutes == null
-              ? "未记录"
-              : <StudyDuration value={japaneseStudy.special.durationMinutes} compact />}</strong>
-            <small>{japaneseStudy.special?.total == null
-              ? "错题练习也归入这里"
-              : `${japaneseStudy.special.total} 题 · ${japaneseStudy.special.correct}/${japaneseStudy.special.total}`}</small>
-          </div>
-          <div>
-            <span>阅读</span>
-            <strong>{japaneseStudy.reading?.durationMinutes == null
-              ? "未记录"
-              : <StudyDuration value={japaneseStudy.reading.durationMinutes} compact />}</strong>
-            <small>{japaneseStudy.reading
-              ? japaneseStudy.reading.total == null
-                ? `${japaneseStudy.reading.sessionCount} 篇 · 题数未记录`
-                : `${japaneseStudy.reading.sessionCount} 篇 · ${japaneseStudy.reading.total} 题`
-              : "今日暂无练习"}</small>
-          </div>
-          <div>
-            <span>考试</span>
-            <strong>{japaneseStudy.exam?.durationMinutes == null
-              ? "未记录"
-              : <StudyDuration value={japaneseStudy.exam.durationMinutes} compact />}</strong>
-            <small>{[
-              japaneseStudy.exam?.at.slice(5, 10).replace("-", "/"),
-              japaneseStudy.exam?.correct == null ? null : `${japaneseStudy.exam.correct}/${japaneseStudy.exam.total}`,
-            ].filter(Boolean).join(" · ") || "今日暂无测试"}</small>
-          </div>
-        </div>
-      </CardLink>
       <CardLink className="health-pulse home-quiet" href="/health" label="打开身心健康">
         <HomeCardHeading eyebrow="身心 · 今日" title={plan?.title || "今日训练"} />
         <p className="health-weekday">{plan?.weekday || "—"}</p>

@@ -13,28 +13,15 @@ export type ResearchDomainHomeMeta = {
 };
 
 export const RESEARCH_DOMAIN_IDS = [
-  "game",
   "ai",
   "economics-finance",
   "language",
-  "thought-history",
-  "zztj",
   "image-management",
   "fitness",
 ] as const satisfies readonly DomainId[];
 
 export const RESEARCH_DOMAIN_HOME_META: Record<DomainId, ResearchDomainHomeMeta> = {
-  game: {
-    id: "game",
-    title: "游戏",
-    mark: "创作母题",
-    defaultBranch: "culture",
-    focusLabel: "知识地图主线",
-    focusTitle: "从作品出发，理解游戏何以成为游戏",
-    focusText: "把历史、玩家经验、设计、制作与产业放在同一张地图中。",
-    highlights: ["游戏史与文化", "设计与体验", "叙事与视听", "制作与产业"],
-    nextLabel: "继续上次位置，或从一个真正在意的作品开始",
-  },
+
   ai: {
     id: "ai",
     title: "人工智能",
@@ -57,28 +44,8 @@ export const RESEARCH_DOMAIN_HOME_META: Record<DomainId, ResearchDomainHomeMeta>
     highlights: ["语言学基础", "语言史与类型", "习得与心智", "具体语言"],
     nextLabel: "从共同概念进入一门语言，或反向比较多门语言",
   },
-  "thought-history": {
-    id: "thought-history",
-    title: "思想史",
-    mark: "观念的来路",
-    defaultBranch: "thought-method",
-    focusLabel: "知识地图主线",
-    focusTitle: "追踪观念怎样回应时代，又怎样流传与变形",
-    focusText: "同时看思想内容、历史处境和书籍、宗教、教育等传播机制。",
-    highlights: ["思想史方法", "世界思想传统", "伦理与政治", "宗教与科学"],
-    nextLabel: "选一个真正困惑的观念，回到它当时的问题现场",
-  },
-  zztj: {
-    id: "zztj",
-    title: "资治通鉴",
-    mark: "熊逸讲透《资治通鉴》",
-    defaultBranch: "zztj-season-5",
-    focusLabel: "当前走到",
-    focusTitle: "第五季 · 第 57 讲",
-    focusText: "石显是怎么巩固自己权势的？",
-    highlights: ["人物名场面", "文化语码", "传世名篇", "长线影响"],
-    nextLabel: "继续课程，或从人物与文化线索横向回顾",
-  },
+
+
   "image-management": {
     id: "image-management",
     title: "形象管理",

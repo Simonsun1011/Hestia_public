@@ -20,7 +20,6 @@ const ROUTE_QUERY_KEYS: Record<string, readonly string[]> = {
   "/projects": ["project", "view", "workline", "tree", "module", "feature", "node", "from"],
   "/schedule": ["todos", "view"],
   "/health": ["band"],
-  "/languages": ["section"],
   "/library": ["open", "view", "kind"],
   "/topics": ["tab", "domain", "branch", "node", "card", "open", "course"],
   "/markets": ["topic"],
@@ -28,7 +27,7 @@ const ROUTE_QUERY_KEYS: Record<string, readonly string[]> = {
 };
 
 const VALID_ROUTES = new Set([
-  "/", "/schedule", "/projects", "/health", "/languages", "/library",
+  "/", "/schedule", "/projects", "/health", "/library",
   "/topics", "/markets", "/markets/assets", "/tools",
 ]);
 

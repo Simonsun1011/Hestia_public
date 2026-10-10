@@ -1,6 +1,6 @@
 import type { KnowledgeChoice, KnowledgeNodeInput } from "./domain-research-cards";
 
-export type DomainId = "game" | "ai" | "language" | "thought-history" | "zztj" | "image-management" | "fitness" | "economics-finance";
+export type DomainId = "ai" | "language" | "image-management" | "fitness" | "economics-finance";
 
 export type DomainIconKey =
   | "book" | "puzzle" | "hammer" | "cpu" | "store" | "users"

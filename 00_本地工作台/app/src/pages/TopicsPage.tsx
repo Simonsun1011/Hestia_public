@@ -26,11 +26,8 @@ function palette(seed: number) {
 type TopicView = "domains" | "materials" | "archive";
 
 const DEFAULT_BRANCH: Record<DomainId, string> = {
-  game: "culture",
   ai: "ai-history-math",
   language: "language-foundations",
-  "thought-history": "thought-method",
-  zztj: "zztj-season-1",
   "image-management": "image-self",
   fitness: "fitness-physiology",
   "economics-finance": "ef-method-history",
@@ -55,7 +52,7 @@ function readTopicsSearch() {
     query: params.get("q") ?? "",
     open: params.get("open"),
     domain,
-    branch: params.get("branch") || (domain ? DEFAULT_BRANCH[domain] : DEFAULT_BRANCH.game),
+    branch: params.get("branch") || (domain ? DEFAULT_BRANCH[domain] : DEFAULT_BRANCH.ai),
     node: params.get("node"),
     cardIndex: Number.isSafeInteger(requestedCardIndex) && requestedCardIndex >= 0 ? requestedCardIndex : 0,
   };
@@ -73,7 +70,7 @@ function writeTopicsView(view: TopicView) {
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
-function writeTopicsDomain(domain: DomainId | null, branch: string = DEFAULT_BRANCH.game, target?: ReaderTarget | null) {
+function writeTopicsDomain(domain: DomainId | null, branch: string = DEFAULT_BRANCH.ai, target?: ReaderTarget | null) {
   const url = new URL(window.location.href);
   url.searchParams.delete("tab");
   if (domain) {
@@ -153,7 +150,7 @@ export default function TopicsPage({
   data,
   pinnedTopicIds = [],
   likedCourseIds = [],
-  pinnedDomainId = "zztj",
+  pinnedDomainId = "ai",
   onTogglePin,
   onToggleLike,
   onToggleDomainPin,
@@ -281,7 +278,7 @@ export default function TopicsPage({
   const selectView = (next: TopicView) => {
     setView(next);
     setDomainId(null);
-    setActiveBranchId(DEFAULT_BRANCH.game);
+    setActiveBranchId(DEFAULT_BRANCH.ai);
     setActiveNodeId(null);
     setActiveCardIndex(0);
     setShowAll(false);
@@ -290,11 +287,10 @@ export default function TopicsPage({
     writeTopicsView(next);
   };
 
-  const game = data.domainResearch.game;
   const knowledgeNodes = data.domainResearch.knowledgeNodes;
 
   const enterDomainAt = (nextDomainId: DomainId, target?: ReaderTarget | null) => {
-    const domain = findResearchDomain(game, nextDomainId, knowledgeNodes);
+    const domain = findResearchDomain(nextDomainId, knowledgeNodes);
     const branchId = target?.branchId ?? domain.branches[0]?.id ?? DEFAULT_BRANCH[nextDomainId];
     setView("domains");
     setDomainId(nextDomainId);
@@ -317,7 +313,7 @@ export default function TopicsPage({
 
   const leaveDomain = () => {
     setDomainId(null);
-    setActiveBranchId(DEFAULT_BRANCH.game);
+    setActiveBranchId(DEFAULT_BRANCH.ai);
     setActiveNodeId(null);
     setActiveCardIndex(0);
     writeTopicsDomain(null);
@@ -331,7 +327,7 @@ export default function TopicsPage({
   };
 
   const continueDomain = (nextDomainId: DomainId) => {
-    const domain = findResearchDomain(game, nextDomainId, knowledgeNodes);
+    const domain = findResearchDomain(nextDomainId, knowledgeNodes);
     const targets = domainReaderTargets(domain);
     const last = domainProgress.lastPositions[nextDomainId] ?? (domainProgress.lastPosition?.domainId === nextDomainId ? domainProgress.lastPosition : null);
     if (last && targets.some((target) => target.branchId === last.branchId && target.nodeId === last.nodeId)) {
@@ -342,11 +338,11 @@ export default function TopicsPage({
   };
 
   const randomDomain = (nextDomainId: DomainId) => {
-    const targets = domainReaderTargets(findResearchDomain(game, nextDomainId, knowledgeNodes));
+    const targets = domainReaderTargets(findResearchDomain(nextDomainId, knowledgeNodes));
     const index = Math.floor(Math.random() * targets.length);
     enterDomainAt(nextDomainId, targets[index] ?? targets[0]);
   };
-  const activeDomain = domainId ? findResearchDomain(game, domainId, knowledgeNodes) : null;
+  const activeDomain = domainId ? findResearchDomain(domainId, knowledgeNodes) : null;
   const activePinnedDomainId = isResearchDomainId(pinnedDomainId) ? pinnedDomainId : null;
 
   return (
@@ -366,13 +362,11 @@ export default function TopicsPage({
             onSaveProgress={saveDomainProgress}
             onAskSecretary={onAskSecretary}
             onBack={leaveDomain}
-            onOpenOverview={() => { if (game.overviewId) openDoc(game.overviewId); }}
           />
         ) : (
           <>
             {view === "domains" ? (
               <DomainResearchHome
-                game={game}
                 knowledgeNodes={knowledgeNodes}
                 progress={domainProgress}
                 focusedDomainId={focusedDomainId}

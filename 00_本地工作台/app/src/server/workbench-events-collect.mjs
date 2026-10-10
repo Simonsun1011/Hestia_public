@@ -1,7 +1,7 @@
 /**
  * 东京活动采集（日程安排 · 日本活动）。移植自 Hestia 的采集链路。
  *
- * - 80_生活事务/日本游玩攻略/活动来源.md：类别定义与来源页，手写。
+ * - 80_生活事务/出行攻略/活动来源.md：类别定义与来源页，手写。
  * - 勾选哪些类别、各类别的入选标准、每周什么时候采集：在「实用工具 · 设置」，存任务设置.json。
  * - 采集结果：00_本地工作台/派生数据/活动采集.json（持久化派生物，可删可重生）。
  *
@@ -23,7 +23,7 @@ import { readSettings } from "./workbench-settings.mjs";
 import { DIR_LIFE, WORKBENCH_DERIVED_DIR } from "./vault-paths.mjs";
 
 export const JOB = "events";
-export const EVENTS_SOURCES_REL = path.posix.join(DIR_LIFE, "日本游玩攻略", "活动来源.md");
+export const EVENTS_SOURCES_REL = path.posix.join(DIR_LIFE, "出行攻略", "活动来源.md");
 export const EVENTS_DERIVED_REL = path.posix.join(WORKBENCH_DERIVED_DIR, "活动采集.json");
 
 export const MAX_CALLS_PER_RUN = 50;

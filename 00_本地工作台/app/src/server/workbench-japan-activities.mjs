@@ -162,8 +162,8 @@ async function guideEntries(vaultRoot, parsed) {
 
 function playbookSource(vaultRoot, sourcePath) {
   const relative = String(sourcePath || "").replaceAll("\\", "/");
-  if (!relative.startsWith("80_生活事务/日本游玩攻略/") || !relative.endsWith(".md") || relative.split("/").includes("..")) {
-    throw new Error("攻略原件路径不在日本游玩攻略目录内");
+  if (!relative.startsWith("80_生活事务/出行攻略/") || !relative.endsWith(".md") || relative.split("/").includes("..")) {
+    throw new Error("攻略原件路径不在出行攻略目录内");
   }
   const root = path.resolve(vaultRoot);
   const target = path.resolve(root, relative);

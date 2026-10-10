@@ -157,8 +157,8 @@ describe("锁与防重复提交", () => {
 
   it("攻略：不在清单里的活动不生成", async () => {
     const root = await tempRoot();
-    await fs.mkdir(path.join(root, "80_生活事务", "日本游玩攻略"), { recursive: true });
-    await fs.writeFile(path.join(root, "80_生活事务", "日本游玩攻略", "日本活动.md"), "<!-- INFANS_JAPAN_ACTIVITIES_JSON_START -->\n```json\n{\"activities\":[]}\n```\n<!-- INFANS_JAPAN_ACTIVITIES_JSON_END -->\n");
+    await fs.mkdir(path.join(root, "80_生活事务", "出行攻略"), { recursive: true });
+    await fs.writeFile(path.join(root, "80_生活事务", "出行攻略", "日本活动.md"), "<!-- INFANS_JAPAN_ACTIVITIES_JSON_START -->\n```json\n{\"activities\":[]}\n```\n<!-- INFANS_JAPAN_ACTIVITIES_JSON_END -->\n");
     const res = await startGuide(root, { activityId: "nope" }, new Date(), async () => {});
     expect(res.status).toBe(404);
   });

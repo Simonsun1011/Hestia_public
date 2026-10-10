@@ -38,7 +38,6 @@ export const DOMAIN_RESEARCH_PROGRESS_PATH = path.posix.join(DIR_WORKBENCH, "派
 export const MUSIC_PLAYLISTS_PATH = path.posix.join(DIR_WORKBENCH, "派生数据", "music-playlists.json");
 export const APPLE_HEALTH_DERIVED = path.posix.join(DIR_WORKBENCH, "派生数据", "apple-health.json");
 export const ANKI_SNAPSHOT_DERIVED = path.posix.join(DIR_WORKBENCH, "派生数据", "anki-snapshot.json");
-export const LANGUAGE_REACTOR_DERIVED = path.posix.join(DIR_WORKBENCH, "派生数据", "language-reactor.json");
 export const GAME_ANALYTICS_DERIVED = path.posix.join(DIR_WORKBENCH, "派生数据", "game-analytics.json");
 export const KITCHEN_ORDERS_DERIVED = path.posix.join(DIR_WORKBENCH, "派生数据", "kitchen-orders.json");
 export const KITCHEN_ORDERS_ARCHIVE = path.posix.join(DIR_LIFE, "日本生活", "私房菜馆", "订单同步归档.md");
@@ -74,7 +73,7 @@ export const WECHAT_BILLS_DIR = path.posix.join(DIR_LIFE, "生活账单");
 /** 固定 / 大事开销备忘（JSON）；支出页只读展示。 */
 export const FIXED_EXPENSES_FILE = path.posix.join(WECHAT_BILLS_DIR, "固定开销.json");
 /** 日本活动官方来源介绍卡；定时任务只能覆盖这一份白名单原件。 */
-export const JAPAN_ACTIVITIES_SOURCE = path.posix.join(DIR_LIFE, "日本游玩攻略", "日本活动.md");
+export const JAPAN_ACTIVITIES_SOURCE = path.posix.join(DIR_LIFE, "出行攻略", "日本活动.md");
 /** 续费／到期管理元数据；不复制金额或完整账号。 */
 export const RENEWAL_EXPIRY_SOURCE = path.posix.join(DIR_LIFE, "日常杂务", "续费到期.md");
 
@@ -101,25 +100,6 @@ export const ODYSSEY_PLAN = path.posix.join(DIR_HEALTH, "20_记录", "奥德赛�
 export const INTERVENTION_CARDS = path.posix.join(DIR_HEALTH, "90_历史", "干预卡库.md");
 export const EXERCISES_DATASET_DIR = path.posix.join(DIR_HEALTH, "exercises-dataset");
 
-export const JP_OVERVIEW = path.posix.join(DIR_LANG, "日语", "日语_总览.md");
-export const JP_N2_DIR = path.posix.join(DIR_LANG, "日语", "JLPT_N2_陪跑");
-export const JP_STATUS = path.posix.join(JP_N2_DIR, "current_status.md");
-export const JP_DAILY = path.posix.join(JP_N2_DIR, "daily_log.md");
-export const JP_GRAMMAR_N5 = path.posix.join(JP_N2_DIR, "文法", "N5.md");
-export const JP_GRAMMAR_N4 = path.posix.join(JP_N2_DIR, "文法", "N4.md");
-export const JP_GRAMMAR_N3 = path.posix.join(JP_N2_DIR, "文法", "N3.md");
-export const JP_GRAMMAR_N2 = path.posix.join(JP_N2_DIR, "文法", "N2.md");
-export const JP_EXPLORATION_PROGRESS = path.posix.join(JP_N2_DIR, "探索进度.md");
-export const JP_MISTAKES = path.posix.join(JP_N2_DIR, "错题集.md");
-export const JP_EXAM_SKILL = path.posix.join(JP_N2_DIR, "考官skill.md");
-export const JP_MISTAKE_STATE = path.posix.join(JP_N2_DIR, "错题状态.json");
-export const JP_SPECIAL_HISTORY_DIR = path.posix.join(JP_N2_DIR, "专项题历史");
-export const JP_SPECIAL_MASTERY = path.posix.join(JP_N2_DIR, "专项掌握.json");
-export const JP_MOCK_SNAPSHOT = path.posix.join(JP_N2_DIR, "探索全卷快照.json");
-export const JP_READING_MILEAGE = path.posix.join(JP_N2_DIR, "阅读练习里程.json");
-export const LANGUAGE_REACTOR_SOURCE = path.posix.join(DIR_LANG, "日语", "沉浸语料", "Language Reactor收藏.md");
-export const LATIN_OVERVIEW = path.posix.join(DIR_LANG, "拉丁语", "拉丁语_总览.md");
-export const CLASSICAL_CN_OVERVIEW = path.posix.join(DIR_LANG, "古汉语", "古汉语_总览.md");
 
 export const LIBRARY_OVERVIEW = path.posix.join(DIR_LIBRARY, "我的书架", "书架_总览.md");
 export const WEREAD_PATH = path.posix.join(DIR_LIBRARY, "我的书架", "微信读书.md");
@@ -158,20 +138,15 @@ export const SCREEN_CULTURE_SOURCES = Object.freeze([
 export const CULTURE_DOCUMENT_SOURCES = Object.freeze([...GAME_CULTURE_SOURCES, ...SCREEN_CULTURE_SOURCES]);
 
 export const TOPICS_OVERVIEW = path.posix.join(DIR_TOPICS, "领域研究_总览.md");
-export const GAME_RESEARCH_OVERVIEW = path.posix.join(DIR_TOPICS, "游戏", "游戏文化研究_总览.md");
-export const GAME_RESEARCH_QUESTIONS = path.posix.join(DIR_TOPICS, "游戏", "首批研究问题.md");
 export const DEDAO_DIR = path.posix.join(DIR_TOPICS, "90_课程原件", "得到");
 export const DEDAO_ARCHIVE = path.posix.join(DEDAO_DIR, "得到课程档案.md");
 export const DEDAO_COVERS_JSON = path.posix.join(DEDAO_DIR, "得到课程封面.json");
 export const DEDAO_COVERS_DIR = path.posix.join(DEDAO_DIR, "封面");
 
 export const TOPIC_SOURCES = Object.freeze([
-  GAME_RESEARCH_OVERVIEW,
   path.posix.join(DIR_TOPICS, "人工智能", "人工智能_总览.md"),
   path.posix.join(DIR_TOPICS, "经济与金融", "经济与金融_总览.md"),
   path.posix.join(DIR_TOPICS, "语言研究", "语言研究_总览.md"),
-  path.posix.join(DIR_TOPICS, "思想史", "思想史_总览.md"),
-  path.posix.join(DIR_TOPICS, "资治通鉴", "资治通鉴_总览.md"),
   path.posix.join(DIR_TOPICS, "形象管理", "形象管理_总览.md"),
   path.posix.join(DIR_TOPICS, "运动健身", "运动健身_总览.md"),
 ]);

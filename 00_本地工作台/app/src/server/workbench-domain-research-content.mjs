@@ -4,23 +4,17 @@ import matter from "gray-matter";
 
 const ID_RE = /^[a-z0-9][a-z0-9-]{0,119}$/u;
 const DOMAIN_IDS = new Set([
-  "game",
   "ai",
   "economics-finance",
   "language",
-  "thought-history",
-  "zztj",
   "image-management",
   "fitness",
 ]);
 
 export const DOMAIN_KNOWLEDGE_DIRECTORIES = Object.freeze([
-  "70_领域研究/游戏/知识节点",
   "70_领域研究/人工智能/知识节点",
   "70_领域研究/经济与金融/知识节点",
   "70_领域研究/语言研究/知识节点",
-  "70_领域研究/思想史/知识节点",
-  "70_领域研究/资治通鉴/知识节点",
   "70_领域研究/形象管理/知识节点",
   "70_领域研究/运动健身/知识节点",
 ]);
@@ -30,12 +24,9 @@ export const DOMAIN_KNOWLEDGE_RESOURCE_CATALOGS = Object.freeze([
 ]);
 
 export const DOMAIN_LEARNING_RECORD_DIRECTORIES = Object.freeze([
-  "70_领域研究/游戏/学习记录",
   "70_领域研究/人工智能/学习记录",
   "70_领域研究/经济与金融/学习记录",
   "70_领域研究/语言研究/学习记录",
-  "70_领域研究/思想史/学习记录",
-  "70_领域研究/资治通鉴/学习记录",
   "70_领域研究/形象管理/学习记录",
   "70_领域研究/运动健身/学习记录",
 ]);

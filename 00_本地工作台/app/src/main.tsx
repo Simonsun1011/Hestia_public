@@ -3,11 +3,11 @@ import { createRoot } from "react-dom/client";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import {
   AlertTriangle, BookMarked, BriefcaseBusiness, CalendarDays, CheckCircle2, CloudSun,
-  HeartPulse, Home, Languages, LibraryBig, LineChart, LockKeyhole, Moon,
+  HeartPulse, Home, LibraryBig, LineChart, LockKeyhole, Moon,
   MoreHorizontal, PawPrint, RefreshCw, Sun, Wrench, X, type LucideIcon,
 } from "lucide-react";
 import type {
-  CalendarSnapshot, HealthSectionData, HomePins, LanguagesSectionData,
+  CalendarSnapshot, HealthSectionData, HomePins,
   LibrarySectionData, MarketsSectionData, WeatherSnapshot, WorkbenchSummary, WriteAction,
 } from "./types";
 import { invalidateSection, refreshSection, useSectionData } from "./workbench-data-cache";
@@ -23,7 +23,6 @@ import "./addons.css";
 const LazySchedulePage = lazy(() => import("./pages/SchedulePage"));
 const LazyProjectsPage = lazy(() => import("./pages/ProjectsPage"));
 const LazyHealthPage = lazy(() => import("./pages/HealthPage"));
-const LazyLanguagesPage = lazy(() => import("./pages/LanguagesPage"));
 const LazyLibraryPage = lazy(() => import("./pages/LibraryPage"));
 const LazyTopicsPage = lazy(() => import("./pages/TopicsPage"));
 const LazyMarketsPage = lazy(() => import("./pages/MarketsPage"));
@@ -36,13 +35,12 @@ const NAV_ITEMS: Array<{ path: string; label: string; icon: LucideIcon; index: s
   { path: "/schedule", label: "日程安排", icon: CalendarDays, index: "02" },
   { path: "/projects", label: "事业顺利", icon: BriefcaseBusiness, index: "03" },
   { path: "/health", label: "身心健康", icon: HeartPulse, index: "04" },
-  { path: "/languages", label: "语言学习", icon: Languages, index: "05" },
-  { path: "/markets", label: "金融资讯", icon: LineChart, index: "06" },
-  { path: "/topics", label: "专题研究", icon: BookMarked, index: "07" },
-  { path: "/library", label: "艺术馆藏", icon: LibraryBig, index: "08" },
-  { path: "/markets/assets", label: "资产管理", icon: LockKeyhole, index: "09" },
-  { path: "/pets", label: "宠物", icon: PawPrint, index: "10" },
-  { path: "/tools", label: "实用工具", icon: Wrench, index: "11" },
+  { path: "/markets", label: "金融资讯", icon: LineChart, index: "05" },
+  { path: "/topics", label: "专题研究", icon: BookMarked, index: "06" },
+  { path: "/library", label: "艺术馆藏", icon: LibraryBig, index: "07" },
+  { path: "/markets/assets", label: "资产管理", icon: LockKeyhole, index: "08" },
+  { path: "/pets", label: "宠物", icon: PawPrint, index: "09" },
+  { path: "/tools", label: "实用工具", icon: Wrench, index: "10" },
 ];
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
@@ -50,7 +48,6 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   "/schedule": { title: "日程安排", description: "今日行动、长期主线与近期安排，都按时间收在这里" },
   "/projects": { title: "事业顺利", description: "项目通过统一原件、稳定编号、状态与证据进入同一套治理模式" },
   "/health": { title: "身心健康", description: "演示身体、心理与生活平衡的结构化记录方式" },
-  "/languages": { title: "日语突破", description: "从教材课次出发，把沟通任务、文法和变形真正练会" },
   "/markets": { title: "金融资讯", description: "只看真正改变判断的大事，以及它们可能怎样传导" },
   "/topics": { title: "专题研究", description: "用知识地图看见领域全貌，把真正关心的问题逐渐弄清楚" },
   "/library": { title: "艺术馆藏", description: "书籍、游戏、动漫、影视与非私密学习材料" },
@@ -59,10 +56,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   "/tools": { title: "实用工具", description: "围绕项目与 Mac 单机工作流保留的必要工具" },
 };
 
-const PRIMARY = new Set(["/", "/schedule", "/projects", "/health", "/languages", "/markets"]);
+const PRIMARY = new Set(["/", "/schedule", "/projects", "/health", "/markets"]);
 const PRIMARY_NAV_ITEMS = NAV_ITEMS.filter((item) => PRIMARY.has(item.path));
 const MORE_NAV_ITEMS = NAV_ITEMS.filter((item) => !PRIMARY.has(item.path));
-const SECTION_BY_ROUTE = { "/health": "health", "/languages": "languages", "/library": "library", "/topics": "library", "/markets": "markets" } as const;
+const SECTION_BY_ROUTE = { "/health": "health", "/library": "library", "/topics": "library", "/markets": "markets" } as const;
 
 function routePath() {
   const path = window.location.pathname;
@@ -83,10 +80,6 @@ function SectionState<T>({ data, error, loading, retry, render }: { data: T | nu
 function HealthRoute({ demoAction }: { demoAction: () => void }) {
   const state = useSectionData("health");
   return <SectionState<HealthSectionData> {...state} render={(data) => <LazyHealthPage data={data} onImport={demoAction} onImportFromDownloads={demoAction} importing={false} onAskCoach={demoAction} onWritePreview={demoAction}/>}/>;
-}
-function LanguagesRoute({ demoAction }: { demoAction: () => void }) {
-  const state = useSectionData("languages");
-  return <SectionState<LanguagesSectionData> {...state} render={(data) => <LazyLanguagesPage data={data} onLanguageReactorImport={demoAction} onOpenExamAi={demoAction} onSectionRefresh={() => { invalidateSection("languages"); state.retry(); }}/>}/>;
 }
 function LibraryRoute() {
   const state = useSectionData("library");
@@ -181,7 +174,6 @@ function App() {
     if (path === "/schedule") return data ? <LazySchedulePage data={data} onWritePreview={writeDemo}/> : fallback;
     if (path === "/projects") return data ? <LazyProjectsPage data={data} onWritePreview={writeDemo}/> : fallback;
     if (path === "/health") return <HealthRoute demoAction={demoAction}/>;
-    if (path === "/languages") return <LanguagesRoute demoAction={demoAction}/>;
     if (path === "/markets") return <MarketsRoute/>;
     if (path === "/topics") return <TopicsRoute demoAction={demoAction}/>;
     if (path === "/library") return <LibraryRoute/>;

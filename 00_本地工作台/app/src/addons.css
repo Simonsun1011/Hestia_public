@@ -179,3 +179,9 @@
   .pet-profile > .source-link { grid-column:1 / -1; }
   .japan-activities-meta { flex-wrap:wrap; }
 }
+
+/* 首页信号区：去掉日语卡片后剩项目与身心两张 */
+@media (min-width:901px) {
+  .home-signal-grid { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); }
+  .home-signal-grid .project-hero { grid-column:auto; }
+}

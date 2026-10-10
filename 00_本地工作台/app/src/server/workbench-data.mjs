@@ -3,8 +3,6 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
-import { parseGrammarChecklist } from "./workbench-grammar.mjs";
-import { LANGUAGE_REACTOR_SOURCE, pickDailySentence, readLanguageReactorData } from "./workbench-language-reactor.mjs";
 import { readAppleHealthData } from "./workbench-apple-health.mjs";
 import { readProjectManagement } from "./workbench-project-management.mjs";
 import { readDomainKnowledgeNodes } from "./workbench-domain-research-content.mjs";
@@ -24,13 +22,6 @@ import {
   DIR_LIBRARY,
   FLAGSHIP_OVERVIEW,
   HEALTH_OVERVIEW,
-  JP_DAILY,
-  JP_GRAMMAR_N2,
-  JP_GRAMMAR_N3,
-  JP_GRAMMAR_N4,
-  JP_GRAMMAR_N5,
-  JP_OVERVIEW,
-  JP_STATUS,
   LIBRARY_OVERVIEW,
   BOOK_COVERS_JSON,
   MARKET_BRIEF,
@@ -52,8 +43,6 @@ import {
   SCREEN_CULTURE_EAGLE,
   SCREEN_CULTURE_CINEMA_PARADISO,
   CULTURE_DOCUMENT_SOURCES,
-  GAME_RESEARCH_OVERVIEW,
-  GAME_RESEARCH_QUESTIONS,
   TODO_PATH,
   TOPIC_SOURCES,
   TOPICS_OVERVIEW,
@@ -96,14 +85,6 @@ export const SOURCES = Object.freeze({
   recentWellbeingLog: RECENT_WELLBEING_LOG,
   odysseyPlan: ODYSSEY_PLAN,
   interventionCards: INTERVENTION_CARDS,
-  japaneseOverview: JP_OVERVIEW,
-  japaneseStatus: JP_STATUS,
-  japaneseDaily: JP_DAILY,
-  grammarN5: JP_GRAMMAR_N5,
-  grammarN4: JP_GRAMMAR_N4,
-  grammarN3: JP_GRAMMAR_N3,
-  grammarN2: JP_GRAMMAR_N2,
-  languageReactor: LANGUAGE_REACTOR_SOURCE,
   library: LIBRARY_OVERVIEW,
   weread: WEREAD_PATH,
   bookCovers: BOOK_COVERS_JSON,
@@ -126,8 +107,6 @@ export const SOURCES = Object.freeze({
   screenCodeGeass: SCREEN_CULTURE_CODE_GEASS,
   screenEagle: SCREEN_CULTURE_EAGLE,
   screenCinemaParadiso: SCREEN_CULTURE_CINEMA_PARADISO,
-  gameResearch: GAME_RESEARCH_OVERVIEW,
-  gameResearchQuestions: GAME_RESEARCH_QUESTIONS,
   marketBrief: MARKET_BRIEF,
 });
 
@@ -153,12 +132,11 @@ async function readSource(root, relativePath, warnings = [], optional = false) {
   }
 }
 
-const OPTIONAL_SOURCES = new Set(["appleHealth", "languageReactor", "marketBrief", "avatar", "trainingPlan", "workview", "lifeview", "lifeDesignLog", "recentWellbeingLog", "odysseyPlan", "interventionCards", "steamGames", "extraGames", "appleGames", "dedaoCovers", "bookCovers", "cultureOverview", "cultureWow", "cultureSouls", "cultureZelda", "screenOverview", "screenFanren", "screenFma", "screenMadoka", "screenCodeGeass", "screenEagle", "screenCinemaParadiso", "gameResearch", "gameResearchQuestions"]);
+const OPTIONAL_SOURCES = new Set(["appleHealth", "marketBrief", "avatar", "trainingPlan", "workview", "lifeview", "lifeDesignLog", "recentWellbeingLog", "odysseyPlan", "interventionCards", "steamGames", "extraGames", "appleGames", "dedaoCovers", "bookCovers", "cultureOverview", "cultureWow", "cultureSouls", "cultureZelda", "screenOverview", "screenFanren", "screenFma", "screenMadoka", "screenCodeGeass", "screenEagle", "screenCinemaParadiso"]);
 
 const SECTION_SOURCE_KEYS = Object.freeze({
   health: ["healthOverview", "body", "training", "trainingPlan", "appleHealth", "todo", "workview", "lifeview", "lifeDesignLog", "recentWellbeingLog", "odysseyPlan", "interventionCards"],
-  languages: ["japaneseOverview", "japaneseStatus", "japaneseDaily", "grammarN5", "grammarN4", "grammarN3", "grammarN2", "languageReactor"],
-  library: ["library", "weread", "bookCovers", "dedao", "dedaoCovers", "paperBooks", "writing", "learning", "steamGames", "extraGames", "appleGames", "cultureOverview", "cultureWow", "cultureSouls", "cultureZelda", "screenOverview", "screenFanren", "screenFma", "screenMadoka", "screenCodeGeass", "screenEagle", "screenCinemaParadiso", "gameResearch", "gameResearchQuestions"],
+  library: ["library", "weread", "bookCovers", "dedao", "dedaoCovers", "paperBooks", "writing", "learning", "steamGames", "extraGames", "appleGames", "cultureOverview", "cultureWow", "cultureSouls", "cultureZelda", "screenOverview", "screenFanren", "screenFma", "screenMadoka", "screenCodeGeass", "screenEagle", "screenCinemaParadiso"],
   markets: ["marketBrief"],
 });
 
@@ -194,98 +172,6 @@ export function trimAppleHealthForSection(summary, dayWindow = HEALTH_SECTION_DA
   const body = Array.isArray(summary.body) ? summary.body.filter((item) => String(item?.day ?? item?.date ?? "") >= cutoff) : [];
   const workouts = Array.isArray(summary.workouts) ? summary.workouts.filter((item) => String(item?.day ?? item?.date ?? "") >= cutoff) : [];
   return { ...summary, daily, body, workouts };
-}
-
-/** 分区只留文法卡片摘要与语料统计；例句/辨析与全量条目走按需接口。 */
-export function trimLanguagesForSection(data) {
-  if (!data) return data;
-  const grammar = (data.grammar ?? []).map((level) => ({
-    ...level,
-    groups: (level.groups ?? []).map((group) => ({
-      ...group,
-      points: (group.points ?? []).map((point) => ({
-        id: point.id,
-        title: point.title,
-        mastery: point.mastery,
-        review: point.review,
-        connection: "",
-        meaning: point.meaning || "",
-        examples: [],
-        distinctions: [],
-        notes: [],
-      })),
-    })),
-  }));
-  const reactor = data.languageReactor
-    ? { ...data.languageReactor, items: [] }
-    : null;
-  const exploration = data.exploration ? {
-    ...data.exploration,
-    grammarDetail: Object.fromEntries(
-      Object.entries(data.exploration.grammarDetail ?? {}).map(([level, detail]) => [level, {
-        groups: (detail?.groups ?? []).map((group) => ({
-          points: (group.points ?? []).map((point) => ({
-            id: point.id,
-            lv: point.lv || 0,
-            correctTotal: point.correctTotal || 0,
-          })),
-        })),
-      }]),
-    ),
-  } : data.exploration;
-  return { ...data, grammar, languageReactor: reactor, exploration };
-}
-
-export async function readGrammarLevel(vaultRoot, level) {
-  const normalized = String(level || "").toUpperCase();
-  if (!["N5", "N4", "N3", "N2"].includes(normalized)) throw Object.assign(new Error("文法等级无效"), { statusCode: 400 });
-  const key = `grammar${normalized}`;
-  const warnings = [];
-  const source = await readNamedSources(path.resolve(vaultRoot), [key], warnings);
-  return {
-    version: WORKBENCH_VERSION,
-    generatedAt: new Date().toISOString(),
-    data: { ...parseGrammarChecklist(source[key].text, normalized), source: sourceMeta(source[key]) },
-    warnings,
-  };
-}
-
-export async function queryLanguageReactor(vaultRoot, options = {}) {
-  const warnings = [];
-  const root = path.resolve(vaultRoot);
-  await readNamedSources(root, ["languageReactor"], warnings);
-  const collection = await readLanguageReactorData(root);
-  if (!collection) {
-    return { version: WORKBENCH_VERSION, generatedAt: new Date().toISOString(), data: { items: [], total: 0, offset: 0, limit: 0, sources: [], collection: null }, warnings };
-  }
-  const kind = String(options.kind || "all");
-  const sourceFilter = String(options.source || "全部作品");
-  const query = String(options.q || "").trim().toLocaleLowerCase("ja");
-  const offset = Math.max(0, Number(options.offset) || 0);
-  const limit = Math.min(100, Math.max(1, Number(options.limit) || 36));
-  const sourceName = (title) => String(title || "").split(" · ")[0] || title;
-  const sources = [...new Set((collection.items ?? []).map((item) => sourceName(item.sourceTitle)))];
-  const filtered = (collection.items ?? []).filter((item) => {
-    if (kind !== "all" && item.type !== kind) return false;
-    if (sourceFilter !== "全部作品" && sourceName(item.sourceTitle) !== sourceFilter) return false;
-    if (!query) return true;
-    const haystack = `${item.sentence} ${item.translation} ${item.transliteration} ${item.word} ${(item.wordTranslations || []).join(" ")} ${item.previous} ${item.next} ${item.sourceTitle}`.toLocaleLowerCase("ja");
-    return haystack.includes(query);
-  });
-  const { items: _drop, ...meta } = collection;
-  return {
-    version: WORKBENCH_VERSION,
-    generatedAt: new Date().toISOString(),
-    data: {
-      collection: meta,
-      sources: ["全部作品", ...sources],
-      items: filtered.slice(offset, offset + limit),
-      total: filtered.length,
-      offset,
-      limit,
-    },
-    warnings,
-  };
 }
 
 const SIGNAL_TARGETS = new Set(["美股", "油价", "利率", "日元", "芯片"]);
@@ -2214,33 +2100,6 @@ export function deriveStrengthBaseline(sessions) {
   return catalog.map((item) => latestByLabel.get(item.label)).filter(Boolean);
 }
 
-export function parseJapanese(statusMarkdown, dailyMarkdown) {
-  const levels = dataRows(extractSection(statusMarkdown, "词汇线（Anki）")).map((row) => ({ name: cleanInline(row[0]), total: numeric(row[1]) ?? 0, learned: numeric(row[2]) ?? 0, status: cleanInline(row[5]) })).filter((row) => row.name && row.total);
-  const scope = statusMarkdown.match(/当前计划范围[^：]*：已学\s*([\d]+)\s*\/\s*([\d]+)/);
-  const decisions = parseCheckboxes(extractSection(statusMarkdown, "待办决策"), 8).map((item) => item.text);
-  const latestDaily = [...dailyMarkdown.matchAll(/^##\s+(\d{4}-\d{2}-\d{2}[^\n]*)$/gm)].at(-1)?.[1] ?? "暂无每日记录";
-  const reviewPace7 = numeric(statusMarkdown.match(/最近 7 个完整学习日[^\n]*答题[^\n]*日均约\s*([\d.]+)\s*次/)?.[1]);
-  const newCardPace7 = numeric(statusMarkdown.match(/最近 7 个完整学习日[^\n]*引入新卡[^\n]*日均约\s*([\d.]+)\s*张/)?.[1]);
-  const newCardPace14 = numeric(statusMarkdown.match(/最近 14 个完整学习日[^\n]*引入新卡[^\n]*日均约\s*([\d.]+)\s*张/)?.[1]);
-  return {
-    updatedAt: statusMarkdown.match(/最近更新：([^\n]+)/)?.[1]?.trim() ?? "未标注",
-    stage: cleanInline(statusMarkdown.match(/## 当前阶段\s+\n+\*\*([^*]+)\*\*/)?.[1] ?? "暂无阶段判断"),
-    progress: scope ? { learned: Number(scope[1]), total: Number(scope[2]) } : null,
-    queue: numeric(statusMarkdown.match(/今日待复习\s*([^。\n]+)/)?.[1]),
-    streak: numeric(statusMarkdown.match(/当前连续学习\s*([^。\n]+)/)?.[1]),
-    pace7: newCardPace7,
-    pace14: newCardPace14,
-    reviewPace7,
-    newCardPace7,
-    newCardPace14,
-    ankiSource: null,
-    latestDaily: cleanInline(latestDaily),
-    note: "词汇进度不代替文法、阅读、听力和真题诊断。",
-    levels,
-    decisions,
-  };
-}
-
 function inferCourseCategory(title) {
   const rules = [
     ["文史经典", /通鉴|唐诗|宋词|苏轼|莎士比亚|中国史|罗马史|西方史|名家/],
@@ -2769,33 +2628,6 @@ function markdownBullets(markdown) {
     .map((line) => line.match(/^\s*[-*]\s+(.+)$/u)?.[1] ?? "")
     .map(cleanInline)
     .filter(Boolean);
-}
-
-function parseGameResearchDomain(source, topics) {
-  const overview = topics.find((item) => item.sourcePath === GAME_RESEARCH_OVERVIEW) ?? null;
-  const parsed = matter(source.gameResearchQuestions?.text || "");
-  const lines = String(parsed.content || "")
-    .split(/^##\s+/mu)
-    .slice(1)
-    .map((section) => {
-      const [heading = "", ...body] = section.split("\n");
-      const title = cleanInline(heading);
-      return {
-        id: contentId(`${GAME_RESEARCH_QUESTIONS}#${title}`),
-        title,
-        questions: markdownBullets(body.join("\n")),
-      };
-    })
-    .filter((section) => section.title && section.title !== "研究完成后要回答" && section.questions.length);
-  return {
-    id: "game",
-    title: "游戏",
-    description: overview?.description || "从作品、文化、设计与制作理解游戏这个领域。",
-    overviewId: overview?.id ?? null,
-    sourcePath: overview?.sourcePath ?? GAME_RESEARCH_OVERVIEW,
-    updatedAt: source.gameResearch?.updatedAt ?? null,
-    researchLines: lines,
-  };
 }
 
 function parseCultureCard(source) {
@@ -3998,49 +3830,6 @@ async function buildHealthFromSources(root, source) {
   };
 }
 
-async function buildJapaneseFromSources(root, source) {
-  const japanese = parseJapanese(source.japaneseStatus.text, source.japaneseDaily.text);
-  const grammar = ["N5", "N4", "N3", "N2"].map((level) => {
-    const key = `grammar${level}`;
-    return { ...parseGrammarChecklist(source[key].text, level), source: sourceMeta(source[key]) };
-  });
-  const { applyAnkiVocabProgress, readAnkiDayReviews, readAnkiVocabProgress, tokyoTodayKey } = await import("./workbench-anki.mjs");
-  const ankiProgress = await readAnkiVocabProgress(root);
-  const merged = applyAnkiVocabProgress(japanese, ankiProgress);
-  const base = {
-    ...merged,
-    grammar,
-    languageReactor: await readLanguageReactorData(root),
-    sources: [sourceMeta(source.japaneseOverview), sourceMeta(source.japaneseStatus), sourceMeta(source.japaneseDaily), ...grammar.map((item) => item.source), sourceMeta(source.languageReactor)],
-  };
-  const { buildJapaneseExploration } = await import("./workbench-japanese-exam.mjs");
-  const today = tokyoTodayKey();
-  const { buildJapaneseTodayStudy, hasJapaneseStudyActivity, tokyoPreviousDateKey } = await import("./workbench-japanese-today.mjs");
-  const previous = tokyoPreviousDateKey();
-  const [exploration, todayAnkiActivity, previousAnkiActivity] = await Promise.all([
-    buildJapaneseExploration(root, base),
-    ankiProgress ? readAnkiDayReviews(today, root) : Promise.resolve(null),
-    ankiProgress ? readAnkiDayReviews(previous, root) : Promise.resolve(null),
-  ]);
-  const todayStudy = buildJapaneseTodayStudy({
-    date: today,
-    oralSessions: exploration.courseProgress.oralSessions,
-    ankiActivity: todayAnkiActivity,
-    examSessions: exploration.studySessions,
-  });
-  const previousStudy = buildJapaneseTodayStudy({
-    date: previous,
-    oralSessions: exploration.courseProgress.oralSessions,
-    ankiActivity: previousAnkiActivity,
-    examSessions: exploration.studySessions,
-  });
-  return {
-    ...base,
-    exploration,
-    studySummary: hasJapaneseStudyActivity(todayStudy) ? todayStudy : previousStudy,
-  };
-}
-
 async function buildLibrarySection(root, source, warnings) {
   const library = await buildLibrary(root, source, warnings);
   const domainKnowledge = await readDomainKnowledgeNodes(root);
@@ -4061,9 +3850,9 @@ async function buildLibrarySection(root, source, warnings) {
     writing: { count: library.writing.length, updatedAt: source.writing.updatedAt },
     learning: { count: library.topics.length, updatedAt: source.learning.updatedAt },
     cultureArchive: library.cultureArchive,
-    domainResearch: { game: parseGameResearchDomain(source, library.topics), knowledgeNodes: domainKnowledge.nodes },
+    domainResearch: { knowledgeNodes: domainKnowledge.nodes },
     items: library.items.map(({ searchableBody: _omit, ...item }) => item),
-    sources: [sourceMeta(source.library), sourceMeta(source.weread), sourceMeta(source.bookCovers), sourceMeta(source.dedao), sourceMeta(source.dedaoCovers), sourceMeta(source.writing), sourceMeta(source.learning), sourceMeta(source.steamGames), sourceMeta(source.extraGames), sourceMeta(source.appleGames), sourceMeta(source.cultureOverview), sourceMeta(source.cultureWow), sourceMeta(source.cultureSouls), sourceMeta(source.cultureZelda), sourceMeta(source.screenOverview), sourceMeta(source.screenFanren), sourceMeta(source.screenFma), sourceMeta(source.screenMadoka), sourceMeta(source.screenCodeGeass), sourceMeta(source.screenEagle), sourceMeta(source.screenCinemaParadiso), sourceMeta(source.gameResearch), sourceMeta(source.gameResearchQuestions)],
+    sources: [sourceMeta(source.library), sourceMeta(source.weread), sourceMeta(source.bookCovers), sourceMeta(source.dedao), sourceMeta(source.dedaoCovers), sourceMeta(source.writing), sourceMeta(source.learning), sourceMeta(source.steamGames), sourceMeta(source.extraGames), sourceMeta(source.appleGames), sourceMeta(source.cultureOverview), sourceMeta(source.cultureWow), sourceMeta(source.cultureSouls), sourceMeta(source.cultureZelda), sourceMeta(source.screenOverview), sourceMeta(source.screenFanren), sourceMeta(source.screenFma), sourceMeta(source.screenMadoka), sourceMeta(source.screenCodeGeass), sourceMeta(source.screenEagle), sourceMeta(source.screenCinemaParadiso)],
   };
 }
 
@@ -4071,7 +3860,6 @@ async function scanVaultUncached(root) {
   const warnings = [];
   const source = await readNamedSources(root, Object.keys(SOURCES), warnings);
   const health = await buildHealthFromSources(root, source);
-  const japanese = await buildJapaneseFromSources(root, source);
   const library = await buildLibrarySection(root, source, warnings);
   const projects = parseProjects(source.projects.text);
   return {
@@ -4089,7 +3877,6 @@ async function scanVaultUncached(root) {
     },
     projectManagement: await readProjectManagement(root),
     health,
-    japanese,
     library,
     market: await buildMarketSection(root, source.marketBrief),
     warnings,
@@ -4156,21 +3943,6 @@ export function summarizeWorkbench(snapshot) {
       staleMuscles: snapshot.health.staleMuscles,
       life: { overdueWeeks: snapshot.health.life.overdueWeeks },
     },
-    japanese: {
-      updatedAt: snapshot.japanese.updatedAt,
-      stage: snapshot.japanese.stage,
-      progress: snapshot.japanese.progress,
-      queue: snapshot.japanese.queue,
-      streak: snapshot.japanese.streak,
-      pace7: snapshot.japanese.pace7,
-      pace14: snapshot.japanese.pace14,
-      reviewPace7: snapshot.japanese.reviewPace7,
-      newCardPace7: snapshot.japanese.newCardPace7,
-      newCardPace14: snapshot.japanese.newCardPace14,
-      ankiSource: snapshot.japanese.ankiSource,
-      studySummary: snapshot.japanese.studySummary,
-      dailySentence: pickDailySentence(snapshot.japanese.languageReactor),
-    },
     library: {
       books: snapshot.library.books,
       completedBooks: snapshot.library.completedBooks,
@@ -4228,8 +4000,6 @@ export async function scanWorkbenchSection(vaultRoot, section) {
         recentAssessment: recentAssessment ? { entries: recentAssessment.entries } : undefined,
       },
     };
-  } else if (section === "languages") {
-    data = trimLanguagesForSection(await buildJapaneseFromSources(root, source));
   } else if (section === "library") {
     data = await buildLibrarySection(root, source, warnings);
   } else {

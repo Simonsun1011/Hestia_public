@@ -150,8 +150,8 @@ sources:
 
   it("一次运行：并入活动页；页面没变的来源第二次不调模型", async () => {
     const root = await tempRoot();
-    await writeFile(root, "80_生活事务/日本游玩攻略/活动来源.md", sourcesText);
-    await writeFile(root, "80_生活事务/日本游玩攻略/日本活动.md", "<!-- INFANS_JAPAN_ACTIVITIES_JSON_START -->\n```json\n{\"activities\":[]}\n```\n<!-- INFANS_JAPAN_ACTIVITIES_JSON_END -->\n");
+    await writeFile(root, "80_生活事务/出行攻略/活动来源.md", sourcesText);
+    await writeFile(root, "80_生活事务/出行攻略/日本活动.md", "<!-- INFANS_JAPAN_ACTIVITIES_JSON_START -->\n```json\n{\"activities\":[]}\n```\n<!-- INFANS_JAPAN_ACTIVITIES_JSON_END -->\n");
     const list = `<ul><li><a href="/exhibitions/monet/">モネ展</a> 2026年10月1日〜2026年12月20日</li></ul>`;
     const fetchImpl = fakeFetch({ "https://museum.example.jp/exhibitions/": list });
     const { spawnImpl, calls } = fakeClaude([{ events: [{ title: "モネ展", category: "art", url: "https://museum.example.jp/exhibitions/monet/", start_date: "2026-10-01", end_date: "2026-12-20", summary_zh: "莫奈展" }] }, { venue: null }]);

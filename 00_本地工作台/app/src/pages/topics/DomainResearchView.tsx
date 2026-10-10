@@ -36,7 +36,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import type { DomainKnowledgeNode, DomainResearchSummary } from "../../types";
+import type { DomainKnowledgeNode } from "../../types";
 import { obsidianHref } from "../../page-shared";
 import {
   buildKnowledgeCards,
@@ -61,8 +61,6 @@ import {
   FULL_AI_DOMAIN,
   IMAGE_MANAGEMENT_DOMAIN,
   LANGUAGE_DOMAIN,
-  THOUGHT_HISTORY_DOMAIN,
-  ZZTJ_DOMAIN,
 } from "./domain-research-domains";
 import { RESEARCH_DOMAIN_IDS } from "./domain-research-home";
 import "./domain-research.css";
@@ -90,7 +88,6 @@ export type ResearchDomainView = {
   cardClass: string;
   icon: LucideIcon;
   branches: ResearchBranch[];
-  researchSummary?: DomainResearchSummary;
 };
 
 export type DomainResearchPosition = {
@@ -123,146 +120,6 @@ export type DomainResearchProgressUpdate = {
     cardIndex: number;
   };
 };
-
-const GAME_BRANCHES: ResearchBranch[] = [
-  {
-    id: "culture",
-    title: "游戏史、文化与批评",
-    cardSummary: "从历史、类型与重要作品理解游戏怎样形成意义。",
-    summary: "从游戏史、类型谱系和重要作品出发，研究媒介演化、创作者选择与整体艺术表达。",
-    guidingQuestion: "游戏为何在特定时代变成现在的样子，一部作品又如何在机制、表达与文化中留下位置？",
-    status: "正在理解",
-    icon: BookOpen,
-    nodes: [
-      { id: "game-culture-history-media-evolution", title: "游戏史与媒介演化", description: "从硬件、商业环境、技术条件和玩家习惯理解电子游戏不同阶段的变化。" },
-      { id: "game-culture-genre-genealogy", title: "类型谱系", description: "观察 MMO、RPG、动作冒险、魂系和开放世界等类型如何形成惯例并相互影响。" },
-      { id: "game-culture-creators-studios", title: "重要创作者与公司", description: "研究关键作者、团队和公司的方法、组织能力与时代限制，不把作品只归因于个人天才。" },
-      { id: "game-culture-close-reading", title: "代表作品精读", description: "把机制、空间、叙事、音乐、表演和玩家行动放在一起，理解作品为何成立。" },
-      { id: "game-culture-criticism-aesthetics", title: "游戏批评与审美", description: "建立可以说明判断的语言，区分个人偏爱、艺术完成度、设计成效与历史影响。" },
-      { id: "game-culture-preservation-memory", title: "保存与再发现", description: "关注旧游戏、版本、服务器、档案和玩家记忆怎样被保存，以及失去后意味着什么。" },
-    ],
-    starterQuestions: [
-      "一部作品的历史位置应该由创新、影响、完成度还是个人经验决定？",
-      "类型名称帮助理解作品的同时，会不会也遮蔽真正的差异？",
-      "今天重看旧作品时，怎样同时保留时代语境与当下判断？",
-    ],
-  },
-  {
-    id: "design",
-    title: "游戏设计与体验",
-    cardSummary: "理解规则、关卡、叙事与体验如何协同。",
-    summary: "研究机制、系统、关卡、叙事与玩家体验怎样共同工作。",
-    guidingQuestion: "设计者怎样通过规则、空间和反馈创造有意义的选择，并让玩家愿意持续行动？",
-    status: "正在理解",
-    icon: Puzzle,
-    nodes: [
-      { id: "game-design-core-play", title: "行动、规则与循环", description: "从玩家能做什么、想达成什么、规则怎样限制和系统如何反馈，理解最小可玩结构怎样形成。" },
-      { id: "game-design-systems-economy", title: "系统、资源与经济", description: "研究资源、成长、数值和规则怎样互相作用，形成长期选择而不是单一路径。" },
-      { id: "game-design-space-world", title: "空间、关卡与世界", description: "研究空间怎样引导行动、制造节奏，并让探索与发现真正发生。" },
-      { id: "game-design-interactive-narrative", title: "互动叙事与角色", description: "区分作者安排、系统事件与玩家行动，观察角色和后果如何承载情感与主题。" },
-      { id: "game-design-interaction-feedback", title: "交互、反馈与手感", description: "理解操作、界面、镜头、声音和反馈怎样共同塑造可读性、控制感与身体体验。" },
-      { id: "game-design-challenge-accessibility", title: "挑战、平衡与可访问性", description: "研究挑战、资源、奖励和辅助选项怎样维持选择空间，并让不同玩家能够进入作品。" },
-    ],
-    starterQuestions: [
-      "一个设计问题应该先改规则、数值、信息还是内容？",
-      "引导何时帮助玩家理解，何时会夺走发现感？",
-      "设计者怎样判断玩家失败是有意义的学习，还是信息与操作出了问题？",
-    ],
-  },
-  {
-    id: "production",
-    title: "游戏制作、团队与管线",
-    cardSummary: "把创意变成能运行、能协作、能交付的作品。",
-    summary: "理解不同工种怎样把设计变成可以运行、可以交付的作品。",
-    guidingQuestion: "一个创意怎样经过验证、协作和取舍，最终成为质量可控、能够交付的游戏？",
-    status: "正在理解",
-    icon: Hammer,
-    nodes: [
-      { id: "game-production-concept-greenlight", title: "创意与立项", description: "明确作品承诺、目标玩家、核心体验和现实约束，让立项不是只有题材与愿望。" },
-      { id: "game-production-prototype-preproduction", title: "原型与预制作", description: "用低成本原型验证最危险的假设，并在扩大生产前建立视觉、技术和内容基线。" },
-      { id: "game-production-disciplines-collaboration", title: "策划、程序、美术与声音", description: "理解主要工种各自的判断对象、交付物与依赖，减少跨工种翻译损耗。" },
-      { id: "game-production-content-pipeline", title: "内容生产管线", description: "研究资源、关卡、文本和配置如何稳定进入游戏，让重复劳动能够被工具和规范承接。" },
-      { id: "game-production-project-version-management", title: "项目管理与版本", description: "用范围、里程碑、版本和风险管理维持节奏，避免进度只靠热情和加班。" },
-      { id: "game-production-testing-collaboration", title: "测试与协作", description: "把试玩反馈、缺陷、决策和跨工种沟通变成可靠流程，减少返工与认知偏差。" },
-      { id: "game-production-independent-development", title: "独立开发方法", description: "研究小团队和个人如何选择规模、复用能力、管理精力，并形成自己的可持续生产方式。" },
-    ],
-    starterQuestions: [
-      "项目最危险的假设是什么，最便宜的验证方法又是什么？",
-      "什么时候应该继续打磨，什么时候应该砍掉或停止？",
-      "独立开发者怎样在创作完整性、个人精力和商业现实之间取舍？",
-    ],
-  },
-  {
-    id: "technology",
-    title: "技术、引擎与平台",
-    cardSummary: "看懂引擎、性能、网络和平台带来的边界。",
-    summary: "理解引擎、图形、网络、性能与平台约束怎样影响游戏。",
-    guidingQuestion: "创作者需要理解多少技术，才能做出正确选择、与工程协作，并避免被工具反过来决定作品？",
-    status: "正在理解",
-    icon: Cpu,
-    nodes: [
-      { id: "game-technology-engines-tools", title: "引擎与工具", description: "理解通用引擎、编辑器与内容管线分别解决什么问题，又会带来哪些限制。" },
-      { id: "game-technology-software-architecture-data", title: "程序架构与数据", description: "理解玩法代码、状态、配置和存档如何组织，使功能能够迭代而不是越改越脆弱。" },
-      { id: "game-technology-graphics-performance", title: "图形与性能", description: "建立渲染、资源、帧率和设备预算的基本认识，让视觉选择有技术依据。" },
-      { id: "game-technology-animation-physics-audio", title: "动画、物理与声音", description: "理解运动、碰撞和声音系统如何共同提供可信反馈，并影响玩法与资源成本。" },
-      { id: "game-technology-networking-data", title: "网络与数据", description: "理解同步、延迟、存档、服务端与数据安全怎样改变玩法和维护成本。" },
-      { id: "game-technology-ai-procedural-generation", title: "AI 与程序化生成", description: "辨认 AI 和生成系统在内容、角色、测试与生产中的真实能力、成本、控制方式和风险。" },
-      { id: "game-technology-cross-platform-porting", title: "跨平台与移植", description: "研究 PC、主机和移动平台在输入、性能、审核、商店与更新上的差异及移植代价。" },
-    ],
-    starterQuestions: [
-      "哪些技术知识属于创作者的基本素养，哪些只需在项目需要时深入？",
-      "工具提高效率的同时，是否正在限制内容结构或审美选择？",
-      "AI 与程序化生成怎样保持可控、可编辑和可验证，而不是只增加随机内容？",
-    ],
-  },
-  {
-    id: "industry",
-    title: "产业、商业、法律与发行",
-    cardSummary: "理解作品怎样找到玩家并形成可持续生意。",
-    summary: "理解作品怎样进入市场、找到玩家并形成可持续的生意。",
-    guidingQuestion: "游戏怎样在市场中被发现、购买和长期支持，创作者又如何建立不伤害作品与玩家的生意？",
-    status: "正在理解",
-    icon: Store,
-    nodes: [
-      { id: "game-industry-market-users", title: "市场与用户", description: "理解品类、受众、竞品和愿望单等信号，避免把个人喜好直接当成市场判断。" },
-      { id: "game-industry-business-models", title: "商业模式", description: "比较买断、订阅、内购与广告等模式怎样影响产品目标、设计和玩家关系。" },
-      { id: "game-industry-publishers-platforms", title: "发行商与平台", description: "研究发行合作、平台规则、资源交换和控制权分配，理解不同发行路径的真实代价。" },
-      { id: "game-industry-store-pricing-wishlists", title: "商店、定价与愿望单", description: "理解商店页、定价、折扣、愿望单和转化之间的关系，让市场反馈能够被正确解释。" },
-      { id: "game-industry-marketing-media-festivals", title: "宣传、媒体与节展", description: "研究内容传播、创作者合作、媒体报道和线下节展怎样共同决定作品被看见的机会。" },
-      { id: "game-industry-community-live-operations", title: "社区与长期运营", description: "理解测试玩家、核心社群、更新节奏和长期沟通怎样影响口碑、迭代与品牌信任。" },
-      { id: "game-industry-copyright-rating-policy", title: "版权、分级与政策", description: "建立素材授权、知识产权、分级、隐私和不同地区政策的基本边界。" },
-      { id: "game-industry-independent-studio-operations", title: "独立工作室经营", description: "研究现金流、团队规模、外包、产品组合和风险储备，形成能持续创作的经营结构。" },
-    ],
-    starterQuestions: [
-      "市场信号什么时候足以改变产品，什么时候只是在诱导短期追逐？",
-      "发行合作带来的资源、分成与控制权应该怎样比较？",
-      "独立工作室如何为失败留出空间，而不是把一次发行变成生死赌局？",
-    ],
-  },
-  {
-    id: "players",
-    title: "玩家、社群与社会",
-    cardSummary: "理解游戏中的心理、身份、社群关系与社会影响。",
-    summary: "研究玩家为何投入、怎样形成身份与社群，以及游戏如何进入更广泛的社会生活。",
-    guidingQuestion: "玩家为何在游戏中投入时间、情感与关系，这些体验又怎样改变个人、社群和现实社会？",
-    status: "正在理解",
-    icon: UsersRound,
-    nodes: [
-      { id: "game-players-motivation-psychology", title: "玩家心理与动机", description: "理解掌握、探索、竞争、表达、关系和习惯等动机如何共同影响持续参与。" },
-      { id: "game-players-identity-presence", title: "身份与沉浸", description: "研究角色扮演、化身、选择和长期投入怎样形成身份认同、代入感与个人记忆。" },
-      { id: "game-players-community-relationships", title: "社群与虚拟关系", description: "理解公会、队伍、师徒、交易和共同事件如何建立信任、归属、冲突与共同历史。" },
-      { id: "game-players-mods-ugc-cocreation", title: "MOD、UGC 与共创", description: "研究玩家创作如何延长作品生命、改变作者边界，并形成新的内容与治理问题。" },
-      { id: "game-players-streaming-esports", title: "直播、电竞与传播", description: "理解观看、竞技、主播和平台算法怎样改变游戏的设计、影响力与公共形象。" },
-      { id: "game-players-harm-ethics-inclusion", title: "成瘾、伦理与包容性", description: "研究时间投入、付费诱导、骚扰、公平和无障碍问题，区分健康参与与有害设计。" },
-      { id: "game-players-serious-games-learning", title: "严肃游戏与教育", description: "观察游戏在学习、训练、治疗和公共议题中的可能性，同时警惕把游戏化当成万能工具。" },
-    ],
-    starterQuestions: [
-      "长期投入来自作品本身、社群关系，还是玩家所处的人生阶段？",
-      "设计者应如何区分高参与度与对脆弱心理的利用？",
-      "玩家共创扩展作品时，作者、平台与社区分别应保留哪些权力？",
-    ],
-  },
-];
 
 const BRANCH_ICONS: Record<DomainIconKey, LucideIcon> = {
   book: BookOpen,
@@ -341,57 +198,15 @@ function catalogBranches(domainId: DomainId, branches: CatalogBranch[], knowledg
   });
 }
 
-const EXPRESSION_BRANCH: ResearchBranch = {
-  id: "expression",
-  title: "叙事、视觉与声音",
-  cardSummary: "研究文字、空间、美术、动画与声音如何形成整体表达。",
-  summary: "把互动叙事、世界观、角色、视觉语言、动画、音乐与声音设计放在玩家行动中共同理解。",
-  guidingQuestion: "叙事、视觉和声音怎样与规则互相支持，让表达不是贴在玩法外面的装饰？",
-  status: "正在理解",
-  icon: PenTool,
-  nodes: [
-    { id: "game-expression-interactive-narrative-agency", title: "互动叙事与玩家能动性", description: "区分玩家位置、作者编排、系统事件与玩家讲述，理解行动怎样参与意义形成。" },
-    { id: "game-expression-worldbuilding-character-text", title: "世界观、角色与文本", description: "研究设定、角色弧光、对白和文本密度怎样服务体验。" },
-    { id: "game-expression-environmental-spatial-storytelling", title: "环境叙事与空间表达", description: "观察场景、动线、物件和遗迹如何在不说明时传递信息。" },
-    { id: "game-expression-visual-language-art-direction", title: "视觉语言与美术方向", description: "理解形状、色彩、材质、构图和一致性怎样建立可辨认世界。" },
-    { id: "game-expression-animation-performance-camera", title: "动画、表演与镜头", description: "研究动作节奏、角色表演和镜头控制怎样传递重量、情绪与信息。" },
-    { id: "game-expression-music-sound-audio-space", title: "音乐、音效与声音空间", description: "理解音乐结构、交互音效、语音和空间声场怎样塑造注意与记忆。" },
-  ],
-  starterQuestions: ["互动怎样参与叙事？", "整体艺术方向如何跨工种保持一致？", "声音何时比画面更能引导玩家？"],
-};
-
-const GAME_BRANCH_BY_ID = new Map(GAME_BRANCHES.map((branch) => [branch.id, branch]));
-const ORDERED_GAME_BRANCHES = ["culture", "players", "design", "expression", "production", "technology", "industry"].flatMap((id) => {
-  if (id === "expression") return [EXPRESSION_BRANCH];
-  const current = GAME_BRANCH_BY_ID.get(id);
-  return current ? [current] : [];
-});
-
 function catalogDomain(domain: CatalogDomain, icon: LucideIcon, knowledgeNodes: DomainKnowledgeNode[]): ResearchDomainView {
   return { ...domain, icon, branches: catalogBranches(domain.id, domain.branches, knowledgeNodes) };
 }
 
-export function researchDomains(game: DomainResearchSummary, knowledgeNodes: DomainKnowledgeNode[] = []): ResearchDomainView[] {
+export function researchDomains(knowledgeNodes: DomainKnowledgeNode[] = []): ResearchDomainView[] {
   const domains: ResearchDomainView[] = [
-    {
-      id: "game",
-      title: game.title,
-      mark: "创作母题",
-      description: game.description,
-      mapLead: "把看到的知识放进脉络，把不懂的问题留在眼前。",
-      cardClass: "domain-card-game",
-      icon: Gamepad2,
-      branches: ORDERED_GAME_BRANCHES.map((branch) => {
-        const mapped = mappedKnowledgeNodes(knowledgeNodes, "game", branch.id, branch.nodes);
-        return { ...branch, mappedNodes: mapped, formalNodes: mapped.filter((node) => node.status === "formal") };
-      }),
-      researchSummary: game,
-    },
     catalogDomain(FULL_AI_DOMAIN, Cpu, knowledgeNodes),
     catalogDomain(ECONOMICS_FINANCE_DOMAIN, Landmark, knowledgeNodes),
     catalogDomain(LANGUAGE_DOMAIN, Languages, knowledgeNodes),
-    catalogDomain(THOUGHT_HISTORY_DOMAIN, History, knowledgeNodes),
-    catalogDomain(ZZTJ_DOMAIN, Bookmark, knowledgeNodes),
     catalogDomain(IMAGE_MANAGEMENT_DOMAIN, Shirt, knowledgeNodes),
     catalogDomain(FITNESS_DOMAIN, Activity, knowledgeNodes),
   ];
@@ -402,8 +217,9 @@ export function researchDomains(game: DomainResearchSummary, knowledgeNodes: Dom
   });
 }
 
-export function findResearchDomain(game: DomainResearchSummary, domainId: DomainId, knowledgeNodes: DomainKnowledgeNode[] = []) {
-  return researchDomains(game, knowledgeNodes).find((domain) => domain.id === domainId) ?? researchDomains(game, knowledgeNodes)[0];
+export function findResearchDomain(domainId: DomainId, knowledgeNodes: DomainKnowledgeNode[] = []) {
+  const domains = researchDomains(knowledgeNodes);
+  return domains.find((domain) => domain.id === domainId) ?? domains[0];
 }
 
 export type ReaderTarget = { domainId: DomainId; branchId: string; nodeId: string; cardIndex: number };
@@ -489,7 +305,6 @@ function ResearchTransformation() {
 }
 
 export function DomainResearchHome({
-  game,
   knowledgeNodes,
   progress,
   focusedDomainId,
@@ -501,7 +316,6 @@ export function DomainResearchHome({
   onStart,
   onRandom,
 }: {
-  game: DomainResearchSummary;
   knowledgeNodes: DomainKnowledgeNode[];
   progress: DomainResearchProgress;
   focusedDomainId: DomainId | null;
@@ -514,7 +328,7 @@ export function DomainResearchHome({
   onRandom: (domainId: DomainId) => void;
 }) {
   const focusRef = useRef<HTMLElement | null>(null);
-  const domains = useMemo(() => researchDomains(game, knowledgeNodes).map((domain) => {
+  const domains = useMemo(() => researchDomains(knowledgeNodes).map((domain) => {
     const cards = allDomainCards(domain);
     const counts = cards.reduce((current, card) => {
       const status = progress.cards[card.id]?.status;
@@ -524,7 +338,7 @@ export function DomainResearchHome({
     }, { overview: 0, unclear: 0, deep: 0, unseen: 0 });
     const hasLastPosition = Boolean(progress.lastPositions[domain.id] ?? (progress.lastPosition?.domainId === domain.id ? progress.lastPosition : null));
     return { domain, counts, hasLastPosition, seen: cards.length - counts.unseen, total: cards.length };
-  }), [game, knowledgeNodes, progress.cards, progress.lastPosition, progress.lastPositions]);
+  }), [knowledgeNodes, progress.cards, progress.lastPosition, progress.lastPositions]);
   const focused = domains.find(({ domain }) => domain.id === focusedDomainId) ?? null;
   const compactDomains = focused ? domains.filter(({ domain }) => domain.id !== focused.domain.id) : domains;
 
@@ -852,7 +666,6 @@ export function DomainKnowledgeMap({
   onSaveProgress,
   onAskSecretary,
   onBack,
-  onOpenOverview,
 }: {
   domain: ResearchDomainView;
   activeBranchId: string;
@@ -866,14 +679,9 @@ export function DomainKnowledgeMap({
   onSaveProgress: (update: DomainResearchProgressUpdate) => Promise<void>;
   onAskSecretary: (seedUser: string) => void;
   onBack: () => void;
-  onOpenOverview: () => void;
 }) {
-  const researchLines = domain.researchSummary?.researchLines ?? [];
-  const [selectedLineId, setSelectedLineId] = useState(researchLines[0]?.id ?? "");
   const activeBranch = domain.branches.find((branch) => branch.id === activeBranchId) ?? domain.branches[0];
-  const selectedLine = researchLines.find((line) => line.id === selectedLineId) ?? researchLines[0] ?? null;
   const ActiveIcon = activeBranch.icon;
-  const isCulture = domain.id === "game" && activeBranch.id === "culture";
   const formalNodes = activeBranch.formalNodes ?? [];
   const mappedNodes = activeBranch.mappedNodes ?? formalNodes;
   const activeNodeIndex = formalNodes.findIndex((node, index) => knowledgeNodeId(activeBranch.id, index, node) === activeNodeId);
@@ -937,7 +745,7 @@ export function DomainKnowledgeMap({
 
           <section className="knowledge-understanding">
             <span><Lightbulb size={16} />一句话理解</span>
-            <p>{isCulture ? "从真正重要的作品出发，理解游戏怎样在历史、类型、机制、表达和玩家经验中形成意义。" : activeBranch.summary}</p>
+            <p>{activeBranch.summary}</p>
             <div className="knowledge-guiding-question"><strong>核心问题</strong><p>{activeBranch.guidingQuestion}</p></div>
           </section>
 
@@ -1016,23 +824,6 @@ export function DomainKnowledgeMap({
             </div>
           </section>
 
-          {isCulture ? (
-            <section className="research-line-section">
-              <header><h3>当前研究线</h3><button type="button" onClick={onOpenOverview}>打开研究原件<ChevronRight size={15} /></button></header>
-              {researchLines.length ? (
-                <div className="research-line-list">
-                  {researchLines.map((line) => (
-                    <button className={line.id === selectedLine?.id ? "is-active" : ""} type="button" key={line.id} onClick={() => setSelectedLineId(line.id)}>
-                      <span><Search size={15} /></span>
-                      <span className="research-line-copy"><strong>{line.title}</strong><small>{line.questions[0]}</small></span>
-                      <em>{line.questions.length} 个真实问题</em>
-                      <ChevronRight size={15} />
-                    </button>
-                  ))}
-                </div>
-              ) : <p className="knowledge-map-empty">研究问题原件尚未读取到，知识地图没有生成占位问题。</p>}
-            </section>
-          ) : null}
 
           <ResearchTransformation />
         </section>

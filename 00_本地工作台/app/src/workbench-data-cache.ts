@@ -1,11 +1,10 @@
 import { startTransition, useCallback, useEffect, useState } from "react";
-import type { HealthSectionData, LanguagesSectionData, LibrarySectionData, MarketsSectionData, WorkbenchSectionResponse } from "./types";
+import type { HealthSectionData, LibrarySectionData, MarketsSectionData, WorkbenchSectionResponse } from "./types";
 import { createRequestCache } from "./request-cache-core.mjs";
 
-export type SectionKey = "health" | "languages" | "library" | "markets";
+export type SectionKey = "health" | "library" | "markets";
 export type SectionDataMap = {
   health: HealthSectionData;
-  languages: LanguagesSectionData;
   library: LibrarySectionData;
   markets: MarketsSectionData;
 };
