@@ -1,0 +1,181 @@
+/* 新增模块：价格追踪、Token 统计、设置、宠物、活动采集。只用主题令牌，玄夜与晴岚自动适配。 */
+
+/* —— 后台任务通用 —— */
+.prices-view, .usage-view, .settings-view { width:min(1180px,100%); margin:0 auto; display:grid; gap:14px; }
+.job-hero { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.job-hero h2 { margin:6px 0 8px; font:500 var(--text-title) var(--font-title); }
+.job-hero small { display:block; margin-top:6px; color:var(--quiet); font-size:var(--text-micro); }
+.job-receipt { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; color:var(--muted); font-size:var(--text-meta); line-height:1.5; }
+.job-receipt strong { font-weight:650; }
+.job-receipt.is-ok strong { color:var(--teal); }
+.job-receipt.is-partial strong, .job-receipt.is-skipped strong { color:var(--gold); }
+.job-receipt.is-failed strong { color:var(--red); }
+.job-receipt time { color:var(--quiet); font-size:var(--text-micro); }
+.job-receipt.is-empty { color:var(--quiet); }
+.job-run-button { flex:0 0 auto; }
+.ghost-button.small { min-height:32px; padding:0 11px; font-size:var(--text-meta); }
+.ghost-button:disabled { opacity:.5; cursor:default; }
+.ghost-button:not(:disabled):hover { color:var(--ink); border-color:var(--line-strong); }
+.job-message { margin:0; padding:9px 12px; border:1px solid var(--line-strong); border-radius:9px; display:flex; align-items:center; gap:8px; color:var(--gold); background:var(--gold-soft); font-size:var(--text-meta); }
+.job-message.is-error { color:var(--red); border-color:color-mix(in srgb,var(--red) 40%,var(--line)); background:color-mix(in srgb,var(--red) 8%,transparent); }
+.job-message button { margin-left:auto; border:0; color:inherit; background:transparent; cursor:pointer; display:inline-flex; align-items:center; gap:4px; }
+.job-message .ghost-button { border:1px solid currentColor; }
+
+/* —— 价格追踪 —— */
+.price-section { display:grid; gap:10px; }
+.price-section-head { display:flex; align-items:center; gap:8px; }
+.price-section-head h3 { margin:0 auto 0 2px; font:500 var(--text-title-sm) var(--font-title); }
+.price-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:12px; align-items:start; }
+.price-card { display:grid; gap:12px; padding:18px 20px; }
+.price-card.is-dropped, .price-card.is-bought, .price-card.is-paused { opacity:.72; }
+.price-card header { display:flex; justify-content:space-between; gap:10px; }
+.price-card h3 { margin:5px 0 0; font:500 var(--text-title-sm)/1.35 var(--font-title); }
+.price-spec { display:block; margin-top:4px; color:var(--quiet); font-size:var(--text-micro); }
+.price-status { flex:0 0 auto; align-self:flex-start; padding:3px 9px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:var(--text-micro); }
+.price-numbers { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.price-numbers > div { padding:9px 10px; border:1px solid var(--line); border-radius:9px; display:grid; gap:3px; background:var(--control-bg); }
+.price-numbers small, .price-numbers span { color:var(--quiet); font-size:var(--text-micro); }
+.price-numbers strong { font:500 var(--text-title-sm)/1.2 var(--font-data); color:var(--ink); }
+.price-sparkline { height:58px; }
+.price-advice { margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; color:var(--muted); font-size:var(--text-meta); line-height:1.6; }
+.price-advice svg { color:var(--gold); align-self:center; }
+.price-advice strong { color:var(--ink); }
+.price-advice.is-buy_now strong { color:var(--teal); }
+.price-candidates { display:grid; gap:6px; font-size:var(--text-meta); }
+.price-candidates button { padding:8px 10px; border:1px solid var(--line); border-radius:8px; display:grid; gap:2px; text-align:left; color:var(--ink); background:var(--control-bg); cursor:pointer; }
+.price-candidates button:hover { border-color:var(--gold); }
+.price-candidates small { color:var(--quiet); }
+.price-offers { margin:0; padding:0; list-style:none; display:grid; gap:5px; }
+.price-offers li { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:8px; font-size:var(--text-meta); }
+.price-offers li > span { color:var(--quiet); font-size:var(--text-micro); min-width:3.2em; }
+.price-offers a { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--muted); text-decoration:none; }
+.price-offers a:hover { color:var(--ink); }
+.price-offers a svg { margin-left:4px; vertical-align:-1px; }
+.price-offers strong { font:500 var(--text-body) var(--font-data); }
+.price-offers em { grid-column:2 / -1; justify-self:start; margin-top:-3px; color:var(--teal); font-size:var(--text-micro); font-style:normal; }
+.price-offers li.is-pick a { color:var(--gold); }
+.price-failures, .price-errors { margin:0; color:var(--quiet); font-size:var(--text-micro); line-height:1.5; }
+.price-errors { color:var(--red); display:flex; gap:6px; align-items:center; }
+.price-card footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; padding-top:10px; border-top:1px solid var(--line); }
+.price-card footer small { color:var(--quiet); font-size:var(--text-micro); }
+.price-card footer > div { display:flex; flex-wrap:wrap; gap:6px; }
+.price-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 14px; }
+.price-form label { display:grid; gap:5px; font-size:var(--text-meta); color:var(--muted); }
+.price-form label.is-wide { grid-column:1 / -1; }
+.price-form input, .price-form textarea, .settings-view select, .settings-view textarea, .settings-time input {
+  min-height:36px; padding:7px 10px; border:1px solid var(--control-border); border-radius:8px; color:var(--ink); background:var(--control-bg); font:inherit; font-size:var(--text-body);
+}
+.price-form input:focus, .price-form textarea:focus, .settings-view select:focus, .settings-view textarea:focus, .settings-time input:focus { outline:none; border-color:var(--control-border-focus); box-shadow:0 0 0 3px var(--focus-ring); }
+.price-site-picker { display:flex; flex-wrap:wrap; align-items:end; gap:12px; padding-bottom:8px; font-size:var(--text-meta); color:var(--muted); }
+.price-site-picker label { display:inline-flex; align-items:center; gap:5px; cursor:pointer; }
+.price-form-error { grid-column:1 / -1; margin:0; color:var(--red); display:flex; align-items:center; gap:6px; font-size:var(--text-meta); }
+.price-form-actions { grid-column:1 / -1; display:flex; justify-content:flex-end; }
+
+/* —— Token 统计 —— */
+.usage-tiles { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.usage-tile { display:grid; gap:6px; padding:16px 18px; }
+.usage-tile strong { font:500 var(--text-display)/1 var(--font-data); color:var(--ink); }
+.usage-tile small { color:var(--quiet); font-size:var(--text-micro); }
+.usage-chart-card h3, .usage-table-card h3 { margin:4px 0 10px; font:500 var(--text-title-sm) var(--font-title); }
+.usage-chart { height:220px; }
+.usage-tables { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px; align-items:start; }
+.usage-table { width:100%; border-collapse:collapse; font-size:var(--text-meta); }
+.usage-table th, .usage-table td { padding:7px 6px; border-bottom:1px solid var(--line); text-align:right; font-weight:400; }
+.usage-table thead th { color:var(--quiet); font-size:var(--text-micro); }
+.usage-table th[scope="row"], .usage-table thead th:first-child { position:relative; text-align:left; color:var(--ink); }
+.usage-table td { color:var(--muted); font-family:var(--font-data); }
+.usage-table td strong { color:var(--ink); font-weight:500; }
+.usage-bar { position:absolute; left:0; bottom:2px; height:2px; border-radius:2px; background:var(--teal); opacity:.7; }
+
+/* —— 设置 —— */
+.settings-master { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.settings-master h3, .settings-job h3, .settings-models h3, .settings-events h3 { margin:5px 0 4px; font:500 var(--text-title-sm) var(--font-title); }
+.settings-master small { color:var(--quiet); font-size:var(--text-micro); }
+.settings-switch { flex:0 0 auto; display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:var(--text-meta); cursor:pointer; }
+.settings-switch input { appearance:none; width:42px; height:24px; margin:0; border:1px solid var(--line-strong); border-radius:999px; background:var(--control-bg); position:relative; cursor:pointer; transition:background .16s ease; }
+.settings-switch input::after { content:""; position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:var(--quiet); transition:transform .16s ease, background .16s ease; }
+.settings-switch input:checked { background:var(--teal-soft); border-color:var(--teal); }
+.settings-switch input:checked::after { transform:translateX(18px); background:var(--teal); }
+.settings-switch input:focus-visible { box-shadow:0 0 0 3px var(--focus-ring); outline:none; }
+.settings-jobs { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:12px; }
+.settings-job { display:grid; gap:12px; }
+.settings-job.is-off > :not(header) { opacity:.55; }
+.settings-job header { display:flex; justify-content:space-between; gap:12px; }
+.settings-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.settings-row > button { min-height:34px; padding:0 14px; border:1px solid var(--line); border-radius:999px; color:var(--muted); background:var(--control-bg); font-size:var(--text-meta); cursor:pointer; }
+.settings-row > button.is-active { color:var(--bg); border-color:var(--gold); background:var(--gold); }
+.settings-times { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.settings-time { display:inline-flex; align-items:center; gap:2px; }
+.settings-time button { width:26px; height:26px; border:0; border-radius:50%; color:var(--quiet); background:transparent; cursor:pointer; display:inline-grid; place-items:center; }
+.settings-time button:hover { color:var(--red); }
+.settings-job footer { display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:10px; border-top:1px solid var(--line); }
+.settings-model-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.settings-field { display:grid; gap:5px; font-size:var(--text-meta); color:var(--muted); }
+.settings-field small { color:var(--quiet); font-size:var(--text-micro); }
+.settings-categories { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; margin-top:8px; }
+.settings-category { padding:11px 12px; border:1px solid var(--line); border-radius:10px; display:grid; gap:6px; background:var(--control-bg); }
+.settings-category.is-on { border-color:var(--line-strong); }
+.settings-category label { display:flex; align-items:center; gap:8px; cursor:pointer; font-size:var(--text-body); }
+.settings-category small { color:var(--quiet); font-size:var(--text-micro); line-height:1.5; }
+.settings-category textarea { min-height:52px; resize:vertical; font-size:var(--text-meta); }
+.settings-save { position:sticky; bottom:12px; z-index:3; display:flex; justify-content:flex-end; align-items:center; gap:10px; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:color-mix(in srgb,var(--bg) 82%,transparent); backdrop-filter:blur(14px); }
+.settings-save span { margin-right:auto; color:var(--muted); font-size:var(--text-meta); }
+
+/* —— 活动 —— */
+.japan-collect-now { min-height:30px; padding:0 10px; border:1px solid var(--line); border-radius:999px; display:inline-flex; align-items:center; gap:6px; color:var(--muted); background:var(--control-bg); font-size:var(--text-micro); cursor:pointer; }
+.japan-collect-now:first-of-type { margin-left:auto; }
+.japan-collect-now:hover:not(:disabled) { color:var(--ink); border-color:var(--line-strong); }
+.japan-collect-now:disabled { opacity:.55; cursor:default; }
+.japan-activities-notice { margin:0; padding:8px 12px; border-radius:9px; color:var(--gold); background:var(--gold-soft); font-size:var(--text-meta); }
+.japan-activity-marks { display:flex; gap:6px; }
+.japan-activity-ticket.is-hidden { opacity:.5; }
+.japan-activity-card-actions button:disabled { opacity:.6; cursor:default; }
+
+/* —— 宠物 —— */
+.pets-page { width:min(1180px,100%); margin:0 auto; display:grid; gap:14px; }
+.pets-layout { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
+.pet-profile { grid-column:1 / -1; display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:18px; align-items:start; }
+.pet-avatar { width:64px; height:64px; border:1px solid var(--line-strong); border-radius:50%; display:grid; place-items:center; color:var(--gold); background:var(--gold-soft); }
+.pet-profile h2 { margin:6px 0 8px; font:500 var(--text-title) var(--font-title); }
+.pet-profile p { margin:10px 0 0; color:var(--muted); font-size:var(--text-body); line-height:var(--type-line-body); }
+.pet-facts { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px 16px; color:var(--muted); font-size:var(--text-meta); }
+.pet-due ul { margin:8px 0 0; padding:0; list-style:none; display:grid; gap:8px; }
+.pet-due li { display:flex; align-items:center; gap:8px; font-size:var(--text-body); color:var(--muted); }
+.pet-due li svg { color:var(--gold); }
+.pet-due li strong { color:var(--ink); font-weight:500; }
+.pet-due li span { margin-left:auto; font-family:var(--font-data); }
+.pet-due li.is-overdue, .pet-due li.is-overdue svg { color:var(--red); }
+.pet-weight h3, .pet-care h3, .pet-supplies h3 { margin:5px 0 8px; font:500 var(--text-title-sm) var(--font-title); }
+.pet-weight-chart { height:160px; }
+.pet-care { grid-column:1 / 2; }
+.pet-section-head { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:10px; margin-bottom:6px; }
+.pet-section-head .japan-activity-filters button { min-height:30px; padding:0 10px; }
+.pet-care-list { margin:0; padding:0; list-style:none; display:grid; }
+.pet-care-list li { display:grid; grid-template-columns:5.5em minmax(0,1fr); gap:10px; padding:11px 0; border-bottom:1px solid var(--line); }
+.pet-care-list time { color:var(--quiet); font:var(--text-meta) var(--font-data); padding-top:2px; }
+.pet-care-list strong { font-weight:500; }
+.pet-care-list small { display:block; margin-top:3px; color:var(--quiet); font-size:var(--text-micro); }
+.pet-care-list p, .pet-supplies li p { margin:5px 0 0; color:var(--muted); font-size:var(--text-meta); line-height:1.55; }
+.pet-chip { margin-left:7px; padding:1px 7px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:var(--text-micro); }
+.pet-supply-group h4 { margin:14px 0 6px; color:var(--gold); font-size:var(--text-meta); font-weight:600; }
+.pet-supplies ul { margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+.pet-supplies li { padding:9px 11px; border:1px solid var(--line); border-radius:9px; background:var(--control-bg); }
+.pet-supplies li.is-stopped { opacity:.6; }
+.pet-supplies li > div { display:flex; align-items:center; }
+.pet-rating { display:inline-flex; gap:1px; margin-top:4px; color:var(--gold); }
+.pet-errors { color:var(--red) !important; display:flex; align-items:center; gap:5px; font-size:var(--text-micro) !important; }
+
+@media (max-width:900px) {
+  .usage-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pets-layout { grid-template-columns:minmax(0,1fr); }
+  .pet-care { grid-column:auto; }
+}
+@media (max-width:620px) {
+  .job-hero, .settings-master { flex-direction:column; align-items:stretch; }
+  .price-grid, .settings-jobs { grid-template-columns:minmax(0,1fr); }
+  .price-form, .settings-model-grid { grid-template-columns:minmax(0,1fr); }
+  .usage-tile strong { font-size:var(--text-page); }
+  .pet-profile { grid-template-columns:auto minmax(0,1fr); }
+  .pet-profile > .source-link { grid-column:1 / -1; }
+  .japan-activities-meta { flex-wrap:wrap; }
+}

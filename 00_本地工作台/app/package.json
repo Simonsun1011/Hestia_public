@@ -11,7 +11,8 @@
     "dev:lan": "vite --host 0.0.0.0",
     "build": "vite build",
     "check": "tsc --noEmit",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run"
   },
   "dependencies": {
     "@musclemap/assets": "^1.0.1",
@@ -34,6 +35,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "typescript": "5.9.3",
-    "vite": "8.0.13"
+    "vite": "8.0.13",
+    "vitest": "3.2.4"
   }
 }

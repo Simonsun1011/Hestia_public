@@ -4,7 +4,7 @@ import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import {
   AlertTriangle, BookMarked, BriefcaseBusiness, CalendarDays, CheckCircle2, CloudSun,
   HeartPulse, Home, Languages, LibraryBig, LineChart, LockKeyhole, Moon,
-  MoreHorizontal, RefreshCw, Sun, Wrench, X, type LucideIcon,
+  MoreHorizontal, PawPrint, RefreshCw, Sun, Wrench, X, type LucideIcon,
 } from "lucide-react";
 import type {
   CalendarSnapshot, HealthSectionData, HomePins, LanguagesSectionData,
@@ -18,6 +18,7 @@ import { ProfileSwitcher } from "./shell/ProfileSwitcher";
 import { applyWorkbenchTheme, getPageScene, readInitialTheme, WORKBENCH_THEMES, type WorkbenchTheme, type WorkbenchThemeIcon } from "./studio-theme";
 import "./styles.css";
 import "./theme.css";
+import "./addons.css";
 
 const LazySchedulePage = lazy(() => import("./pages/SchedulePage"));
 const LazyProjectsPage = lazy(() => import("./pages/ProjectsPage"));
@@ -28,6 +29,7 @@ const LazyTopicsPage = lazy(() => import("./pages/TopicsPage"));
 const LazyMarketsPage = lazy(() => import("./pages/MarketsPage"));
 const LazyAssetsPage = lazy(() => import("./pages/AssetsPage"));
 const LazyToolsPage = lazy(() => import("./pages/ToolsPage"));
+const LazyPetsPage = lazy(() => import("./pages/PetsPage"));
 
 const NAV_ITEMS: Array<{ path: string; label: string; icon: LucideIcon; index: string }> = [
   { path: "/", label: "首页", icon: Home, index: "01" },
@@ -39,7 +41,8 @@ const NAV_ITEMS: Array<{ path: string; label: string; icon: LucideIcon; index: s
   { path: "/topics", label: "专题研究", icon: BookMarked, index: "07" },
   { path: "/library", label: "艺术馆藏", icon: LibraryBig, index: "08" },
   { path: "/markets/assets", label: "资产管理", icon: LockKeyhole, index: "09" },
-  { path: "/tools", label: "实用工具", icon: Wrench, index: "10" },
+  { path: "/pets", label: "宠物", icon: PawPrint, index: "10" },
+  { path: "/tools", label: "实用工具", icon: Wrench, index: "11" },
 ];
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
@@ -52,6 +55,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   "/topics": { title: "专题研究", description: "用知识地图看见领域全貌，把真正关心的问题逐渐弄清楚" },
   "/library": { title: "艺术馆藏", description: "书籍、游戏、动漫、影视与非私密学习材料" },
   "/markets/assets": { title: "资产管理", description: "资产、投资、收入与支出的完整功能演示；全部为虚构数据" },
+  "/pets": { title: "宠物", description: "档案、护理与就医、用品" },
   "/tools": { title: "实用工具", description: "围绕项目与 Mac 单机工作流保留的必要工具" },
 };
 
@@ -183,6 +187,7 @@ function App() {
     if (path === "/library") return <LibraryRoute/>;
     if (path === "/markets/assets") return <LazyAssetsPage demoMode/>;
     if (path === "/tools") return <LazyToolsPage/>;
+    if (path === "/pets") return <LazyPetsPage/>;
     return data ? <HomePage data={data} calendar={calendar} secretaryName="Infans Studio" active refreshSummary={load}/> : fallback;
   };
 

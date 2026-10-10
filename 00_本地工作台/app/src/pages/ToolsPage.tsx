@@ -5,12 +5,15 @@ import {
   ChefHat,
   ChevronRight,
   FileText,
+  Gauge,
   Hourglass,
   LoaderCircle,
   MessageCircleHeart,
   Music2,
   Radar,
   RefreshCw,
+  SlidersHorizontal,
+  Tags,
   type LucideIcon,
 } from "lucide-react";
 import type { CronMonitorSnapshot, CronMonitorTask, DevelopmentLogDay, DevelopmentLogSnapshot, RhythmAssetGroup, RhythmCoverageRow, RhythmFreshnessRow } from "../types";
@@ -19,6 +22,9 @@ import KitchenOrdersView from "./tools/KitchenOrdersView";
 import MusicPlayerView from "./tools/MusicPlayerView";
 import RenewalExpiryView from "./tools/RenewalExpiryView";
 const DiaryModeView = lazy(() => import("./tools/DiaryModeView"));
+const PricesView = lazy(() => import("./tools/PricesView"));
+const UsageView = lazy(() => import("./tools/UsageView"));
+const SettingsView = lazy(() => import("./tools/SettingsView"));
 
 type DevelopmentLogDayViewComponent = ComponentType<{ day: DevelopmentLogDay; onBack: () => void }>;
 let developmentLogDayViewPromise: Promise<{ default: DevelopmentLogDayViewComponent }> | null = null;
@@ -28,7 +34,7 @@ function preloadDevelopmentLogDayView() {
   return developmentLogDayViewPromise;
 }
 
-type ToolId = "development-log" | "diary-mode" | "renewals" | "kitchen-orders" | "cron" | "music";
+type ToolId = "development-log" | "diary-mode" | "renewals" | "kitchen-orders" | "cron" | "music" | "prices" | "usage" | "settings";
 
 type ToolDefinition = {
   id: ToolId;
@@ -79,6 +85,27 @@ const TOOLS: ToolDefinition[] = [
     name: "私房菜单",
     kicker: "11",
     icon: ChefHat,
+    tone: "gold",
+  },
+  {
+    id: "prices",
+    name: "价格追踪",
+    kicker: "13",
+    icon: Tags,
+    tone: "teal",
+  },
+  {
+    id: "usage",
+    name: "Token 统计",
+    kicker: "14",
+    icon: Gauge,
+    tone: "mist",
+  },
+  {
+    id: "settings",
+    name: "设置",
+    kicker: "15",
+    icon: SlidersHorizontal,
     tone: "gold",
   },
 ];
@@ -786,6 +813,9 @@ function CronMonitorView({ active }: { active: boolean }) {
 
 const TOOL_VIEWS: Record<Exclude<ToolId, "cron" | "diary-mode">, ComponentType<{ active: boolean }>> = {
   "development-log": DevelopmentLogView,
+  prices: PricesView,
+  usage: UsageView,
+  settings: SettingsView,
   renewals: RenewalExpiryView,
   "kitchen-orders": KitchenOrdersView,
   music: MusicPlayerView,
@@ -847,7 +877,7 @@ export default function ToolsPage({ active = true }: { active?: boolean }) {
       ) : (
         (() => {
           const View = TOOL_VIEWS[toolId];
-          return <View active={active} />;
+          return <Suspense fallback={<Empty>正在打开。</Empty>}><View active={active} /></Suspense>;
         })()
       )}
     </div>

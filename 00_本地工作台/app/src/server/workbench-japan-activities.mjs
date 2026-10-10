@@ -2,6 +2,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 import { JAPAN_ACTIVITIES_SOURCE } from "./vault-paths.mjs";
+import { readEventsDerived, readSources } from "./workbench-events-collect.mjs";
+import { guideKey, readAiGuides } from "./workbench-events-guide.mjs";
+import { runState } from "./job-runtime.mjs";
 
 const START = "<!-- INFANS_JAPAN_ACTIVITIES_JSON_START -->";
 const END = "<!-- INFANS_JAPAN_ACTIVITIES_JSON_END -->";
@@ -100,6 +103,63 @@ function normalizeActivity(raw) {
   };
 }
 
+function dateLabelOf(start, end) {
+  const short = (ymd) => `${Number(ymd.slice(5, 7))}月${Number(ymd.slice(8, 10))}日`;
+  return start === end ? short(start) : `${short(start)} – ${short(end)}`;
+}
+
+/** 自动采集到的活动 → 活动卡。采集只摘了页面上写着的信息，语言等没核验的项如实标出。 */
+function collectedActivity(event, labels, generatedAt) {
+  const officialUrl = safeUrl(event.url);
+  if (!officialUrl || !event.id || !event.title || !event.start_date || !event.end_date) return null;
+  const label = labels.get(event.category) || event.category || "其他";
+  const why = [event.summary_zh, event.reasons?.length ? `入选理由：${event.reasons.join("、")}` : ""].filter(Boolean).join(" ");
+  return {
+    id: String(event.id),
+    name: String(event.title),
+    filterTag: label,
+    category: label,
+    startDate: event.start_date,
+    endDate: event.end_date,
+    dateLabel: dateLabelOf(event.start_date, event.end_date),
+    place: event.venue || "地点见官方页面",
+    region: "东京",
+    cost: event.price_text || "价格见官方页面",
+    registration: event.time_text ? `时间：${event.time_text}` : "时间见官方页面",
+    language: "未核验",
+    languagePressure: "待核验",
+    chineseFriendly: "未核验",
+    why: why || "自动采集，详情见官方页面",
+    officialUrl,
+    sourceLabel: event.source || "官方来源",
+    verifiedAt: generatedAt || "",
+    origin: "collected",
+    imageUrl: safeUrl(event.image_url),
+  };
+}
+
+/** AI 攻略的条目（带上采集到的官方图）。 */
+async function aiGuideEntries(vaultRoot, existingIds) {
+  const derived = await readEventsDerived(vaultRoot);
+  const images = new Map((derived?.events ?? []).map((event) => [String(event.id), safeUrl(event.image_url)]));
+  const out = [];
+  for (const guide of (await readAiGuides(vaultRoot)).values()) {
+    if (existingIds.has(guide.id)) continue;
+    const imageUrl = images.get(guide.id) || "";
+    out.push({
+      id: guide.id, name: guide.name, dateLabel: guide.dateLabel, status: "AI 攻略", updatedAt: guide.updatedAt, sourcePath: guide.sourcePath,
+      ...(imageUrl ? { imageUrl, imageAlt: `${guide.name} 官方图`, imageSourceLabel: "官方页面", imageSourceUrl: guide.sourceUrl } : {}),
+    });
+  }
+  return out;
+}
+
+/** 手写的攻略、参加记录与 AI 生成的攻略，合在一起供攻略页与图片读取。 */
+async function guideEntries(vaultRoot, parsed) {
+  const handwritten = [...(Array.isArray(parsed.playbooks) ? parsed.playbooks : []), ...(Array.isArray(parsed.guides) ? parsed.guides : [])];
+  return [...handwritten, ...(await aiGuideEntries(vaultRoot, new Set(handwritten.map((entry) => String(entry?.id || "")))))];
+}
+
 function playbookSource(vaultRoot, sourcePath) {
   const relative = String(sourcePath || "").replaceAll("\\", "/");
   if (!relative.startsWith("80_生活事务/日本游玩攻略/") || !relative.endsWith(".md") || relative.split("/").includes("..")) {
@@ -132,7 +192,12 @@ export async function readJapanActivities(vaultRoot, options = {}) {
   const markdown = await fs.readFile(path.join(vaultRoot, JAPAN_ACTIVITIES_SOURCE), "utf8");
   const parsed = parseEmbeddedJson(markdown);
   const interests = parseInterests(markdown);
-  const playbooks = (Array.isArray(parsed.playbooks) ? parsed.playbooks : []).flatMap((playbook) => {
+  const derived = await readEventsDerived(vaultRoot);
+  const { categories } = await readSources(vaultRoot);
+  const labels = new Map(categories.map((category) => [category.key, category.label]));
+  const handwrittenPlaybooks = Array.isArray(parsed.playbooks) ? parsed.playbooks : [];
+  const playbookSources = [...handwrittenPlaybooks, ...(await aiGuideEntries(vaultRoot, new Set(handwrittenPlaybooks.map((item) => String(item?.id || "")))))];
+  const playbooks = playbookSources.flatMap((playbook) => {
     if (!playbook?.id || !playbook?.name || !playbook?.sourcePath) return [];
     const updatedAt = /^\d{4}-\d{2}-\d{2}$/.test(String(playbook.updatedAt || "")) ? String(playbook.updatedAt) : "";
     return [{
@@ -146,15 +211,21 @@ export async function readJapanActivities(vaultRoot, options = {}) {
     }];
   }).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const playbookRank = new Map(playbooks.map((playbook, index) => [playbook.id, index]));
-  const activities = (Array.isArray(parsed.activities) ? parsed.activities : [])
-    .map(normalizeActivity)
-    .filter(Boolean)
-    .filter((activity) => activity.endDate >= today)
-    .map((activity) => ({
+  const curated = (Array.isArray(parsed.activities) ? parsed.activities : []).map(normalizeActivity).filter(Boolean).map((activity) => ({ ...activity, origin: "curated" }));
+  const curatedIds = new Set(curated.map((activity) => activity.id));
+  const collected = (derived?.events ?? []).map((event) => collectedActivity(event, labels, derived.generated_at)).filter((activity) => activity && !curatedIds.has(activity.id));
+  const merged = [];
+  for (const activity of [...curated, ...collected]) {
+    if (activity.endDate < today) continue;
+    merged.push({
       ...activity,
       interested: Boolean(interests[activity.id]?.interested),
+      hidden: Boolean(interests[activity.id]?.hidden),
       hasPlaybook: playbookRank.has(activity.id),
-    }))
+      guideRunning: (await runState(vaultRoot, guideKey(activity.id))).running,
+    });
+  }
+  const activities = merged
     .sort((a, b) => Number(b.hasPlaybook) - Number(a.hasPlaybook)
       || (a.hasPlaybook ? (playbookRank.get(a.id) ?? 0) - (playbookRank.get(b.id) ?? 0) : 0)
       || a.startDate.localeCompare(b.startDate)
@@ -178,6 +249,8 @@ export async function readJapanActivities(vaultRoot, options = {}) {
     activities,
     playbooks,
     attended,
+    filters: ["全部", ...new Set(activities.map((activity) => activity.filterTag))],
+    collectedAt: derived?.generated_at || "",
     sourcePath: JAPAN_ACTIVITIES_SOURCE,
   };
 }
@@ -187,10 +260,7 @@ export async function readJapanActivityPlaybook(vaultRoot, playbookId) {
   if (!id) throw new Error("没有指定要看的攻略");
   const catalogMarkdown = await fs.readFile(path.join(vaultRoot, JAPAN_ACTIVITIES_SOURCE), "utf8");
   const parsed = parseEmbeddedJson(catalogMarkdown);
-  const entries = [
-    ...(Array.isArray(parsed.playbooks) ? parsed.playbooks : []),
-    ...(Array.isArray(parsed.guides) ? parsed.guides : []),
-  ];
+  const entries = await guideEntries(vaultRoot, parsed);
   const playbook = entries.find((item) => String(item?.id || "") === id);
   if (!playbook?.name || !playbook?.sourcePath) throw new Error("日本活动里没有这一份攻略");
   const source = playbookSource(vaultRoot, playbook.sourcePath);
@@ -213,10 +283,7 @@ export async function readJapanActivityGuideImage(vaultRoot, guideId, options = 
   if (!id) throw new Error("没有指定攻略图片");
   const catalogMarkdown = await fs.readFile(path.join(vaultRoot, JAPAN_ACTIVITIES_SOURCE), "utf8");
   const parsed = parseEmbeddedJson(catalogMarkdown);
-  const entries = [
-    ...(Array.isArray(parsed.playbooks) ? parsed.playbooks : []),
-    ...(Array.isArray(parsed.guides) ? parsed.guides : []),
-  ];
+  const entries = await guideEntries(vaultRoot, parsed);
   const entry = entries.find((item) => String(item?.id || "") === id);
   const image = normalizeGuideImage(entry);
   if (!image.imageUrl) throw new Error("这份攻略还没有可用的官方内容图");
@@ -243,18 +310,21 @@ export async function readJapanActivityGuideImage(vaultRoot, guideId, options = 
 
 export async function writeJapanActivityInterest(vaultRoot, payload, options = {}) {
   const activityId = String(payload?.activityId || "").trim();
-  if (!activityId || typeof payload?.interested !== "boolean") throw new Error("感兴趣状态不完整");
+  const field = typeof payload?.interested === "boolean" ? "interested" : typeof payload?.hidden === "boolean" ? "hidden" : null;
+  if (!activityId || !field) throw new Error("标记不完整");
   const target = path.join(vaultRoot, JAPAN_ACTIVITIES_SOURCE);
   const markdown = await fs.readFile(target, "utf8");
   const parsed = parseEmbeddedJson(markdown);
-  const known = (Array.isArray(parsed.activities) ? parsed.activities : []).some((activity) => String(activity?.id || "") === activityId);
+  const derived = await readEventsDerived(vaultRoot);
+  const known = (Array.isArray(parsed.activities) ? parsed.activities : []).some((activity) => String(activity?.id || "") === activityId)
+    || (derived?.events ?? []).some((event) => String(event.id) === activityId);
   if (!known) throw new Error("找不到这张活动卡");
   const items = parseInterests(markdown);
-  if (payload.interested) {
-    items[activityId] = { interested: true, updatedAt: options.now || new Date().toISOString() };
-  } else {
-    delete items[activityId];
-  }
+  const mark = { ...(items[activityId] || {}) };
+  if (payload[field]) mark[field] = true; else delete mark[field];
+  delete mark.updatedAt;
+  if (mark.interested || mark.hidden) items[activityId] = { ...mark, updatedAt: options.now || new Date().toISOString() };
+  else delete items[activityId];
   const block = renderInterests(items);
   const start = markdown.indexOf(INTEREST_START);
   const end = markdown.indexOf(INTEREST_END);

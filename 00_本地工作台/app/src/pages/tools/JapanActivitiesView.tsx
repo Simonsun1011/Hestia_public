@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState, type ComponentType, type RefObject } from "react";
-import { ArrowLeft, BookMarked, CalendarDays, ChevronRight, ExternalLink, Heart, Languages, MapPin, RefreshCw, Ticket } from "lucide-react";
+import { ArrowLeft, BookMarked, CalendarDays, ChevronRight, ExternalLink, EyeOff, Heart, Languages, LoaderCircle, MapPin, RefreshCw, Sparkles, Ticket } from "lucide-react";
 
 import { Card, Empty, Kicker, fmtDateTime, jsonFetch } from "../../page-shared";
 import type { JapanActivitiesSnapshot } from "../../types";
 import GuideOfficialImage from "./GuideOfficialImage";
 
-const FILTER_TAGS = ["全部", "ACG", "历史人文", "AI 新知"] as const;
-type FilterTag = (typeof FILTER_TAGS)[number];
+type FilterTag = string;
+/** 有攻略在生成时，每隔这么久刷新一次看是否完成。 */
+const GUIDE_POLL_MS = 8000;
 
 type ActivityGuideComponent = ComponentType<{ id: string; onBack: () => void; backLabel: string }>;
 let activityGuidePromise: Promise<{ default: ActivityGuideComponent }> | null = null;
@@ -84,6 +85,11 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
   const [showPlaybooks, setShowPlaybooks] = useState(false);
   const [savingInterestId, setSavingInterestId] = useState<string | null>(null);
   const [filterTag, setFilterTag] = useState<FilterTag>("全部");
+  const [showHidden, setShowHidden] = useState(false);
+  const [requestedGuides, setRequestedGuides] = useState<Set<string>>(new Set());
+  const [notice, setNotice] = useState("");
+  const [collecting, setCollecting] = useState(false);
+  const guideInFlight = useRef(new Set<string>());
   const playbookCarouselRef = useRef<HTMLOListElement>(null);
   const playbookScrollLeftRef = useRef(0);
   const pageScrollYRef = useRef(0);
@@ -100,14 +106,14 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
     }
   };
 
-  const setInterested = async (activityId: string, interested: boolean) => {
+  const setMark = async (activityId: string, mark: { interested: boolean } | { hidden: boolean }) => {
     setSavingInterestId(activityId);
     setError("");
     try {
       setData(await jsonFetch<JapanActivitiesSnapshot>("/api/tools/japan-activities", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ activityId, interested }),
+        body: JSON.stringify({ activityId, ...mark }),
       }));
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "没能保存感兴趣状态");
@@ -120,6 +126,57 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
     if (!active) return;
     void load();
   }, [active]);
+
+  const generateGuide = async (activityId: string) => {
+    // 连点只发一次；跨设备的重复由服务端拒绝
+    if (guideInFlight.current.has(activityId)) return;
+    guideInFlight.current.add(activityId);
+    setNotice("");
+    setRequestedGuides((prev) => new Set(prev).add(activityId));
+    try {
+      await jsonFetch("/api/tools/japan-activities/guide", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ activityId }) });
+      setNotice("攻略生成中，一两分钟后出现在卡片上");
+    } catch (reason) {
+      setRequestedGuides((prev) => { const next = new Set(prev); next.delete(activityId); return next; });
+      setNotice(reason instanceof Error ? reason.message : "没能开始生成");
+      // 以服务端为准：别处已在生成时，卡片显示「生成中」
+      void load();
+    } finally {
+      guideInFlight.current.delete(activityId);
+    }
+  };
+
+  const collectNow = async () => {
+    setCollecting(true);
+    setNotice("");
+    try {
+      const result = await jsonFetch<{ message: string }>("/api/tools/jobs/run", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ job: "events" }) });
+      setNotice(`活动采集${result.message}，完成后点「刷新卡片」`);
+    } catch (reason) {
+      setNotice(reason instanceof Error ? reason.message : "没能开始采集");
+    } finally {
+      setCollecting(false);
+    }
+  };
+
+  // 有攻略在生成：定时刷新，生成完（hasPlaybook）或失败（不再 running）后停止
+  const pendingGuide = Boolean(data?.activities.some((activity) => activity.guideRunning || (requestedGuides.has(activity.id) && !activity.hasPlaybook)));
+  useEffect(() => {
+    if (!active || !pendingGuide) return;
+    const timer = window.setInterval(async () => {
+      try {
+        const next = await jsonFetch<JapanActivitiesSnapshot>("/api/tools/japan-activities");
+        setData(next);
+        setRequestedGuides((prev) => {
+          const kept = new Set([...prev].filter((id) => { const item = next.activities.find((activity) => activity.id === id); return item && !item.hasPlaybook && item.guideRunning; }));
+          return kept.size === prev.size ? prev : kept;
+        });
+      } catch {
+        /* 下一轮再试 */
+      }
+    }, GUIDE_POLL_MS);
+    return () => window.clearInterval(timer);
+  }, [active, pendingGuide]);
 
   useEffect(() => {
     if (guideId || !showPlaybooks) return;
@@ -168,22 +225,24 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
       : <div className="activity-guide-detail"><button type="button" className="activity-guide-back" onClick={closeGuide}><ArrowLeft size={16} />{backLabel}</button><Empty>正在小秘书里打开完整攻略。</Empty></div>;
   }
 
-  const visibleActivities = data?.activities.filter((activity) => filterTag === "全部" || activity.filterTag === filterTag) ?? [];
-  const filterCount = (tag: FilterTag) => tag === "全部"
-    ? (data?.activities.length ?? 0)
-    : (data?.activities.filter((activity) => activity.filterTag === tag).length ?? 0);
+  const filters = data?.filters?.length ? data.filters : ["全部"];
+  const activeFilter = filters.includes(filterTag) ? filterTag : "全部";
+  const shown = data?.activities.filter((activity) => showHidden || !activity.hidden) ?? [];
+  const hiddenCount = data?.activities.filter((activity) => activity.hidden).length ?? 0;
+  const visibleActivities = shown.filter((activity) => activeFilter === "全部" || activity.filterTag === activeFilter);
+  const filterCount = (tag: FilterTag) => tag === "全部" ? shown.length : shown.filter((activity) => activity.filterTag === tag).length;
 
   return (
     <section className="japan-activities" aria-labelledby="japan-activities-title">
       <Card className="japan-activities-hero">
         <div>
-          <Kicker>隔周导览·官方来源</Kicker>
+          <Kicker>每周导览·官方来源</Kicker>
           <h2 id="japan-activities-title">日本活动</h2>
-          <p>ACG、历史人文和 AI 新知。先翻介绍卡；真想去时，直接告诉 AI 把这张卡补成你的出门攻略。</p>
+          <p>每周从官方来源自动采集。先翻介绍卡；真想去时点「生成攻略」。</p>
         </div>
         <div className="japan-activities-stamps">
           <div className="japan-activities-stamp">
-            <span>{data?.activities.length ?? "—"}</span>
+            <span>{data ? shown.length : "—"}</span>
             <small>未过期的</small>
             <button type="button" onClick={() => void load()} disabled={loading}>
               <RefreshCw className={loading ? "spin" : ""} size={13} />
@@ -238,15 +297,24 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
         <>
           <div className="japan-activities-meta">
             <span>{data.scope}</span>
-            <small>原件更新 {fmtDateTime(data.updatedAt)}</small>
+            <small>原件更新 {fmtDateTime(data.updatedAt)}{data.collectedAt ? ` · 自动采集 ${fmtDateTime(data.collectedAt)}` : ""}</small>
+            <button type="button" className="japan-collect-now" onClick={() => void collectNow()} disabled={collecting}>
+              <RefreshCw className={collecting ? "spin" : ""} size={13} />立即采集
+            </button>
+            {hiddenCount ? (
+              <button type="button" className="japan-collect-now" aria-pressed={showHidden} onClick={() => setShowHidden((value) => !value)}>
+                <EyeOff size={13} />{showHidden ? "收起已隐藏" : `已隐藏 ${hiddenCount}`}
+              </button>
+            ) : null}
           </div>
+          {notice ? <p className="japan-activities-notice" role="status">{notice}</p> : null}
           <div className="japan-activity-filters" role="group" aria-label="按活动类别筛选">
-            {FILTER_TAGS.map((tag) => (
+            {filters.map((tag) => (
               <button
                 type="button"
                 key={tag}
-                aria-pressed={filterTag === tag}
-                className={filterTag === tag ? "is-active" : ""}
+                aria-pressed={activeFilter === tag}
+                className={activeFilter === tag ? "is-active" : ""}
                 onClick={() => setFilterTag(tag)}
               >
                 <span>{tag}</span>
@@ -256,7 +324,7 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
           </div>
           <div className="japan-activity-grid">
             {visibleActivities.map((activity) => (
-              <article className="japan-activity-ticket" key={activity.id}>
+              <article className={`japan-activity-ticket${activity.hidden ? " is-hidden" : ""}`} key={activity.id}>
                 <div className="japan-activity-date">
                   <CalendarDays size={17} aria-hidden="true" />
                   <span>{activity.dateLabel}</span>
@@ -269,32 +337,60 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
                       <span className={`pressure-${activity.languagePressure}`}><Languages size={12} />语言压力 {activity.languagePressure}</span>
                       {activity.hasPlaybook ? <span className="is-guide-ready"><BookMarked size={12} />攻略已做</span> : null}
                     </div>
-                    <button
-                      type="button"
-                      className={`japan-activity-interest${activity.interested ? " is-interested" : ""}`}
-                      aria-label={activity.interested ? "取消感兴趣" : "标记感兴趣"}
-                      title={activity.interested ? "取消感兴趣" : "标记感兴趣"}
-                      aria-pressed={activity.interested}
-                      disabled={savingInterestId === activity.id}
-                      onClick={() => void setInterested(activity.id, !activity.interested)}
-                    >
-                      <Heart size={activity.interested ? 17 : 15} fill={activity.interested ? "currentColor" : "none"} />
-                    </button>
+                    <div className="japan-activity-marks">
+                      <button
+                        type="button"
+                        className="japan-activity-interest"
+                        aria-label={activity.hidden ? "取消隐藏" : "不感兴趣，隐藏"}
+                        title={activity.hidden ? "取消隐藏" : "不感兴趣，隐藏"}
+                        aria-pressed={activity.hidden}
+                        disabled={savingInterestId === activity.id}
+                        onClick={() => void setMark(activity.id, { hidden: !activity.hidden })}
+                      >
+                        <EyeOff size={15} />
+                      </button>
+                      <button
+                        type="button"
+                        className={`japan-activity-interest${activity.interested ? " is-interested" : ""}`}
+                        aria-label={activity.interested ? "取消感兴趣" : "标记感兴趣"}
+                        title={activity.interested ? "取消感兴趣" : "标记感兴趣"}
+                        aria-pressed={activity.interested}
+                        disabled={savingInterestId === activity.id}
+                        onClick={() => void setMark(activity.id, { interested: !activity.interested })}
+                      >
+                        <Heart size={activity.interested ? 17 : 15} fill={activity.interested ? "currentColor" : "none"} />
+                      </button>
+                    </div>
                   </header>
                   <h3>{activity.name}</h3>
                   <p className="japan-activity-place"><MapPin size={14} />{activity.place}</p>
-                  <dl>
-                    <div><dt>费用／报名</dt><dd>{activity.cost}<br />{activity.registration}</dd></div>
-                    <div><dt>语言／中文友好</dt><dd>{activity.language}<br />{activity.chineseFriendly}</dd></div>
-                    <div><dt>为什么可能适合你</dt><dd>{activity.why}</dd></div>
-                  </dl>
+                  {activity.origin === "collected" ? (
+                    <dl>
+                      <div><dt>费用／时间</dt><dd>{activity.cost}<br />{activity.registration}</dd></div>
+                      <div><dt>简介</dt><dd>{activity.why}</dd></div>
+                    </dl>
+                  ) : (
+                    <dl>
+                      <div><dt>费用／报名</dt><dd>{activity.cost}<br />{activity.registration}</dd></div>
+                      <div><dt>语言／中文友好</dt><dd>{activity.language}<br />{activity.chineseFriendly}</dd></div>
+                      <div><dt>为什么可能适合你</dt><dd>{activity.why}</dd></div>
+                    </dl>
+                  )}
                   <footer>
                     <div className="japan-activity-card-actions">
                       {activity.hasPlaybook ? (
                         <button type="button" onClick={() => openPlaybook(activity.id, "activities")}>
                           <BookMarked size={13} />打开攻略
                         </button>
-                      ) : null}
+                      ) : activity.guideRunning || requestedGuides.has(activity.id) ? (
+                        <button type="button" disabled>
+                          <LoaderCircle className="spin" size={13} />攻略生成中
+                        </button>
+                      ) : (
+                        <button type="button" onClick={() => void generateGuide(activity.id)}>
+                          <Sparkles size={13} />生成攻略
+                        </button>
+                      )}
                       <a href={activity.officialUrl} target="_blank" rel="noreferrer">
                         {activity.sourceLabel}<ExternalLink size={13} />
                       </a>
@@ -305,7 +401,7 @@ export default function JapanActivitiesView({ active, homeRequest = 0 }: { activ
               </article>
             ))}
           </div>
-          {!visibleActivities.length ? <Empty>{filterTag === "全部" ? "目前没有通过官方来源核验且尚未过期的活动。" : `这一轮还没有找到适合你的${filterTag}活动。`}</Empty> : null}
+          {!visibleActivities.length ? <Empty>{activeFilter === "全部" ? "目前没有尚未过期的活动。" : `这一轮还没有找到${activeFilter}活动。`}</Empty> : null}
         </>
       ) : null}
     </section>

@@ -1746,7 +1746,8 @@ export type CronMonitorSnapshot = {
 export type JapanActivity = {
   id: string;
   name: string;
-  filterTag: "ACG" | "历史人文" | "AI 新知";
+  /** 手写卡为 ACG / 历史人文 / AI 新知；自动采集的卡为活动来源.md 里的类别名。 */
+  filterTag: string;
   category: string;
   startDate: string;
   endDate: string;
@@ -1763,7 +1764,11 @@ export type JapanActivity = {
   sourceLabel: string;
   verifiedAt: string;
   interested: boolean;
+  hidden: boolean;
   hasPlaybook: boolean;
+  guideRunning: boolean;
+  origin: "curated" | "collected";
+  imageUrl?: string;
 };
 
 export type JapanActivitiesSnapshot = {
@@ -1774,6 +1779,8 @@ export type JapanActivitiesSnapshot = {
   activities: JapanActivity[];
   playbooks: Array<JapanActivityGuideSummary & { updatedAt: string; sourcePath: string }>;
   attended: Array<JapanActivityGuideSummary & { sourcePath: string }>;
+  filters: string[];
+  collectedAt: string;
   sourcePath: string;
 };
 

@@ -11,6 +11,7 @@ import { readRenewalExpiry } from "./workbench-renewals.mjs";
 import { streamAnimeCover } from "./workbench-anime-covers.mjs";
 import { readProjectManagement } from "./workbench-project-management.mjs";
 import { animeCoversSupportDir } from "./vault-paths.mjs";
+import { handleJobsApi, startScheduler } from "./workbench-jobs-api.mjs";
 
 function studioRoot(baseDir = process.cwd()) { return path.resolve(process.env.INFANS_STUDIO_ROOT || path.join(baseDir, "../..")); }
 function supportRoot(root) { return path.resolve(process.env.INFANS_SUPPORT_ROOT || path.join(root, "../Infans_Support")); }
@@ -133,11 +134,13 @@ export function studioDataPlugin() {
   return {
     name: "infans-studio-demo-data-v2", apply: "serve",
     configureServer(server) {
+      if (process.env.INFANS_SCHEDULER !== "off") startScheduler(studioRoot());
       server.middlewares.use(async (request, response, next) => {
         const url = new URL(request.url || "/", "http://127.0.0.1");
         if (!url.pathname.startsWith("/api/")) return next();
         const root = studioRoot();
         try {
+          if (await handleJobsApi({ url, request, root, json: (body, status) => json(response, body, status) })) return;
           if (url.pathname === "/api/summary") return json(response, await scanWorkbenchSummary(root));
           if (url.pathname === "/api/project-management") return json(response, await readProjectManagement(root));
           if (url.pathname.startsWith("/api/sections/")) return json(response, await scanWorkbenchSection(root, decodeURIComponent(url.pathname.slice("/api/sections/".length))));
