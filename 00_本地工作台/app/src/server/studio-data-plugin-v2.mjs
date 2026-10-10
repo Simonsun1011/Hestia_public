@@ -188,7 +188,6 @@ export function studioDataPlugin() {
           if (url.pathname === "/api/home-pins") return json(response, homePins);
           if (url.pathname === "/api/domain-research-progress") return json(response, domainProgress);
           if (url.pathname === "/api/course-shelf") return json(response, { available: true, courses: [], warnings: [] });
-          if (url.pathname === "/api/anki") return json(response, { available: false, due: 18, reviewCount: 0, durationMinutes: 0, message: "演示环境未连接 Anki" });
           return json(response, { error: "演示版未启用此本机接口" }, 404);
         } catch (error) {
           return json(response, { error: error instanceof Error ? error.message : "演示数据读取失败" }, Number(error?.statusCode) || 500);

@@ -1819,7 +1819,6 @@ function lineMatchAliases(item) {
   if (stripped && stripped !== name) aliases.push(stripped);
   // 仅加不易误伤的简称；过宽词（如单独「公众号」）不加
   if (/修仙/.test(name)) aliases.push("修仙传", "裸辞修仙", "辞职修仙");
-  if (/日语/.test(name)) aliases.push("JLPT", "N2");
   if (/设计手记/.test(name)) aliases.push("设计手记");
   if (/抖音/.test(name)) aliases.push("抖音");
   if (/小红书/.test(name)) aliases.push("小红书");

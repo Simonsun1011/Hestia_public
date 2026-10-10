@@ -118,7 +118,6 @@ function createDemoCalendar(): CalendarSnapshot {
     message: "演示日程，不读取本机日历",
     events: [
       { id: "sample", calendar: "Infans Studio 演示", title: "秋季样衣评审", start: at(9, 30), end: at(10, 30), allDay: false, recurring: false, editable: false },
-      { id: "japanese", calendar: "Infans Studio 演示", title: "日语接待口语练习", start: at(14, 0), end: at(14, 45), allDay: false, recurring: false, editable: false },
       { id: "stream", calendar: "Infans Studio 演示", title: "守望先锋专题直播", start: at(20, 0), end: at(22, 0), allDay: false, recurring: false, editable: false },
     ],
   };
