@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "moon-rose-shop",
+    "name": "月蔷薇商店",
+    "status": "active",
+    "summary": "服装上新、库存与订单工具。",
+    "defaultView": "home"
+  },
+  "worklines": [
+    {
+      "id": "shop-delivery",
+      "name": "商店交付",
+      "status": "active",
+      "summary": "从商品资料到上架验收。",
+      "source": { "path": "项目进度与待办.md", "label": "项目进度" },
+      "view": { "kind": "featureTree", "treeId": "shop-features" }
+    }
+  ],
+  "featureTrees": [
+    {
+      "id": "shop-features",
+      "worklineId": "shop-delivery",
+      "name": "商店功能",
+      "summary": "只暴露工作台需要的项目结构。",
+      "source": { "path": "项目进度与待办.md", "label": "项目进度" },
+      "modules": [
+        {
+          "id": "catalog",
+          "name": "商品资料",
+          "status": "active",
+          "summary": "款式、尺码、面料与图片。",
+          "features": [
+            { "id": "product-card", "name": "商品卡", "status": "active", "summary": "维护上架需要的完整资料。" }
+          ]
+        }
+      ]
+    }
+  ],
+  "taskLinks": [],
+  "recentLinks": []
+}

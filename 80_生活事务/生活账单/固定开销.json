@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    { "id": "studio-cloud", "name": "工作室云存储", "kind": "monthly", "subgroup": "subscription", "dueDay": 8, "note": "演示：从虚构公司卡自动扣款" },
+    { "id": "shop-rent", "name": "工作室房租", "kind": "monthly", "subgroup": "deduction", "dueDay": 25, "note": "演示：每月手动确认" }
+  ]
+}

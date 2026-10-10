@@ -1,0 +1,977 @@
+{
+  "platform": "Apple Games",
+  "game_count": 110,
+  "data_mode": "sanitized-library-sample",
+  "privacy": {
+    "personalHistory": "redacted",
+    "accountIdentity": "removed",
+    "activityEvidence": "removed"
+  },
+  "note": "保留作品名称、平台、公开发售信息和封面来源；原拥有者的账号证据、口述回忆、成就、游玩时间与购买经历已移除。",
+  "games": [
+    {
+      "id": "apple-6741038133",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "卡包修仙 - 抽卡模拟器，仙道卡牌对战",
+      "app_store_id": "6741038133",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d0/8e/d2/d08ed2ae-e63f-3850-85e1-ca78e638058d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%8D%A1%E5%8C%85%E4%BF%AE%E4%BB%99-%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8-%E4%BB%99%E9%81%93%E5%8D%A1%E7%89%8C%E5%AF%B9%E6%88%98/id6741038133?uo=4"
+    },
+    {
+      "id": "apple-6450693428",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "鸣潮",
+      "app_store_id": "6450693428",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5a/c3/10/5ac31046-6f04-c077-1193-ff4fca1c1e56/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E9%B8%A3%E6%BD%AE/id6450693428?uo=4"
+    },
+    {
+      "id": "apple-1669808831",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "传奇商店：经营与打造",
+      "app_store_id": "1669808831",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/46/28/83462843-776d-6fa4-d60e-75f2f960ced4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E4%BC%A0%E5%A5%87%E5%95%86%E5%BA%97-%E7%BB%8F%E8%90%A5%E4%B8%8E%E6%89%93%E9%80%A0/id1669808831?uo=4"
+    },
+    {
+      "id": "apple-1661087323",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "飞机大厨：全球烹饪",
+      "app_store_id": "1661087323",
+      "external_url": "https://apps.apple.com/app/id1661087323"
+    },
+    {
+      "id": "apple-1569751630",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "小镇消除故事",
+      "app_store_id": "1569751630",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/d7/46/45d74691-2f5a-e275-97f0-d4176130bd37/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%B0%8F%E9%95%87%E6%B6%88%E9%99%A4%E6%95%85%E4%BA%8B/id1569751630?uo=4"
+    },
+    {
+      "id": "apple-1544488000",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "王国保卫战：起源 (KR Origins) - 塔防史诗冒险",
+      "app_store_id": "1544488000",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/73/43/6e/73436e28-a6df-0c29-d9de-658ce860a59e/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E7%8E%8B%E5%9B%BD%E4%BF%9D%E5%8D%AB%E6%88%98-%E8%B5%B7%E6%BA%90-kr-origins-%E5%A1%94%E9%98%B2%E5%8F%B2%E8%AF%97%E5%86%92%E9%99%A9/id1544488000?uo=4"
+    },
+    {
+      "id": "apple-1523446532",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "重生细胞",
+      "app_store_id": "1523446532",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/8c/d8/9c8cd813-604c-b180-f1df-88570a252295/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E9%87%8D%E7%94%9F%E7%BB%86%E8%83%9E/id1523446532?uo=4"
+    },
+    {
+      "id": "apple-1493512288",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "猎魔村物语",
+      "app_store_id": "1493512288",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/06/fd/65/06fd65b2-a61a-a5de-0964-218aa824f054/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E7%8D%B5%E9%AD%94%E6%9D%91%E7%89%A9%E8%AA%9E/id1493512288?uo=4"
+    },
+    {
+      "id": "apple-1482634275",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "曲奇必死",
+      "app_store_id": "1482634275",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/b0/43/29b04395-3f42-c8df-27d9-3c860ed3107f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%9B%B2%E5%A5%87%E5%BF%85%E6%AD%BB/id1482634275?uo=4"
+    },
+    {
+      "id": "apple-1477139957",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "WolfAndMoon : Sudoku",
+      "app_store_id": "1477139957",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/00/04/31/0004316e-1021-b416-48c5-3e7819308cb8/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/wolfandmoon-sudoku/id1477139957?uo=4"
+    },
+    {
+      "id": "apple-1475058355",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "弓箭传说",
+      "app_store_id": "1475058355",
+      "external_url": "https://apps.apple.com/app/id1475058355"
+    },
+    {
+      "id": "apple-1468010739",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Grand Mountain Adventure",
+      "app_store_id": "1468010739",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/16/43/18164396-b932-ff10-71db-d7985de7af3f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/grand-mountain-adventure/id1468010739?uo=4"
+    },
+    {
+      "id": "apple-1464496261",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "花儿爱消除",
+      "app_store_id": "1464496261",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/de/b7/dc/deb7dc15-b8a5-3ef6-46c5-df800080359e/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E8%8A%B1%E5%84%BF%E7%88%B1%E6%B6%88%E9%99%A4/id1464496261?uo=4"
+    },
+    {
+      "id": "apple-1463927176",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "星空浪人",
+      "app_store_id": "1463927176",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fe/b1/6a/feb16acc-6c26-ffb0-72e0-421de50636b6/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%98%9F%E7%A9%BA%E6%B5%AA%E4%BA%BA/id1463927176?uo=4"
+    },
+    {
+      "id": "apple-1455833480",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "闪耀暖暖",
+      "app_store_id": "1455833480",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/94/88/7e/94887ee4-0094-e0bc-3019-9bdcf5c7558f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E9%97%AA%E8%80%80%E6%9A%96%E6%9A%96/id1455833480?uo=4"
+    },
+    {
+      "id": "apple-1450255214",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Hexonia",
+      "app_store_id": "1450255214",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/ea/d7/b6/ead7b6f2-5b6b-3463-a01c-90414cf7b0d6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/hexonia/id1450255214?uo=4"
+    },
+    {
+      "id": "apple-1397824035",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "小镇大厨 - 模拟餐厅经营美食烹饪游戏",
+      "app_store_id": "1397824035",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/88/2e/29/882e29bf-05c3-45c8-8d61-4d5e4c2bbd94/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%B0%8F%E9%95%87%E5%A4%A7%E5%8E%A8-%E6%A8%A1%E6%8B%9F%E9%A4%90%E5%8E%85%E7%BB%8F%E8%90%A5%E7%BE%8E%E9%A3%9F%E7%83%B9%E9%A5%AA%E6%B8%B8%E6%88%8F/id1397824035?uo=4"
+    },
+    {
+      "id": "apple-1386980527",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Slashy Knight",
+      "app_store_id": "1386980527",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fc/12/87/fc12871c-c8af-b047-27bd-aaeb9c9457e7/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/us/app/slashy-knight/id1386980527?uo=4"
+    },
+    {
+      "id": "apple-1361253233",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "《传奇商店》：制作和设计",
+      "app_store_id": "1361253233",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/09/6b/60096be8-9e35-3ad7-85c8-f676be8b410a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%82%B3%E5%A5%87%E5%95%86%E5%BA%97-%E8%A3%BD%E4%BD%9C%E8%88%87%E8%A8%AD%E8%A8%88/id1361253233?uo=4"
+    },
+    {
+      "id": "apple-1352933197",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "PAKO Forever",
+      "app_store_id": "1352933197",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/51/c7/7a/51c77a48-d042-aea1-8cc5-904a80fe9130/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/pako-forever/id1352933197?uo=4"
+    },
+    {
+      "id": "apple-1330546179",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Climbing Flail",
+      "app_store_id": "1330546179",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/8c/a5/5e/8ca55e7e-cb66-0f5d-3ea7-164a86e9815b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/climbing-flail/id1330546179?uo=4"
+    },
+    {
+      "id": "apple-1308819846",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "星陨传说",
+      "app_store_id": "1308819846",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/16/f5/d6/16f5d6d5-9003-8c6c-15af-3b53efca49f1/AppIcon-1x_U007emarketing-0-7-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%98%9F%E9%9A%95%E5%82%B3%E8%AA%AA/id1308819846?uo=4"
+    },
+    {
+      "id": "apple-1298366657",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "魔女之泉3",
+      "app_store_id": "1298366657",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ef/86/ca/ef86ca95-a543-45b8-b5ec-c9264960d958/AppIcon-0-1x_U007emarketing-0-85-220-9.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E9%AD%94%E5%A5%B3%E4%B9%8B%E6%B3%893/id1298366657?uo=4"
+    },
+    {
+      "id": "apple-1281488403",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "沙盒：进化",
+      "app_store_id": "1281488403",
+      "external_url": "https://apps.apple.com/app/id1281488403"
+    },
+    {
+      "id": "apple-1257639204",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "喵咪斗恶龙",
+      "app_store_id": "1257639204",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/67/d2/75/67d2756a-1627-5eda-44e7-178cc3f5c21e/AppIcon-1x_U007emarketing-0-7-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%96%B5%E5%92%AA%E9%AC%A5%E6%83%A1%E9%BE%8D/id1257639204?uo=4"
+    },
+    {
+      "id": "apple-1244456273",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": ".projekt",
+      "app_store_id": "1244456273",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/2d/5c/04/2d5c0472-f9f1-d492-e8ed-b44fa0a95204/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/projekt/id1244456273?uo=4"
+    },
+    {
+      "id": "apple-1244210673",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Laps Fuse: 数字解谜游戏",
+      "app_store_id": "1244210673",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/66/f9/de66f93d-bc34-08bf-fd97-0702336e9844/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/laps-fuse-%E6%95%B8%E5%AD%97%E8%A7%A3%E8%AC%8E%E9%81%8A%E6%88%B2/id1244210673?uo=4"
+    },
+    {
+      "id": "apple-1241923451",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "战争与文明 - 席卷全球的史诗策略游戏",
+      "app_store_id": "1241923451",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/df/21/c6df212a-0f1b-4548-235f-dff4aebba470/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E6%88%98%E4%BA%89%E4%B8%8E%E6%96%87%E6%98%8E-%E5%B8%AD%E5%8D%B7%E5%85%A8%E7%90%83%E7%9A%84%E5%8F%B2%E8%AF%97%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F/id1241923451?uo=4"
+    },
+    {
+      "id": "apple-1234446615",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Stormbound",
+      "app_store_id": "1234446615",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/7b/bd/307bbda6-bd6f-4e1a-5223-7682b113d00c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/stormbound/id1234446615?uo=4"
+    },
+    {
+      "id": "apple-1219880069",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "全能英雄",
+      "app_store_id": "1219880069",
+      "external_url": "https://apps.apple.com/app/id1219880069"
+    },
+    {
+      "id": "apple-1216114260",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "战争艺术",
+      "app_store_id": "1216114260",
+      "external_url": "https://apps.apple.com/app/id1216114260"
+    },
+    {
+      "id": "apple-1214483956",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "商店英雄(Shop Heroes): 贸易大战",
+      "app_store_id": "1214483956",
+      "external_url": "https://apps.apple.com/app/id1214483956"
+    },
+    {
+      "id": "apple-1209083773",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "站上塔楼",
+      "app_store_id": "1209083773",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/62/06/6d6206e2-6622-d5d8-4fcb-2de71354bba3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%BE%9E%E5%89%8D%E6%9C%89%E4%B8%80%E5%BA%A7%E5%A1%94%E6%A8%93/id1209083773?uo=4"
+    },
+    {
+      "id": "apple-1197552569",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Poly Bridge",
+      "app_store_id": "1197552569",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/90/c7/bf/90c7bf8a-8d0f-3adb-a56e-30ba166f32a9/AppIcon-1x_U007emarketing-85-220-0-7.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/poly-bridge/id1197552569?uo=4"
+    },
+    {
+      "id": "apple-1195816621",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Galaxy on Fire 3",
+      "app_store_id": "1195816621",
+      "external_url": "https://apps.apple.com/app/id1195816621"
+    },
+    {
+      "id": "apple-1184159988",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "元气骑士",
+      "app_store_id": "1184159988",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/52/4f/de524f43-d6c1-7938-1df3-47e366a2acf5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%85%83%E6%B0%94%E9%AA%91%E5%A3%AB/id1184159988?uo=4"
+    },
+    {
+      "id": "apple-1183708679",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "弓箭手大作战",
+      "app_store_id": "1183708679",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/a1/06/1aa106bf-40a0-16cb-7295-642cc9ee7774/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%BC%93%E7%AE%AD%E6%89%8B%E5%A4%A7%E4%BD%9C%E6%88%98/id1183708679?uo=4"
+    },
+    {
+      "id": "apple-1173353216",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Knight Saves Queen",
+      "app_store_id": "1173353216",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/4d/0e/0d/4d0e0dff-6e71-59f4-8187-61eb1ec77dae/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/knight-saves-queen/id1173353216?uo=4"
+    },
+    {
+      "id": "apple-1165289168",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Build a Bridge!",
+      "app_store_id": "1165289168",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c3/e3/3c/c3e33cff-2da4-2a0e-7b55-689cf28a190f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/build-a-bridge/id1165289168?uo=4"
+    },
+    {
+      "id": "apple-1162024432",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Tiny Gladiators",
+      "app_store_id": "1162024432",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/42/f8/c8/42f8c8f1-820d-a02b-4987-5f1055b0bb02/AppIcon-0-0-1x_U007emarketing-0-0-0-9-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/tiny-gladiators/id1162024432?uo=4"
+    },
+    {
+      "id": "apple-1159072426",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Tiny Rails: 小火车",
+      "app_store_id": "1159072426",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/b7/ce/13b7ce8f-1351-d1e8-e747-19bb23854532/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/tiny-rails/id1159072426?uo=4"
+    },
+    {
+      "id": "apple-1156787368",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "野蛮时代 (Brutal Age)",
+      "app_store_id": "1156787368",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/dc/c3/92dcc347-b270-4b2d-1a45-805188d9eed0/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E9%87%8E%E8%9B%AE%E6%97%B6%E4%BB%A3-brutal-age/id1156787368?uo=4"
+    },
+    {
+      "id": "apple-1154749673",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "阿门罗",
+      "app_store_id": "1154749673",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/22/ba/16/22ba16bc-09d4-55fd-8ae1-5743254ed5d2/AppIcon-1x_U007emarketing-85-220-0-8.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%84%9B%E9%96%80%E7%BE%85/id1154749673?uo=4"
+    },
+    {
+      "id": "apple-1154402178",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "喧闹的城堡: 成为城堡的骑士或者国王",
+      "app_store_id": "1154402178",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/b0/e9/1ab0e930-f327-e890-5f37-844c0adfd1a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%96%A7%E9%AC%A7%E7%9A%84%E5%9F%8E%E5%A0%A1-%E6%88%90%E7%82%BA%E9%A8%8E%E5%A3%AB%E6%88%96%E8%80%85%E5%9F%8E%E5%A0%A1%E7%9A%84%E5%9C%8B%E7%8E%8B/id1154402178?uo=4"
+    },
+    {
+      "id": "apple-1146355499",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "炫动城市",
+      "app_store_id": "1146355499",
+      "external_url": "https://apps.apple.com/app/id1146355499"
+    },
+    {
+      "id": "apple-1146138135",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Zip—Zap",
+      "app_store_id": "1146138135",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/ba/c2/5e/bac25ea4-6858-0f85-1689-32febdd9d0a2/AppIcon-1x_U007emarketing-85-220-6.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/zip-zap/id1146138135?uo=4"
+    },
+    {
+      "id": "apple-1142924104",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "方圆之战",
+      "app_store_id": "1142924104",
+      "external_url": "https://apps.apple.com/app/id1142924104"
+    },
+    {
+      "id": "apple-1141358828",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Mushroom Wars 2",
+      "app_store_id": "1141358828",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/bd/22/14bd22db-1781-6d7c-73ba-32d7f5e61ec7/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/mushroom-wars-2/id1141358828?uo=4"
+    },
+    {
+      "id": "apple-1141132957",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "智人进化",
+      "app_store_id": "1141132957",
+      "external_url": "https://apps.apple.com/app/id1141132957"
+    },
+    {
+      "id": "apple-1133173046",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Warlords of Aternum",
+      "app_store_id": "1133173046",
+      "external_url": "https://apps.apple.com/app/id1133173046"
+    },
+    {
+      "id": "apple-1133161444",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "KAMI 2",
+      "app_store_id": "1133161444",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3f/40/16/3f401636-7be8-df11-dcd5-55011c157194/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/kami-2/id1133161444?uo=4"
+    },
+    {
+      "id": "apple-1130186793",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "谜途",
+      "app_store_id": "1130186793",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f5/e6/30/f5e63074-47ee-668c-9b6b-8ac920a18eb4/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E8%AC%8E%E9%80%94/id1130186793?uo=4"
+    },
+    {
+      "id": "apple-1123406342",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "辐射：避难所",
+      "app_store_id": "1123406342",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bd/b4/df/bdb4df84-7a74-7049-8f73-92d3a8f8aef2/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E8%BE%90%E5%B0%84-%E9%81%BF%E9%9A%BE%E6%89%80/id1123406342?uo=4"
+    },
+    {
+      "id": "apple-1115730443",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Castle Creeps TD",
+      "app_store_id": "1115730443",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/41/5c/32/415c3216-cb3e-040d-f678-1ce8d09c5c9e/AppIcon-0-0-1x_U007emarketing-0-0-0-4-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/castle-creeps-td/id1115730443?uo=4"
+    },
+    {
+      "id": "apple-1112429079",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "物种起源",
+      "app_store_id": "1112429079",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/a2/c7/75a2c729-6bd6-e120-f3b3-e430618c6c7e/AppIcon-1x_U007emarketing-0-8-0-85-220-0.jpeg/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E7%89%A9%E7%A7%8D%E8%B5%B7%E6%BA%90/id1112429079?uo=4"
+    },
+    {
+      "id": "apple-1110646984",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "地下城堡2: 黑暗觉醒",
+      "app_store_id": "1110646984",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/eb/66/8b/eb668b04-4051-b156-24c1-d9f8e8b21c14/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E5%A0%A12-%E9%BB%91%E6%9A%97%E8%A7%89%E9%86%92/id1110646984?uo=4"
+    },
+    {
+      "id": "apple-1093714835",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Postknight",
+      "app_store_id": "1093714835",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/46/a8/ff/46a8ffe0-494a-926d-e09e-1fea7f75ccec/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/postknight/id1093714835?uo=4"
+    },
+    {
+      "id": "apple-1090826925",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Ball Tower",
+      "app_store_id": "1090826925",
+      "external_url": "https://apps.apple.com/app/id1090826925"
+    },
+    {
+      "id": "apple-1090348795",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Micro Breaker",
+      "app_store_id": "1090348795",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e9/5b/c7/e95bc7d4-b963-62ce-6b46-0fe87f4ecf4a/AppIcon-0-0-1x_U007emarketing-0-8-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/micro-breaker/id1090348795?uo=4"
+    },
+    {
+      "id": "apple-1084860489",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Chameleon Run",
+      "app_store_id": "1084860489",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/c0/08/97c008c2-18f5-58e7-a1ba-5dd20e396789/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/chameleon-run/id1084860489?uo=4"
+    },
+    {
+      "id": "apple-1081847121",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "INKS.",
+      "app_store_id": "1081847121",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/a0/04/70/a00470fb-6604-fbd6-2cc9-9abbf5fcadd4/AppIcon-0-1x_U007emarketing-0-85-220-6.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/inks/id1081847121?uo=4"
+    },
+    {
+      "id": "apple-1081609724",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Logic Traces",
+      "app_store_id": "1081609724",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/ba/70/2c/ba702c26-4b1a-2409-48f3-1775267a410d/AppIcon-1x_U007emarketing-85-220-7.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/logic-traces/id1081609724?uo=4"
+    },
+    {
+      "id": "apple-1075872386",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "螃蟹先生 2",
+      "app_store_id": "1075872386",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/2f/0b/ba/2f0bbab6-c830-3169-02ba-5a70b9170991/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E8%9E%83%E8%9F%B9%E5%85%88%E7%94%9F-2/id1075872386?uo=4"
+    },
+    {
+      "id": "apple-1072737282",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Space Marshals 2",
+      "app_store_id": "1072737282",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/7f/e8/6d/7fe86d0f-a8db-592b-0bb2-5ef5ac9abd4f/AppIcon-1x_U007emarketing-0-9-0-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/space-marshals-2/id1072737282?uo=4"
+    },
+    {
+      "id": "apple-1068204657",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "我的咖啡厅 — 餐厅游戏",
+      "app_store_id": "1068204657",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/7b/3c/4a7b3cd4-803f-749d-92ec-3a5b37a6d4de/AppIcon-0-0-1x_U007epad-0-1-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%88%91%E7%9A%84%E5%92%96%E5%95%A1%E5%BB%B3-%E9%A4%90%E5%BB%B3%E7%B6%93%E7%87%9F%E9%81%8A%E6%88%B2/id1068204657?uo=4"
+    },
+    {
+      "id": "apple-1067774611",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "砍怪达人",
+      "app_store_id": "1067774611",
+      "external_url": "https://apps.apple.com/app/id1067774611"
+    },
+    {
+      "id": "apple-1067684327",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "骑士故事 - Good Knight Story",
+      "app_store_id": "1067684327",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/96/3e/bb/963ebb98-4a37-14b5-3a35-79d0bc83e49a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E9%A8%8E%E5%A3%AB%E6%95%85%E4%BA%8B-good-knight-story/id1067684327?uo=4"
+    },
+    {
+      "id": "apple-1056874279",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "像素积木－每天锻炼大脑5分钟",
+      "app_store_id": "1056874279",
+      "external_url": "https://apps.apple.com/app/id1056874279"
+    },
+    {
+      "id": "apple-1047961826",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "疯狂动物园-跑酷牛仔向前冲",
+      "app_store_id": "1047961826",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/45/66/234566fd-5117-9c1c-0be2-9f76936fce82/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E7%96%AF%E7%8B%82%E5%8A%A8%E7%89%A9%E5%9B%AD-%E8%B7%91%E9%85%B7%E7%89%9B%E4%BB%94%E5%90%91%E5%89%8D%E5%86%B2/id1047961826?uo=4"
+    },
+    {
+      "id": "apple-1043318628",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "BattleHand",
+      "app_store_id": "1043318628",
+      "external_url": "https://apps.apple.com/app/id1043318628"
+    },
+    {
+      "id": "apple-1039626861",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "怪物城堡 Monster Castle",
+      "app_store_id": "1039626861",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/64/aa/2f64aac1-1436-c3be-79a3-b6db9c684879/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%80%AA%E7%89%A9%E5%9F%8E%E5%A0%A1-monster-castle/id1039626861?uo=4"
+    },
+    {
+      "id": "apple-1032997004",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "天阶",
+      "app_store_id": "1032997004",
+      "external_url": "https://apps.apple.com/app/id1032997004"
+    },
+    {
+      "id": "apple-1024951639",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "孤岛宁静  (Lonely One)",
+      "app_store_id": "1024951639",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/36/5f/97/365f97f3-5615-8e43-4d53-bcd98f0e1975/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%AD%A4%E5%B3%B6%E5%AF%A7%E9%9D%9C-lonely-one/id1024951639?uo=4"
+    },
+    {
+      "id": "apple-1020990223",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "巫师物语",
+      "app_store_id": "1020990223",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e1/f9/d6/e1f9d604-f1d0-ae55-0d11-65d1ceca6d9e/AppIcon-0-0-1x_U007emarketing-0-7-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/mage-mania/id1020990223?uo=4"
+    },
+    {
+      "id": "apple-991485954",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "我们相距十万光年",
+      "app_store_id": "991485954",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/49/e5/44/49e544f6-25fc-c151-f840-c61f4f4762c7/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E6%88%91%E4%BB%AC%E7%9B%B8%E8%B7%9D%E5%8D%81%E4%B8%87%E5%85%89%E5%B9%B4/id991485954?uo=4"
+    },
+    {
+      "id": "apple-982763237",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Hyperburner",
+      "app_store_id": "982763237",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/24/b4/f5/24b4f561-c373-0d5d-0ed0-e83724264977/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/hyperburner/id982763237?uo=4"
+    },
+    {
+      "id": "apple-980168512",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "天天消消乐-消消乐的开心消除者",
+      "app_store_id": "980168512",
+      "external_url": "https://apps.apple.com/app/id980168512"
+    },
+    {
+      "id": "apple-971756507",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "拒绝上班 (Commute)",
+      "app_store_id": "971756507",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/48/68/204868b1-15f0-33da-b9ee-83f88d2fefb4/AppIcon-0-0-1x_U007epad-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E6%8B%92%E7%B5%95%E4%B8%8A%E7%8F%AD-commute/id971756507?uo=4"
+    },
+    {
+      "id": "apple-966322463",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "左右消消消",
+      "app_store_id": "966322463",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/9e/80/a69e80a4-8905-b5cc-035e-aee895c56a03/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/slidey-block-puzzle/id966322463?uo=4"
+    },
+    {
+      "id": "apple-963093508",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Dragon Hills (龙之丘)",
+      "app_store_id": "963093508",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/00/06/73/00067375-64c8-9d90-890a-0ff2d0e66a8d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/dragon-hills-%E6%BD%9B%E9%BE%8D%E5%B1%B1%E4%B8%98/id963093508?uo=4"
+    },
+    {
+      "id": "apple-961641025",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Dungeon Legends - Best Hunter",
+      "app_store_id": "961641025",
+      "external_url": "https://apps.apple.com/app/id961641025"
+    },
+    {
+      "id": "apple-960316645",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "冰火围城",
+      "app_store_id": "960316645",
+      "external_url": "https://apps.apple.com/app/id960316645"
+    },
+    {
+      "id": "apple-957124541",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Tsuro通路——造路游戏",
+      "app_store_id": "957124541",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/ca/7c/a0/ca7ca0ba-a882-90ee-11c9-3890fa99a438/AppIcon-1x_U007emarketing-0-9-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/tsuro-the-game-of-the-path/id957124541?uo=4"
+    },
+    {
+      "id": "apple-955298998",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Pursuit of Light",
+      "app_store_id": "955298998",
+      "external_url": "https://apps.apple.com/app/id955298998"
+    },
+    {
+      "id": "apple-945274928",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "COK列王的纷争",
+      "app_store_id": "945274928",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8d/2f/39/8d2f394e-d491-8c4d-5c44-f1c6a547fad6/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/cok%E5%88%97%E7%8E%8B%E7%9A%84%E7%BA%B7%E4%BA%89/id945274928?uo=4"
+    },
+    {
+      "id": "apple-943273841",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "天空漫步",
+      "app_store_id": "943273841",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple7/v4/25/d7/53/25d75302-53cc-d949-739b-354a4412f958/pr_source.jpg/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/skyward/id943273841?uo=4"
+    },
+    {
+      "id": "apple-938185444",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "商店英雄：角色扮演大亨",
+      "app_store_id": "938185444",
+      "external_url": "https://apps.apple.com/app/id938185444"
+    },
+    {
+      "id": "apple-901738789",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "地下城堡: 炼金术师的魔幻之旅",
+      "app_store_id": "901738789",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0b/17/05/0b1705c5-a35a-0498-ca21-45f541e6573d/AppIcon-2-1x_U007emarketing-0-7-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E5%A0%A1-%E7%82%BC%E9%87%91%E6%9C%AF%E5%B8%88%E7%9A%84%E9%AD%94%E5%B9%BB%E4%B9%8B%E6%97%85/id901738789?uo=4"
+    },
+    {
+      "id": "apple-881106329",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "万智对决",
+      "app_store_id": "881106329",
+      "external_url": "https://apps.apple.com/app/id881106329"
+    },
+    {
+      "id": "apple-795688887",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Bicolor",
+      "app_store_id": "795688887",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/fb/e7/72/fbe77242-8c2c-4575-9fc6-87fff38599ee/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/bicolor/id795688887?uo=4"
+    },
+    {
+      "id": "apple-791532221",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "开心消消乐",
+      "app_store_id": "791532221",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/53/ef/73/53ef73a6-8bf5-b658-4804-56b4da8801c4/AppIcon-1x_U007epad-0-1-0-0-85-220-0.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E5%BC%80%E5%BF%83%E6%B6%88%E6%B6%88%E4%B9%90/id791532221?uo=4"
+    },
+    {
+      "id": "apple-742183900",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "星星传奇: 超好玩单机消除小游戏",
+      "app_store_id": "742183900",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ee/f2/02/eef202b9-dcbe-3008-91d5-5783b6a093ad/AppIcon-0-0-1x_U007emarketing-0-9-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/%E6%98%9F%E6%98%9F%E4%BC%A0%E5%A5%87-%E8%B6%85%E5%A5%BD%E7%8E%A9%E5%8D%95%E6%9C%BA%E6%B6%88%E9%99%A4%E5%B0%8F%E6%B8%B8%E6%88%8F/id742183900?uo=4"
+    },
+    {
+      "id": "apple-741915897",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "魔塔 - 童话王子拯救公主",
+      "app_store_id": "741915897",
+      "external_url": "https://apps.apple.com/app/id741915897"
+    },
+    {
+      "id": "apple-728293409",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "紀念碑谷",
+      "app_store_id": "728293409",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/8e/d8/218ed8a3-c616-9ec7-419e-368073b9deb7/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E7%B4%80%E5%BF%B5%E7%A2%91%E8%B0%B7/id728293409?uo=4"
+    },
+    {
+      "id": "apple-714796093",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "烹饪发烧友 –风靡全球的模拟烹饪游戏",
+      "app_store_id": "714796093",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/79/a0/6d/79a06d6f-447a-493f-3684-398f264e942e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E7%83%B9%E9%A3%AA%E7%99%BC%E7%87%92%E5%8F%8B/id714796093?uo=4"
+    },
+    {
+      "id": "apple-694089953",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Elfcraft: Match 3 Stones",
+      "app_store_id": "694089953",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/30/76/98/3076982c-52bf-52f3-b78c-538a2158cc9b/mzl.evulzour.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/elfcraft-match-3-stones/id694089953?uo=4"
+    },
+    {
+      "id": "apple-610391947",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "狂野飙车8：极速凌云",
+      "app_store_id": "610391947",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e7/86/d2/e786d2a9-dcab-abf0-abb2-86ef95a070b1/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E7%8B%82%E9%87%8E%E9%A3%86%E8%BB%8A8-%E6%A5%B5%E9%80%9F%E5%87%8C%E9%9B%B2/id610391947?uo=4"
+    },
+    {
+      "id": "apple-603527166",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Smash Hit",
+      "app_store_id": "603527166",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/90/96/13/90961318-b263-0267-7c20-723217bc3866/AppIcon-0-0-1x_U007epad-0-1-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/smash-hit/id603527166?uo=4"
+    },
+    {
+      "id": "apple-596402997",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "小黄人快跑 - Minion Rush",
+      "app_store_id": "596402997",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/0e/51/ff0e519a-2cbe-abf6-9ee6-5d1cc407538f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%A5%94%E8%B7%91%E5%B0%8F%E5%B0%8F%E5%85%B5-minion-rush/id596402997?uo=4"
+    },
+    {
+      "id": "apple-572234695",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "顶级华容道",
+      "app_store_id": "572234695",
+      "external_url": "https://apps.apple.com/app/id572234695"
+    },
+    {
+      "id": "apple-554855652",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "爱丽丝快跑",
+      "app_store_id": "554855652",
+      "external_url": "https://apps.apple.com/app/id554855652"
+    },
+    {
+      "id": "apple-549361775",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "时空冲浪王",
+      "app_store_id": "549361775",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/e3/5f/d5/e35fd5ae-89e0-b762-078b-7f55c8395958/AppIcon-0-1x_U007emarketing-0-0-85-220-10.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/time-surfer/id549361775?uo=4"
+    },
+    {
+      "id": "apple-541044144",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "奇幻射击",
+      "app_store_id": "541044144",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple22/v4/67/05/2b/67052b89-2dac-c1bf-9d86-2189b5be8049/mzm.okbivgmf.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/%E5%A5%87%E5%B9%BB%E5%B0%84%E6%93%8A/id541044144?uo=4"
+    },
+    {
+      "id": "apple-500299591",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "国际象棋",
+      "app_store_id": "500299591",
+      "external_url": "https://apps.apple.com/app/id500299591"
+    },
+    {
+      "id": "apple-496386846",
+      "platform": "iOS",
+      "medium": "Apple Games",
+      "name_zh": "Air Wings®",
+      "app_store_id": "496386846",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e2/c0/7d/e2c07dae-6aed-60d1-b595-acda6925f1c8/AirWingsIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/air-wings/id496386846?uo=4"
+    },
+    {
+      "id": "apple-494254145",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "The Tribez: Build a Village",
+      "app_store_id": "494254145",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e3/05/45/e30545da-ea00-9acb-6d3d-4b569bf75a5d/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/the-tribez-build-a-village/id494254145?uo=4"
+    },
+    {
+      "id": "apple-465072566",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Galaxy on Fire 2™ HD",
+      "app_store_id": "465072566",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/89/b5/72/89b57214-d4f2-7262-6742-16f1747bff87/AppIcon-1x_U007emarketing-4-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/hk/app/galaxy-on-fire-2-hd/id465072566?uo=4"
+    },
+    {
+      "id": "apple-449069244",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Bean's Quest",
+      "app_store_id": "449069244",
+      "external_url": "https://apps.apple.com/app/id449069244"
+    },
+    {
+      "id": "apple-285490012",
+      "platform": "iOS",
+      "medium": "Apple Games · Game Center",
+      "name_zh": "Moonlight Mahjong Lite",
+      "app_store_id": "285490012",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/a3/71/a6a37180-0556-fa12-0a4a-30309ef40bd3/AppIcon-0-0-1x_U007emarketing-0-4-85-220.png/600x600bb.jpg",
+      "external_url": "https://apps.apple.com/cn/app/moonlight-mahjong-lite/id285490012?uo=4"
+    },
+    {
+      "id": "apple-989673964",
+      "platform": "iOS",
+      "medium": "iOS · 本人确认",
+      "name_zh": "王者荣耀",
+      "name_en": "Honor of Kings",
+      "app_store_id": "989673964",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b0/c2/5d/b0c25d2f-658b-dbb4-a1bf-d63e266bc877/Placeholder.mill/400x400bb-75.webp",
+      "external_url": "https://apps.apple.com/cn/app/id989673964"
+    }
+  ]
+}

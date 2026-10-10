@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#060d10" />
+    <meta name="description" content="Infans Studio 清洁版" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Infans Studio" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("infans-workbench-theme");
+          const theme = stored && /^[a-z0-9-]{1,32}$/.test(stored) ? stored : "night";
+          const storedScheme = localStorage.getItem("infans-workbench-theme-scheme");
+          const legacyLightTheme = theme === "day";
+          const scheme = storedScheme === "light" || storedScheme === "dark" ? storedScheme : legacyLightTheme ? "light" : "dark";
+          const color = localStorage.getItem("infans-workbench-theme-color") || (legacyLightTheme ? "#eef3f0" : "#060d10");
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = scheme;
+          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", color);
+        } catch {
+          document.documentElement.dataset.theme = "night";
+        }
+      })();
+    </script>
+    <link rel="manifest" href="/site.webmanifest?v=710c4fc084b7" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=710c4fc084b7" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=710c4fc084b7" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=710c4fc084b7" />
+    <title>Infans Studio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

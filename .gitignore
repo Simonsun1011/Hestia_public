@@ -1,0 +1,6 @@
+00_本地工作台/project-sources.local.json
+00_本地工作台/app/node_modules/
+00_本地工作台/app/dist/
+.DS_Store
+# 游戏封面是商业作品的图片，不进公开仓库；本机照常读取
+60_艺术馆藏/我的游戏/封面/

@@ -1,0 +1,1523 @@
+{
+  "platform": "多平台",
+  "game_count": 166,
+  "data_mode": "sanitized-library-sample",
+  "privacy": {
+    "personalHistory": "redacted",
+    "accountIdentity": "removed",
+    "activityEvidence": "removed"
+  },
+  "note": "保留作品名称、平台、公开发售信息和封面来源；原拥有者的账号证据、口述回忆、成就、游玩时间与购买经历已移除。",
+  "games": [
+    {
+      "id": "ns-mario-party",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "超级马里奥派对",
+      "name_en": "Super Mario Party",
+      "name_ja": "スーパー マリオパーティ",
+      "release_date": "2018-10-05",
+      "search": "Super Mario Party Switch",
+      "cover_file": "封面/非Steam/ns-mario-party.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_SuperMarioParty_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-trials-of-mana",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "圣剑传说3 试炼之力",
+      "name_en": "Trials of Mana",
+      "name_ja": "聖剣伝説3 TRIALS of MANA",
+      "release_date": "2020-04-24",
+      "search": "Trials of Mana Switch",
+      "cover_file": "封面/非Steam/ns-trials-of-mana.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_TrialsOfMana_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-zelda-echoes",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "塞尔达传说 智慧的再现",
+      "name_en": "The Legend of Zelda: Echoes of Wisdom",
+      "name_ja": "ゼルダの伝説 知恵のかりもの",
+      "release_date": "2024-09-26",
+      "search": "Echoes of Wisdom Switch",
+      "cover_file": "封面/非Steam/ns-zelda-echoes.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_TheLegendofZeldaEchoesOfWisdom_image500w.jpg"
+    },
+    {
+      "id": "ns-mario-wonder",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "超级马里奥兄弟 惊奇",
+      "name_en": "Super Mario Bros. Wonder",
+      "name_ja": "スーパーマリオブラザーズ ワンダー",
+      "release_date": "2023-10-20",
+      "search": "Super Mario Bros. Wonder",
+      "cover_file": "封面/非Steam/ns-mario-wonder.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_SuperMarioBrosWonder_image500w.jpg"
+    },
+    {
+      "id": "ns-yoshi-crafted",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "耀西的手工世界",
+      "name_en": "Yoshi's Crafted World",
+      "name_ja": "ヨッシークラフトワールド",
+      "release_date": "2019-03-29",
+      "search": "Yoshi's Crafted World",
+      "cover_file": "封面/非Steam/ns-yoshi-crafted.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_YoshisCraftedWorld_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-triangle-strategy",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "三角战略",
+      "name_en": "TRIANGLE STRATEGY",
+      "name_ja": "トライアングルストラテジー",
+      "release_date": "2022-03-04",
+      "search": "TRIANGLE STRATEGY",
+      "steam_appid": 1850510,
+      "cover_file": "封面/非Steam/ns-triangle-strategy.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850510/library_600x900.jpg"
+    },
+    {
+      "id": "ns-mario-rabbids",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "马里奥+疯狂兔子 王国之战",
+      "name_en": "Mario + Rabbids Kingdom Battle",
+      "name_ja": "マリオ+ラビッツ キングダムバトル",
+      "release_date": "2017-10-27",
+      "search": "Mario Rabbids Kingdom Battle",
+      "cover_file": "封面/非Steam/ns-mario-rabbids.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_MarioAndRabbidsKingdomBattle_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-fe-three-houses",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "火焰纹章 风花雪月",
+      "name_en": "Fire Emblem: Three Houses",
+      "name_ja": "ファイアーエムブレム 風花雪月",
+      "release_date": "2019-07-26",
+      "search": "Fire Emblem Three Houses",
+      "cover_file": "封面/非Steam/ns-fe-three-houses.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_FireEmblemThreeHouses_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-octopath",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "八方旅人",
+      "name_en": "OCTOPATH TRAVELER",
+      "name_ja": "オクトパストラベラー",
+      "release_date": "2018-07-13",
+      "search": "OCTOPATH TRAVELER",
+      "steam_appid": 921570,
+      "cover_file": "封面/非Steam/ns-octopath.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/921570/library_600x900.jpg"
+    },
+    {
+      "id": "ns-hyrule-warriors-aoc",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "塞尔达无双 灾厄启示录",
+      "name_en": "Hyrule Warriors: Age of Calamity",
+      "name_ja": "ゼルダ無双 厄災の黙示録",
+      "release_date": "2020-11-20",
+      "search": "Hyrule Warriors Age of Calamity",
+      "cover_file": "封面/非Steam/ns-hyrule-warriors-aoc.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_HyruleWarriorsAgeOfCalamity_PEGI_EN_image500w.jpg"
+    },
+    {
+      "id": "ns-ring-fit",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "健身环大冒险",
+      "name_en": "Ring Fit Adventure",
+      "name_ja": "リングフィット アドベンチャー",
+      "release_date": "2019-10-18",
+      "search": "Ring Fit Adventure",
+      "cover_file": "封面/非Steam/ns-ring-fit.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_RingFitAdventure_image500w.jpg"
+    },
+    {
+      "id": "ns-just-dance-2022",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "舞力全开 2022",
+      "name_en": "Just Dance 2022",
+      "name_ja": "ジャストダンス2022",
+      "release_date": "2021-11-04",
+      "search": "Just Dance 2022 Switch",
+      "cover_file": "封面/非Steam/ns-just-dance-2022.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/hardware_2/nintendo_switch_18/migration_2/1x1_NSwitch2_ParentalControl_GB_en_image500w.jpg"
+    },
+    {
+      "id": "ns-metroid-dread",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "密特罗德 生存恐惧",
+      "name_en": "Metroid Dread",
+      "name_ja": "メトロイド ドレッド",
+      "release_date": "2021-10-08",
+      "search": "Metroid Dread",
+      "cover_file": "封面/非Steam/ns-metroid-dread.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_MetroidDread_image500w.jpg"
+    },
+    {
+      "id": "ns-zelda-botw",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "塞尔达传说 旷野之息",
+      "name_en": "The Legend of Zelda: Breath of the Wild",
+      "name_ja": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+      "release_date": "2017-03-03",
+      "search": "Breath of the Wild Switch",
+      "cover_file": "封面/非Steam/ns-zelda-botw.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldabreathofthewild_nintendoswitch2edition/1x1_NSwitch2_TLoZTBotWNSwitch2Edition_image500w.jpg"
+    },
+    {
+      "id": "ns-p5r",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "女神异闻录5 皇家版",
+      "name_en": "Persona 5 Royal",
+      "name_ja": "ペルソナ5 ザ・ロイヤル",
+      "release_date": "2019-10-31",
+      "search": "Persona 5 Royal",
+      "steam_appid": 1687950,
+      "cover_file": "封面/非Steam/ns-p5r.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/library_600x900.jpg"
+    },
+    {
+      "id": "ns-acnh",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "集合啦！动物森友会",
+      "name_en": "Animal Crossing: New Horizons",
+      "name_ja": "あつまれ どうぶつの森",
+      "release_date": "2020-03-20",
+      "search": "Animal Crossing New Horizons",
+      "cover_file": "封面/非Steam/ns-acnh.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_AnimalCrossingNewHorizons_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-mario-3d-world",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "超级马里奥 3D世界 ＋ 狂怒世界",
+      "name_en": "Super Mario 3D World + Bowser's Fury",
+      "name_ja": "スーパーマリオ ３Ｄワールド ＋ フューリーワールド",
+      "release_date": "2021-02-12",
+      "search": "Super Mario 3D World Bowser's Fury",
+      "cover_file": "封面/非Steam/ns-mario-3d-world.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_SuperMario3DWorldAndBowsersFury_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-ori-collection",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "奥日合集",
+      "name_en": "Ori: The Collection",
+      "name_ja": "オリとくらやみの森 / オリとまぼろしの森",
+      "release_date": "2020-09-17",
+      "search": "Ori The Collection",
+      "steam_appid": 387290,
+      "cover_file": "封面/非Steam/ns-ori-collection.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/library_600x900.jpg"
+    },
+    {
+      "id": "ns-zelda-skyward",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "塞尔达传说 御天之剑 HD",
+      "name_en": "The Legend of Zelda: Skyward Sword HD",
+      "name_ja": "ゼルダの伝説 スカイウォードソード HD",
+      "release_date": "2021-07-16",
+      "search": "Skyward Sword HD",
+      "cover_file": "封面/非Steam/ns-zelda-skyward.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_TheLegendOfZeldaSkywardSwordHD_image500w.jpg"
+    },
+    {
+      "id": "ns-immortals-fenyx",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "渡神纪 芬尼斯崛起",
+      "name_en": "Immortals Fenyx Rising",
+      "name_ja": "イモータルズ フィニクス ライジング",
+      "release_date": "2020-12-03",
+      "search": "Immortals Fenyx Rising",
+      "steam_appid": 1401600,
+      "cover_file": "封面/非Steam/ns-immortals-fenyx.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1401600/library_600x900.jpg"
+    },
+    {
+      "id": "ns-unicorn-overlord",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "圣兽之王",
+      "name_en": "Unicorn Overlord",
+      "name_ja": "ユニコーンオーバーロード",
+      "release_date": "2024-03-08",
+      "search": "Unicorn Overlord",
+      "steam_appid": 2395500,
+      "cover_file": "封面/非Steam/ns-unicorn-overlord.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_UnicornOverlord_image500w.jpg"
+    },
+    {
+      "id": "ns-xenoblade-de",
+      "platform": "NS",
+      "medium": "卡带",
+      "name_zh": "异度神剑 终极版",
+      "name_en": "Xenoblade Chronicles: Definitive Edition",
+      "name_ja": "ゼノブレイド ディフィニティブ・エディション",
+      "release_date": "2020-05-29",
+      "search": "Xenoblade Chronicles Definitive Edition",
+      "cover_file": "封面/非Steam/ns-xenoblade-de.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_XenobladeChroniclesDefinitiveEdition_PEGI_image500w.jpg"
+    },
+    {
+      "id": "ns-mh-rise",
+      "platform": "NS",
+      "medium": "待确认",
+      "name_zh": "怪物猎人 崛起",
+      "name_en": "Monster Hunter Rise",
+      "name_ja": "モンスターハンターライズ",
+      "release_date": "2021-03-26",
+      "search": "Monster Hunter Rise",
+      "steam_appid": 1446780,
+      "cover_file": "封面/非Steam/ns-mh-rise.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1446780/library_600x900.jpg"
+    },
+    {
+      "id": "ns-splatoon-2",
+      "platform": "NS",
+      "medium": "待确认",
+      "name_zh": "喷射战士2",
+      "name_en": "Splatoon 2",
+      "name_ja": "スプラトゥーン2",
+      "release_date": "2017-07-21",
+      "search": "Splatoon 2",
+      "cover_file": "封面/非Steam/ns-splatoon-2.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/05_packshots/games_13/nintendo_switch_8/PS_NSwitch_Splatoon2_enGB_image500w.jpg"
+    },
+    {
+      "id": "ns-zelda-totk",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "塞尔达传说 王国之泪",
+      "name_en": "The Legend of Zelda: Tears of the Kingdom",
+      "name_ja": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+      "release_date": "2023-05-12",
+      "search": "Tears of the Kingdom",
+      "cover_file": "封面/非Steam/ns-zelda-totk.jpg",
+      "cover_source": "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_TheLegendOfZeldaTearsOfTheKingdom_EU_image500w.jpg"
+    },
+    {
+      "id": "ns-stardew",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "星露谷物语",
+      "name_en": "Stardew Valley",
+      "name_ja": "スターデューバレー",
+      "release_date": "2016-02-26",
+      "search": "Stardew Valley",
+      "steam_appid": 413150,
+      "cover_file": "封面/非Steam/ns-stardew.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/library_600x900.jpg"
+    },
+    {
+      "id": "ns-sea-of-stars",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "星之海",
+      "name_en": "Sea of Stars",
+      "name_ja": "Sea of Stars",
+      "release_date": "2023-08-29",
+      "search": "Sea of Stars",
+      "steam_appid": 1244090,
+      "cover_file": "封面/非Steam/ns-sea-of-stars.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244090/library_600x900.jpg"
+    },
+    {
+      "id": "pc-wow",
+      "platform": "PC客户端",
+      "medium": "客户端",
+      "name_zh": "魔兽世界",
+      "name_en": "World of Warcraft",
+      "name_ja": "ワールドオブウォークラフト",
+      "release_date": "2004-11-23",
+      "search": "World of Warcraft",
+      "cover_file": "封面/非Steam/pc-wow.jpg",
+      "cover_source": "https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png"
+    },
+    {
+      "id": "pc-aoe2",
+      "platform": "PC客户端",
+      "medium": "客户端",
+      "name_zh": "帝国时代2",
+      "name_en": "Age of Empires II",
+      "name_ja": "エイジ オブ エンパイア II",
+      "release_date": "1999-09-30",
+      "search": "Age of Empires II",
+      "steam_appid": 813780,
+      "cover_file": "封面/非Steam/pc-aoe2.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/library_600x900.jpg"
+    },
+    {
+      "id": "pc-ra2",
+      "platform": "PC客户端",
+      "medium": "客户端",
+      "name_zh": "红色警戒2",
+      "name_en": "Command & Conquer: Red Alert 2",
+      "name_ja": "コマンド＆征服 レッドアラート2",
+      "release_date": "2000-10-23",
+      "search": "Red Alert 2",
+      "steam_appid": 2229850,
+      "cover_file": "封面/非Steam/pc-ra2.jpg",
+      "cover_source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2229850/library_600x900.jpg"
+    },
+    {
+      "id": "pc-richman4",
+      "platform": "PC客户端",
+      "medium": "客户端",
+      "name_zh": "大富翁4",
+      "name_en": "Richman 4",
+      "name_ja": "大富翁4",
+      "release_date": "2002-01-01",
+      "search": "大富翁4",
+      "steam_appid": 2059810,
+      "cover_file": "封面/非Steam/pc-richman4.jpg",
+      "cover_source": "Steam app 2059810"
+    },
+    {
+      "id": "other-4399-mota",
+      "platform": "其他",
+      "medium": "网页",
+      "name_zh": "4399魔塔",
+      "name_en": "Magic Tower (4399)",
+      "search": "魔塔",
+      "steam_appid": 948770,
+      "cover_file": "封面/非Steam/other-4399-mota.jpg",
+      "cover_source": "Steam 魔塔2018 app 948770（同题材代表封面；原为4399网页魔塔）"
+    },
+    {
+      "id": "ns-family-chess",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "家庭象棋",
+      "name_en": "Family Chess",
+      "release_date": "2022-06-17",
+      "cover_url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000047382/cd58d6712f704fac140870dbc03c110e0ee39dd6e48faa80cbbefba84d06aeae",
+      "external_url": "https://www.nintendo.com/us/store/products/family-chess-switch/"
+    },
+    {
+      "id": "ns-switch-sports",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "Nintendo Switch Sports",
+      "name_en": "Nintendo Switch Sports",
+      "name_ja": "Nintendo Switch Sports",
+      "release_date": "2022-04-29",
+      "cover_url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000049931/282ce6a96d5855d8b46aa9316314969f731a26ef9c7b2bc1e5aebe62dcf2ece2",
+      "external_url": "https://www.nintendo.com/us/store/products/nintendo-switch-sports-switch/"
+    },
+    {
+      "id": "ns-pokemon-lets-go-pikachu",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "精灵宝可梦 Let's Go！皮卡丘",
+      "name_en": "Pokémon: Let's Go, Pikachu!",
+      "name_ja": "ポケットモンスター Let's Go! ピカチュウ",
+      "release_date": "2018-11-16",
+      "cover_url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000000447/8b2acaf2549895635f8d706eac06b3751e56bc3a970b04a937dcdec3e87ad3bf",
+      "external_url": "https://www.nintendo.com/us/store/products/pokemon-lets-go-pikachu-switch/"
+    },
+    {
+      "id": "ns-tricky-towers",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "Tricky Towers",
+      "name_en": "Tricky Towers",
+      "release_date": "2018-10-11",
+      "cover_url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000003656/8c607cc4a4796248e38aac75fcfbf43682412239c858c047151d9c921b3c013c",
+      "external_url": "https://www.nintendo.com/us/store/products/tricky-towers-switch/"
+    },
+    {
+      "id": "ns-arena-of-valor",
+      "platform": "NS",
+      "medium": "电子版",
+      "name_zh": "传说对决",
+      "name_en": "Arena of Valor",
+      "release_date": "2018-09-25",
+      "cover_url": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000002022/015492cb88ef370d58b834f7b658f347866dfe5f1e158ddded923fed8f187048",
+      "external_url": "https://www.nintendo.com/us/store/products/arena-of-valor-switch/"
+    },
+    {
+      "id": "ps-riders-republic",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "极限国度",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202604/2218/092ac0b61df7a08efdcc56a027f7962b6ea47521be3b3988.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/JP0001-PPSA01594_00-MADSTANDARTED000"
+    },
+    {
+      "id": "ps-stellar-blade-demo",
+      "platform": "PS",
+      "medium": "PS5 · 体验版",
+      "name_zh": "剑星 体验版",
+      "steam_appid": 3489700,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP9000-PPSA18489_00-STELLARBLADEDEMO"
+    },
+    {
+      "id": "ps-cyberpunk-2077",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "赛博朋克 2077",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3015/uv1qEJc1QWcP47vbpj8SVWE8.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP4497-PPSA04028_00-00000000000000N5"
+    },
+    {
+      "id": "ps-taiko-demo",
+      "platform": "PS",
+      "medium": "PS4 · 体验版",
+      "name_zh": "太鼓之达人 合奏咚咚咚！体验版",
+      "cover_url": "https://image.api.playstation.com/cdn/JP0700/CUSA09895_00/tS4FR5t3TDgcuk3Iu4Jk7QcyhNlatamj8M6SW6rvXIHOjbDpjNTM4lS4ymRsZ4XC.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/JP0700-CUSA09895_00-ASIA000000000000"
+    },
+    {
+      "id": "ps-diablo-iv",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "暗黑破坏神 IV",
+      "steam_appid": 2344520,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0002-PPSA02442_00-DIVGAMESTANDARD1"
+    },
+    {
+      "id": "ps-diablo-iv-beta",
+      "platform": "PS",
+      "medium": "PS4 · PS5 · 测试版",
+      "name_zh": "暗黑破坏神 IV 测试版",
+      "steam_appid": 2344520,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0002-PPSA05263_00-RENEGDBETAPS5000"
+    },
+    {
+      "id": "ps-fist",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "暗影火炬城",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202105/1711/rdd4pMPCuRetmvAgvay0YMLu.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP6808-PPSA03970_00-FISTASIAPS5HK003"
+    },
+    {
+      "id": "ps-horizon-forbidden-west",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "地平线 西之绝境",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/znI6uvJgJWhIo2suiflXeIkF.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/EP9000-PPSA01521_00-FORBIDDENWESTPS5"
+    },
+    {
+      "id": "ps-black-myth-wukong",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "黑神话：悟空",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2122/bbbe4db597c4df23aed122c276066e695730a7123b55cb11.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP6545-PPSA23226_00-GAMEDELUXE000000"
+    },
+    {
+      "id": "ps-atelier-ryza-2",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "莱莎的炼金工房２ ～失落传说与秘密妖精～",
+      "steam_appid": 1257290,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0106-PPSA02095_00-RYZA200000MASTER"
+    },
+    {
+      "id": "ps-utawarerumono-zan-demo",
+      "platform": "PS",
+      "medium": "PS4 · 体验版",
+      "name_zh": "受赞颂者斩 体验版",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/cfn/11307Kpxv2kjqMGRTAzesiSSThsSmPzEAmjqExJMp_S_-15EMgeUyxKybLS7OAxK7NG-EIQmuZ2K7QzHUqVoRoJMHuMYxn9o.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0177-CUSA17854_00-UTAWARERUMONOZNT"
+    },
+    {
+      "id": "ps-it-takes-two",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "双人成行",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/rnd/202103/1515/CIArS0HysgiS5pbwYtHLU9B0.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0006-CUSA16742_00-HAZELIGHTNUTS000"
+    },
+    {
+      "id": "ps-astro-bot",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "宇宙机器人",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202406/0500/8f15268257b878597757fcc5f2c9545840867bc71fc863b1.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP9000-PPSA21568_00-0000000000000000"
+    },
+    {
+      "id": "ps-genshin-impact",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "原神",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0109/bda1f2d78487199db831a9e982008182e640183f72b0abd0.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/EP6261-PPSA02584_00-OSRELSIEEGENSHIN"
+    },
+    {
+      "id": "ps-dynasty-warriors-8-empires-free",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "真·三国无双7 Empires 共斗版",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0106/CUSA01832_00/xMnSEb2u8MCRMXeMNhnWe6yQ7Q2V38r1sdqe0VOcBa23dvUvl6OekVwdiCPpjkRz.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0106-CUSA01832_00-SM7EMPCOOPPLAY00"
+    },
+    {
+      "id": "ps-baldurs-gate-3",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "博德之门3",
+      "name_en": "Baldur's Gate 3",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/ba706e54d68d10a0eb6ab7c36cdad9178c58b7fb7bb03d28.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP3470-PPSA14486_00-0137097724824368"
+    },
+    {
+      "id": "ps-call-of-duty-modern-warfare",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "使命召唤：现代战争",
+      "name_en": "Call of Duty: Modern Warfare",
+      "steam_appid": 1962663,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0002-CUSA15556_00-CODWARZONE000001"
+    },
+    {
+      "id": "ps-chants-of-sennaar",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "巴别塔圣歌",
+      "name_en": "Chants of Sennaar",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202304/0416/6ab7ae9e3996e333752cc8e3789f7a6ff0090a5a4067c9ad.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/EP4133-CUSA42225_00-CHANTSOFSENNAAR0"
+    },
+    {
+      "id": "ps-dark-souls-2-sotfs",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "黑暗之魂 II：原罪学者",
+      "name_en": "DARK SOULS II: Scholar of the First Sin",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0700/CUSA01713_00/V2R7GqdGUdKcAlUN9jb4AijP7F6EwePNSFmXv7Gqg8bRwXarnP8os5FKO2vgLiB7.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0700-CUSA01713_00-DARKSOULS2000003"
+    },
+    {
+      "id": "ps-dark-souls-3",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "黑暗之魂 III",
+      "name_en": "DARK SOULS III",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0700/CUSA03434_00/8h7cWRisC1eoKS3dNjsSt7bMM59QDsJhh2VpJ5v0j18T57tUOabxc3QaG8A5HAJw.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0700-CUSA03434_00-DARKSOULS3000000"
+    },
+    {
+      "id": "ps-doax3-fortune-free",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "死或生 沙滩排球3 Fortune 基本免费版",
+      "name_en": "DEAD OR ALIVE Xtreme 3 Fortune",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0106/CUSA05195_00/KOA9QN1gJZkWjXQEds1PUr4rEDRB7cBL3hfddY08N7xR4TTGkJ4sAwCvL3LE7gLG.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0106-CUSA05195_00-DOAX300000000000"
+    },
+    {
+      "id": "ps-diablo-2-resurrected",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "暗黑破坏神 II：狱火重生",
+      "name_en": "Diablo II: Resurrected",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/88/Diablo_2_Resurrected_cover_art.jpg",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0002-PPSA02443_00-D2RESURRECTED000"
+    },
+    {
+      "id": "ps-elden-ring",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "艾尔登法环",
+      "name_en": "ELDEN RING",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202108/0410/np2Eb60bDep9fDWtqNNSzqZI.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0700-PPSA04608_00-ELDENRING0000000"
+    },
+    {
+      "id": "ps-final-fantasy-14-online",
+      "platform": "PS",
+      "medium": "PS5",
+      "name_zh": "最终幻想 XIV Online",
+      "name_en": "FINAL FANTASY XIV Online",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202103/0507/s3A4o8IlYPO6rFTZnrfGnjIe.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0082-PPSA02954_00-FFXIVONLPS5000NA"
+    },
+    {
+      "id": "ps-final-fantasy-16-demo",
+      "platform": "PS",
+      "medium": "PS5 · 体验版",
+      "name_zh": "最终幻想 XVI 体验版",
+      "name_en": "FINAL FANTASY XVI DEMO",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202306/1010/dc71bed49d941561e9d8b1a53a800db122d696b6bc6e178f.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0082-PPSA13804_00-FF16DEMO00000000"
+    },
+    {
+      "id": "ps-ghost-trick-demo",
+      "platform": "PS",
+      "medium": "PS4 · 体验版",
+      "name_zh": "幽灵诡计 体验版",
+      "name_en": "Ghost Trick: Phantom Detective Demo",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202304/2604/a34d50b5993725585d12a2669a1f5acd338264c19608c5b2.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/JP0102-CUSA34092_00-GHOSTTRICKDEMO00"
+    },
+    {
+      "id": "ps-god-of-war-2018",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "战神",
+      "name_en": "God of War",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/rnd/202011/1021/X3WIAh63yKhRRiMohLoJMeQu.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP9000-CUSA07413_00-00000000GODOFWAR"
+    },
+    {
+      "id": "ps-god-of-war-3-remastered",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "战神 III 重制版",
+      "name_en": "God of War III Remastered",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/8b/God_of_War_III_cover_art.jpg",
+      "external_url": "https://store.playstation.com/zh-hans-hk/search/god%20of%20war%20iii%20remastered"
+    },
+    {
+      "id": "ps-hades",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "哈迪斯",
+      "name_en": "Hades",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202104/0517/9AcM3vy5t77zPiJyKHwRfnNT.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP2125-PPSA03355_00-3466019145463410"
+    },
+    {
+      "id": "ps-horizon-zero-dawn-complete",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "地平线 零之曙光 完全版",
+      "name_en": "Horizon Zero Dawn: Complete Edition",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/rnd/202011/1018/9erXiwu0ozgKGPIUVTuy2siN.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP9000-CUSA10218_00-HRZCE00000000000"
+    },
+    {
+      "id": "ps-knack-2-demo",
+      "platform": "PS",
+      "medium": "PS4 · 体验版",
+      "name_zh": "KNACK 2 体验版",
+      "cover_url": "https://image.api.playstation.com/cdn/HP9000/CUSA09639_00/qUI18KpGYOgQnOk6sBAj2Auo6O45oknXKH28jW1zAvN5xhsF8hMT9IeHEbRiUAU0.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP9000-CUSA09639_00-KNACK20000000000"
+    },
+    {
+      "id": "ps-let-it-die",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "LET IT DIE",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0747/CUSA07365_00/HKkRvsAl2aFGdw0wjC0BSrN9VQeGwUQa0vwiPmyGR385jfKAALqmyguxgaLM5p6L.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0747-CUSA07365_00-APPLETITDIEAS000"
+    },
+    {
+      "id": "ps-little-nightmares",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "小小梦魇",
+      "name_en": "Little Nightmares",
+      "steam_appid": 424840,
+      "external_url": "https://store.playstation.com/zh-hans-hk/search/little%20nightmares"
+    },
+    {
+      "id": "ps-lost-in-random",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "随机消失",
+      "name_en": "Lost in Random",
+      "steam_appid": 1462570,
+      "external_url": "https://store.playstation.com/zh-hans-hk/search/lost%20in%20random"
+    },
+    {
+      "id": "ps-gundam-battle-operation-2",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "机动战士高达 激战任务2",
+      "name_en": "Mobile Suit Gundam Battle Operation 2",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/2402/0208c284373aa88a1a7bf8c2d978db96985b76d4e746bf49.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/JP0700-CUSA11210_00-ASIA000000000001"
+    },
+    {
+      "id": "ps-monster-hunter-world-iceborne",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "怪物猎人 世界：冰原",
+      "name_en": "Monster Hunter World: Iceborne",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/cfn/11307jxVu7ooF5fJw3Q3mPXNzTS-ro9WV23durm6Iy9eBv1cvhGUh7CYoW9UCE54boirqpSIqDmHd5qiLAh_IiZN76Arumih.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0102-CUSA09554_00-ICEBORNME0000000"
+    },
+    {
+      "id": "ps-nier-automata",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "尼尔：机械纪元",
+      "name_en": "NieR:Automata",
+      "steam_appid": 524220,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA06592_00-ANDROIDS20030612"
+    },
+    {
+      "id": "ps-nier-automata-demo",
+      "platform": "PS",
+      "medium": "PS4 · 体验版",
+      "name_zh": "尼尔：机械纪元 体验版",
+      "name_en": "NieR:Automata DEMO",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0082/CUSA07760_00/qWLcVB09ZKr0CgjQuB95xHL8F9XZomH6kt2LpjdYB3Y0wWVcEu9eZhwpFjvktypG.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0082-CUSA07760_00-NIERAUTOMATADEMO"
+    },
+    {
+      "id": "ps-overwatch-trial",
+      "platform": "PS",
+      "medium": "PS4 · 试玩版",
+      "name_zh": "守望先锋 试玩版",
+      "name_en": "Overwatch",
+      "steam_appid": 2357570,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP0002-CUSA01842_00-ASIAIGINSTRIAL00"
+    },
+    {
+      "id": "ps-red-dead-redemption-2",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "荒野大镖客：救赎2",
+      "name_en": "Red Dead Redemption 2",
+      "steam_appid": 1174180,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP1004-CUSA03041_00-ASIAPLACEHOLDER0"
+    },
+    {
+      "id": "ps-sekiro",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "只狼：影逝二度",
+      "name_en": "Sekiro: Shadows Die Twice",
+      "cover_url": "https://image.api.playstation.com/cdn/HP0506/CUSA13910_00/QKJRzanGk86ezpx2pk5QqQaduoXGJV3u8vHIejSav4MYiHA3F7zNgxSOF9bJmt2T.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0506-CUSA13910_00-ASIAFULLGAME0000"
+    },
+    {
+      "id": "ps-sifu",
+      "platform": "PS",
+      "medium": "PS4 · PS5",
+      "name_zh": "师父",
+      "name_en": "Sifu",
+      "cover_url": "https://image.api.playstation.com/vulcan/img/rnd/202201/1616/THJbARAq2YiRVUv5abCQ8GYQ.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP2703-PPSA05132_00-4856299050197748"
+    },
+    {
+      "id": "ps-matrix-awakens",
+      "platform": "PS",
+      "medium": "PS5 · 技术体验",
+      "name_zh": "黑客帝国：觉醒",
+      "name_en": "The Matrix Awakens: An Unreal Engine 5 Experience",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/81/The_Matrix_Awakens.jpg",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP1477-PPSA05753_00-MATRIXUNREALDEMO"
+    },
+    {
+      "id": "ps-riftbreaker-prologue",
+      "platform": "PS",
+      "medium": "PS5 · 序章",
+      "name_zh": "银河破裂者：序章",
+      "name_en": "The Riftbreaker: Prologue",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202109/1413/YFHOp3ns7Aj76r85J7hVZdiL.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0507-PPSA04879_00-4589589222262997"
+    },
+    {
+      "id": "ps-the-witness",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "见证者",
+      "name_en": "The Witness",
+      "cover_url": "https://image.api.playstation.com/cdn/UP2124/CUSA00498_00/tlYF0r1zb6vlBVpknPlJrLL1x05fl6IKHllkN3EJT7g7E8g1DfB8ftlC1pEyNE7q.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP2124-CUSA00498_00-ASIA000000000000"
+    },
+    {
+      "id": "ps-titanfall-2",
+      "platform": "PS",
+      "medium": "PS4",
+      "name_zh": "泰坦陨落2",
+      "name_en": "Titanfall 2",
+      "steam_appid": 1237970,
+      "external_url": "https://store.playstation.com/zh-hans-hk/search/titanfall%202"
+    },
+    {
+      "id": "ps-war-thunder",
+      "platform": "PS",
+      "medium": "PS4 · PS5 · 免费版",
+      "name_zh": "战争雷霆",
+      "name_en": "War Thunder",
+      "steam_appid": 236390,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/EP4432-CUSA00182_00-EBW0820000000000"
+    },
+    {
+      "id": "ps-warface-clutch",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "Warface: Clutch",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202412/2616/6cb89abdf7a4c3d156195e38f2b15a7416a8a60be3f95b7d.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/EP2134-CUSA12894_00-ASIA000000000000"
+    },
+    {
+      "id": "ps-warframe",
+      "platform": "PS",
+      "medium": "PS4 · 免费版",
+      "name_zh": "星际战甲",
+      "name_en": "Warframe",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202606/1716/3649f730bdd4eed643166b158e33a38397e0be93e65c31c7.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/UP2097-CUSA00080_00-ASIARAMEFINAL001"
+    },
+    {
+      "id": "ps-wo-long-demo",
+      "platform": "PS",
+      "medium": "PS5 · 体验版",
+      "name_zh": "卧龙：苍天陨落 体验版",
+      "name_en": "Wo Long: Fallen Dynasty Demo",
+      "steam_appid": 1448440,
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/HP0106-PPSA09296_00-TRIAL00000000000"
+    },
+    {
+      "id": "ps-yugioh-master-duel",
+      "platform": "PS",
+      "medium": "PS5 · 免费版",
+      "name_zh": "游戏王：大师决斗",
+      "name_en": "Yu-Gi-Oh! Master Duel",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202607/3101/9b60952bc52e9af93ae5a3e282ea9cc489f545c88c57326a.png",
+      "external_url": "https://store.playstation.com/zh-hans-hk/product/JP0101-PPSA02502_00-3223055546198587"
+    },
+    {
+      "id": "pc-overwatch",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "守望先锋",
+      "name_en": "Overwatch",
+      "release_date": "2016-05-24",
+      "steam_appid": 2357570
+    },
+    {
+      "id": "pc-hearthstone",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "炉石传说",
+      "name_en": "Hearthstone",
+      "release_date": "2014-03-11",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/9/92/Hearthstone_2016_logo.png"
+    },
+    {
+      "id": "pc-diablo-2",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "暗黑破坏神 II",
+      "name_en": "Diablo II",
+      "release_date": "2000-06-29",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png"
+    },
+    {
+      "id": "pc-diablo-2-resurrected",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "暗黑破坏神 II：狱火重生",
+      "name_en": "Diablo II: Resurrected",
+      "release_date": "2021-09-23",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/88/Diablo_2_Resurrected_cover_art.jpg"
+    },
+    {
+      "id": "pc-starcraft-2",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "星际争霸 II",
+      "name_en": "StarCraft II",
+      "release_date": "2010-07-27",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg"
+    },
+    {
+      "id": "pc-diablo-4",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "暗黑破坏神 IV",
+      "name_en": "Diablo IV",
+      "release_date": "2023-06-06",
+      "steam_appid": 2344520
+    },
+    {
+      "id": "pc-richman5",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "大富翁5",
+      "name_en": "Richman 5",
+      "release_date": "2001-06-15",
+      "cover_url": "https://boneash.oldgame.tw/temp/richman/rich5/rich5-cover.jpg"
+    },
+    {
+      "id": "pc-beach-head-2000",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "抢滩登陆 2000",
+      "name_en": "Beach Head 2000",
+      "release_date": "2000-06-15",
+      "cover_url": "https://cdn.thegamesdb.net/images/original/boxart/front/91244-1.jpg"
+    },
+    {
+      "id": "pc-red-alert-3",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "红色警戒3",
+      "name_en": "Command & Conquer: Red Alert 3",
+      "release_date": "2008-10-28",
+      "steam_appid": 17480
+    },
+    {
+      "id": "pc-red-alert-2-yuris-revenge",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "红色警戒2：尤里的复仇",
+      "name_en": "Command & Conquer: Yuri's Revenge",
+      "release_date": "2001-10-10",
+      "steam_appid": 2229850
+    },
+    {
+      "id": "pc-red-alert-2-republic-glory",
+      "platform": "PC客户端",
+      "medium": "PC Mod",
+      "name_zh": "红色警戒2：共和国之辉",
+      "name_en": "Red Alert 2: Republic Glory",
+      "cover_url": "https://syimg.3dmgame.com/uploadimg/img/2024/0329/1711683018586562.jpg"
+    },
+    {
+      "id": "pc-age-of-empires-3",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "帝国时代3",
+      "name_en": "Age of Empires III",
+      "release_date": "2005-10-18",
+      "steam_appid": 933110
+    },
+    {
+      "id": "pc-warcraft-3",
+      "platform": "PC客户端",
+      "medium": "Battle.net",
+      "name_zh": "魔兽争霸 III：混乱之治",
+      "name_en": "Warcraft III: Reign of Chaos",
+      "release_date": "2002-07-03",
+      "cover_url": "https://cdn.mobygames.com/covers/7809685-warcraft-iii-reign-of-chaos-windows-front-cover.jpg"
+    },
+    {
+      "id": "pc-road-rash",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "暴力摩托",
+      "name_en": "Road Rash",
+      "release_date": "1996-09-30",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/83/Road_Rash_cover.jpg"
+    },
+    {
+      "id": "pc-steamland",
+      "platform": "PC客户端",
+      "medium": "PC单机",
+      "name_zh": "蒸汽时代",
+      "name_en": "Steamland",
+      "release_date": "2003-11-22"
+    },
+    {
+      "id": "pc-dragon-oath",
+      "platform": "PC客户端",
+      "medium": "网络游戏",
+      "name_zh": "天龙八部",
+      "name_en": "Dragon Oath",
+      "release_date": "2007-05-09"
+    },
+    {
+      "id": "pc-blade-and-soul",
+      "platform": "PC客户端",
+      "medium": "网络游戏",
+      "name_zh": "剑灵",
+      "name_en": "Blade & Soul",
+      "release_date": "2013-11-28"
+    },
+    {
+      "id": "pc-zhengtu",
+      "platform": "PC客户端",
+      "medium": "网络游戏",
+      "name_zh": "征途",
+      "name_en": "Zhengtu Online",
+      "release_date": "2006-04-21",
+      "cover_url": "https://siteres.ztgame.com/upload/zt/images/news/2018-07/zt763.jpg"
+    },
+    {
+      "id": "other-shadow-of-the-ninja",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "赤影战士（水上魂斗罗）",
+      "name_en": "Shadow of the Ninja",
+      "name_ja": "闇の仕事人 KAGE",
+      "release_date": "1990-08-10",
+      "cover_url": "https://icemanvideogames.com/cdn/shop/products/091199021488_80dfa0ba-dab8-45d0-896f-164a70df3e51_1024x1024.jpg?v=1734126099"
+    },
+    {
+      "id": "other-contra",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "魂斗罗",
+      "name_en": "Contra",
+      "release_date": "1988-02-09",
+      "cover_url": "https://www.controlpadblues.com/wp-content/uploads/2011/09/contra.cover_.front_.jpg"
+    },
+    {
+      "id": "other-super-mario-bros",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "超级马里奥兄弟",
+      "name_en": "Super Mario Bros.",
+      "name_ja": "スーパーマリオブラザーズ",
+      "release_date": "1985-09-13",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png"
+    },
+    {
+      "id": "other-mitsume-ga-tooru",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "三目童子",
+      "name_en": "Mitsume ga Tooru",
+      "name_ja": "三つ目がとおる",
+      "release_date": "1992-07-17",
+      "cover_url": "https://images.launchbox-app.com/6fc70b93-7815-4ecf-b33a-8b8679dabc72.png"
+    },
+    {
+      "id": "ps2-samurai-warriors-2",
+      "platform": "PS",
+      "medium": "PS2",
+      "name_zh": "战国无双2",
+      "name_en": "Samurai Warriors 2",
+      "name_ja": "戦国無双2",
+      "release_date": "2006-02-24",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/2/24/Samurai_Warriors_2_Coverart.png"
+    },
+    {
+      "id": "ps2-dynasty-warriors-2",
+      "platform": "PS",
+      "medium": "PS2",
+      "name_zh": "真·三国无双2",
+      "name_en": "Dynasty Warriors 2",
+      "name_ja": "真・三國無双",
+      "release_date": "2000-08-03",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/b/b9/Dynasty_Warriors_2_Coverart.png"
+    },
+    {
+      "id": "ps2-tenchu-3",
+      "platform": "PS",
+      "medium": "PS2",
+      "name_zh": "天诛3：天堂之怒",
+      "name_en": "Tenchu: Wrath of Heaven",
+      "name_ja": "天誅 参",
+      "release_date": "2003-03-07",
+      "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Tenchu_Wrath_of_Heaven.jpg"
+    },
+    {
+      "id": "other-memory-4970b92343c8",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "反恐精英 1.6",
+      "name_en": "Counter-Strike 1.6",
+      "steam_appid": 10
+    },
+    {
+      "id": "other-memory-addb5959fd52",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "反恐精英：零点行动",
+      "name_en": "Counter-Strike: Condition Zero",
+      "steam_appid": 80
+    },
+    {
+      "id": "other-memory-d0439907a8c4",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "星际争霸",
+      "name_en": "StarCraft",
+      "cover_url": "https://i.ebayimg.com/images/g/NU4AAOSw9M5kzVWo/s-l1200.png"
+    },
+    {
+      "id": "other-memory-48e9e9599ef3",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "星际争霸：母巢之战",
+      "name_en": "StarCraft: Brood War",
+      "cover_url": "https://cdn.wikimg.net/en/strategywiki/images/d/dd/StarCraft_Brood_War_CD_Cover.png"
+    },
+    {
+      "id": "other-memory-a8e4ebe27029",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "暗黑破坏神 III",
+      "name_en": "Diablo III",
+      "cover_url": "https://i5.walmartimages.com/seo/Diablo-III-Activision-Blizzard-PC-Software-020626728515_e2e74a5d-33dc-4324-8259-3eb2d43d57e7.4da53d28bad72417e283d72c2070876a.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768"
+    },
+    {
+      "id": "other-memory-e19b5adaba15",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "英雄无敌 III",
+      "name_en": "Heroes of Might and Magic III",
+      "steam_appid": 297000
+    },
+    {
+      "id": "other-memory-f09af2f38557",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "盟军敢死队",
+      "name_en": "Commandos",
+      "steam_appid": 6800
+    },
+    {
+      "id": "other-memory-3eeb1a34f2da",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "盟军敢死队2",
+      "name_en": "Commandos 2",
+      "steam_appid": 6830
+    },
+    {
+      "id": "other-memory-4f192c19a090",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "盟军敢死队3",
+      "name_en": "Commandos 3",
+      "steam_appid": 6840
+    },
+    {
+      "id": "other-memory-c9ebd6654ca6",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "三角洲特种部队",
+      "name_en": "Delta Force",
+      "steam_appid": 32620
+    },
+    {
+      "id": "other-memory-e3c813d07827",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "侠盗猎车手 III",
+      "name_en": "Grand Theft Auto III",
+      "cover_url": "https://www.cdiscount.com/pdt2/4/4/6/1/700x700/5026555035446/rw/gta-iii-pc-cd-rom.jpg"
+    },
+    {
+      "id": "other-memory-9d711d1ef0ec",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "极品飞车：地下狂飙",
+      "name_en": "Need for Speed: Underground",
+      "cover_url": "https://cdn.mobygames.com/covers/27956213-need-for-speed-underground-windows-front-cover.jpg"
+    },
+    {
+      "id": "other-memory-09fa8de483b8",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "百战天虫2",
+      "name_en": "Worms 2",
+      "cover_url": "https://cdn.mobygames.com/covers/11029388-worms-2-windows-front-cover.jpg"
+    },
+    {
+      "id": "other-memory-4cc0227748b8",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "植物大战僵尸",
+      "name_en": "Plants vs. Zombies",
+      "steam_appid": 3590
+    },
+    {
+      "id": "other-memory-7454f32d3c7c",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "祖玛",
+      "name_en": "Zuma",
+      "steam_appid": 3330
+    },
+    {
+      "id": "other-memory-76d10a009811",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "机械迷城",
+      "name_en": "Machinarium",
+      "steam_appid": 40700
+    },
+    {
+      "id": "other-memory-d22c515a246b",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "仙剑奇侠传4",
+      "cover_url": "https://cdn.mobygames.com/covers/4400885-xianjian-qixia-zhuan-4-windows-front-cover.jpg"
+    },
+    {
+      "id": "other-memory-db460d10a095",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "剑侠情缘",
+      "cover_url": "https://n.sinaimg.cn/sinacn05/111/w427h484/20181204/5429-hphsupx9926917.jpg"
+    },
+    {
+      "id": "other-memory-4855ae442497",
+      "platform": "其他",
+      "medium": "PC单机",
+      "name_zh": "模拟人生",
+      "cover_url": "https://eventyrhuset.no/cdn/shop/files/the-sims-2000-pc-spill-scanbox-egmont-film-544_1024x1024.jpg?v=1762118346"
+    },
+    {
+      "id": "other-memory-f469aa19b1f2",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "冒险岛",
+      "cover_url": "https://i.ebayimg.com/images/g/3hgAAOSwpeplyxWp/s-l1200.jpg"
+    },
+    {
+      "id": "other-memory-8bb1dd5d9df4",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "跑跑卡丁车",
+      "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/6c/f7/f76cf78b-d5cf-9e38-1739-4d807b08dc93/196871183604.jpg/1200x1200bf-60.jpg"
+    },
+    {
+      "id": "other-memory-852703e33209",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "泡泡堂",
+      "cover_url": "https://i0.wp.com/news.qoo-app.com/ko/wp-content/uploads/sites/4/2019/03/19032605472727.png"
+    },
+    {
+      "id": "other-memory-c14d54bbc39d",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "QQ堂",
+      "cover_url": "https://doc-fd.zol-img.com.cn/g3/M05/07/08/Cg-4V1CUvoiIejVaAADdy-2LRKAAAAeEgFWV8AAAN3j720.jpg"
+    },
+    {
+      "id": "other-memory-599fd9028bf1",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "地下城与勇士",
+      "name_en": "DNF",
+      "steam_appid": 495910
+    },
+    {
+      "id": "other-memory-e4b3e7d9a2ef",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "穿越火线",
+      "name_en": "CrossFire",
+      "cover_url": "https://media.senscritique.com/media/000014844213/0/crossfire.jpg"
+    },
+    {
+      "id": "other-memory-a1ac8e7999ee",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "英雄联盟",
+      "name_en": "League of Legends",
+      "cover_url": "https://gaming-cdn.com/images/products/9456/orig/league-of-legends-pc-spel-cover.jpg?v=1747212286"
+    },
+    {
+      "id": "other-memory-0b797c9b946b",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "Dota",
+      "cover_url": "https://fonzon.club/uploads/posts/2022-01/1643326015_15-fonzon-club-p-dota-1-zastavka-27.jpg"
+    },
+    {
+      "id": "other-memory-8f7fea4b390d",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "热血江湖",
+      "cover_url": "https://img.ddooo.com/uppic/20240424/2fa6d493b6147cdf87e776e7cf5aab2d.jpg"
+    },
+    {
+      "id": "other-memory-ebd5f2fb38b1",
+      "platform": "其他",
+      "medium": "网络游戏",
+      "name_zh": "龙之谷",
+      "cover_url": "https://img.bhs4.com/a2/e/a2e0d7691d17f666dd87fdd044c9be5211e3606a_large.jpg"
+    },
+    {
+      "id": "other-memory-6fbb35248c2a",
+      "platform": "其他",
+      "medium": "网页游戏",
+      "name_zh": "宠物连连看",
+      "cover_url": "https://static.keygames.com/5/60335/35218/672x448/pet-connect.webp"
+    },
+    {
+      "id": "other-memory-5503cc25b229",
+      "platform": "其他",
+      "medium": "网页游戏",
+      "name_zh": "黄金矿工",
+      "cover_url": "https://criticalhits.com.br/wp-content/uploads/2013/01/gold-miner.jpg"
+    },
+    {
+      "id": "other-memory-d1d58e65db71",
+      "platform": "其他",
+      "medium": "网页游戏",
+      "name_zh": "死神 VS 火影",
+      "cover_url": "https://cdn.bagogames.com/wp-content/uploads/2015/10/04125719/BleachVSNaruto_2.4_BagogGames_4.jpg"
+    },
+    {
+      "id": "other-memory-c73e8ae9bfa5",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "坦克大战",
+      "name_en": "Battle City",
+      "cover_url": "https://cdn.wikimg.net/en/strategywiki/images/0/06/Battle_City_FC_box.jpg"
+    },
+    {
+      "id": "other-memory-e202819ac935",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "冒险岛3",
+      "cover_url": "https://images.launchbox-app.com/bd39a4d3-4294-447c-93eb-90a676088f44.jpg"
+    },
+    {
+      "id": "other-memory-f4859d81db79",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "敲冰块",
+      "name_en": "Ice Climber",
+      "cover_url": "https://questicle.net/wp-content/uploads/2022/10/IceClimber.jpg"
+    },
+    {
+      "id": "other-memory-b0421a34fd62",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "沙罗曼蛇",
+      "name_en": "Salamander",
+      "cover_url": "https://cdn.mobygames.com/covers/7177853-life-force-nes-front-cover.jpg"
+    },
+    {
+      "id": "other-memory-fa1f2914d4fc",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "小蜜蜂",
+      "name_en": "Galaga",
+      "cover_url": "https://emubrowser.com/sites/default/files/boxart/Galaga.jpg"
+    },
+    {
+      "id": "other-memory-9fb38068e8a2",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "超时空要塞",
+      "cover_url": "https://images.launchbox-app.com/7159d34e-617c-45b3-8f74-1bda5065c2c4.png"
+    },
+    {
+      "id": "other-memory-5acf6d1637d3",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "水管工",
+      "name_en": "Mario Bros.",
+      "cover_url": "https://storage.googleapis.com/images.pricecharting.com/2qqdig22bjscpd3m/1600.jpg"
+    },
+    {
+      "id": "other-memory-f0d7a1a2b036",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "忍者龙剑传",
+      "cover_url": "https://www.loadingscreen.ca/cdn/shop/products/NinjaGaiden.jpg?v=1644794119"
+    },
+    {
+      "id": "other-memory-4fb77139e977",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "忍者神龟",
+      "cover_url": "https://retronorthgames.com/cdn/shop/files/IMG_2707-Photoroom_069c0c6b-13e0-4c18-9a30-95b8adb80c33.jpg?v=1773112456"
+    },
+    {
+      "id": "other-memory-45598171a7c9",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "双截龙2",
+      "cover_url": "https://www.powerupgaming.ca/cdn/shop/files/20994_front.jpg?v=1693015632"
+    },
+    {
+      "id": "other-memory-c23cc7ab6225",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "唐老鸭梦冒险",
+      "cover_url": "https://i.ebayimg.com/images/g/GwEAAOSwEvVkE4HL/s-l1200.png"
+    },
+    {
+      "id": "other-memory-e3977ec8aebc",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "雪人兄弟",
+      "cover_url": "https://ec.treasure-f.com/images/1061003704813640/1500/1061003704813640_01_5094w.jpeg"
+    },
+    {
+      "id": "other-memory-559958a88534",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "泡泡龙",
+      "cover_url": "https://cdn.mobygames.com/covers/6676718-bubble-bobble-nes-front-cover.jpg"
+    },
+    {
+      "id": "other-memory-4fa79cae0535",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "热血物语",
+      "cover_url": "https://i.ebayimg.com/images/g/duAAAOSw4JRlZneO/s-l1200.jpg"
+    },
+    {
+      "id": "other-memory-b1f0bfe29155",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "绿色兵团",
+      "cover_url": "https://en.konsolinet.fi/tuotekuvat/800x800/df068d68.jpg"
+    },
+    {
+      "id": "other-memory-cf3811446eb9",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "影子传说",
+      "cover_url": "https://i0.wp.com/www.michaelspillane.com/games/boxes-nes/legend_of_kage_box.jpg"
+    },
+    {
+      "id": "other-memory-454eadadefb8",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "恶魔城",
+      "cover_url": "https://1904comics.com/cdn/shop/products/image_e5637c8f-9116-4d84-a47e-d05cfa7fe057.jpg"
+    },
+    {
+      "id": "other-memory-5c51dca49f2d",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "火焰之纹章",
+      "cover_url": "https://i.ebayimg.com/images/g/4zMAAeSw65JpH1qr/s-l400.jpg"
+    },
+    {
+      "id": "other-memory-7950df7483af",
+      "platform": "其他",
+      "medium": "红白机",
+      "name_zh": "吞食天地",
+      "cover_url": "https://images.launchbox-app.com/11ad40c3-187a-46d5-8381-5e735ed73dae.jpg"
+    },
+    {
+      "id": "other-memory-96645552187f",
+      "platform": "其他",
+      "medium": "街机",
+      "name_zh": "雷电",
+      "cover_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2pwp.jpg"
+    },
+    {
+      "id": "other-memory-50ffc12c5248",
+      "platform": "其他",
+      "medium": "PS2",
+      "name_zh": "旺达与巨像",
+      "cover_url": "https://cdn.mobygames.com/covers/5497517-shadow-of-the-colossus-playstation-2-front-cover.jpg"
+    }
+  ]
+}

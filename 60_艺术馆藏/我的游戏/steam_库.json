@@ -1,0 +1,2392 @@
+{
+  "platform": "Steam",
+  "game_count": 360,
+  "data_mode": "sanitized-library-sample",
+  "privacy": {
+    "playtime": "redacted",
+    "accountIdentity": "removed",
+    "personalHistory": "redacted"
+  },
+  "note": "保留作品名称、公开商店信息和必要封面；原拥有者的 Steam 身份、主页、游玩时长、近期活动与获取时间已移除。",
+  "games": [
+    {
+      "appid": 427520,
+      "name": "Factorio",
+      "name_en": "Factorio",
+      "release_date": "2020-08-14",
+      "cover_file": "封面/精选封面/steam-427520.jpg"
+    },
+    {
+      "appid": 1366540,
+      "name": "戴森球计划",
+      "name_zh": "戴森球计划",
+      "name_en": "Dyson Sphere Program",
+      "name_original": "Dyson Sphere Program",
+      "release_date": "2021-01-20",
+      "cover_file": "封面/精选封面/steam-1366540.jpg"
+    },
+    {
+      "appid": 1466860,
+      "name": "Age of Empires IV: Anniversary Edition",
+      "name_en": "Age of Empires IV: Anniversary Edition",
+      "release_date": "2021-10-28",
+      "cover_file": "封面/精选封面/steam-1466860.jpg"
+    },
+    {
+      "appid": 526870,
+      "name": "幸福工厂",
+      "name_zh": "幸福工厂",
+      "name_en": "Satisfactory",
+      "name_original": "Satisfactory",
+      "release_date": "2024-09-10",
+      "cover_file": "封面/精选封面/steam-526870.jpg"
+    },
+    {
+      "appid": 1086940,
+      "name": "博德之门3",
+      "name_zh": "博德之门3",
+      "name_en": "Baldur's Gate 3",
+      "name_original": "Baldur's Gate 3",
+      "release_date": "2023-08-03",
+      "cover_file": "封面/精选封面/steam-1086940.jpg"
+    },
+    {
+      "appid": 2694490,
+      "name": "Path of Exile 2",
+      "name_en": "Path of Exile 2",
+      "release_date": "2024-12-06",
+      "cover_file": "封面/精选封面/steam-2694490.jpg"
+    },
+    {
+      "appid": 588650,
+      "name": "Dead Cells",
+      "name_en": "Dead Cells",
+      "release_date": "2018-08-06",
+      "cover_file": "封面/精选封面/steam-588650.jpg"
+    },
+    {
+      "appid": 1771300,
+      "name": "天国：拯救2",
+      "name_zh": "天国：拯救2",
+      "name_en": "Kingdom Come: Deliverance II",
+      "name_ja": "Kingdom Come: Deliverance II",
+      "name_original": "Kingdom Come: Deliverance II",
+      "release_date": "2025-02-04",
+      "cover_file": "封面/精选封面/steam-1771300.jpg"
+    },
+    {
+      "appid": 374320,
+      "name": "DARK SOULS™ III",
+      "name_en": "DARK SOULS™ III",
+      "release_date": "2016-04-11",
+      "cover_file": "封面/精选封面/steam-374320.jpg"
+    },
+    {
+      "appid": 977400,
+      "name": "Cell to Singularity - Evolution Never Ends",
+      "name_en": "Cell to Singularity - Evolution Never Ends",
+      "release_date": "2021-11-03",
+      "cover_file": "封面/精选封面/steam-977400.jpg"
+    },
+    {
+      "appid": 860890,
+      "name": "Factory Town",
+      "name_en": "Factory Town",
+      "release_date": "2021-11-17"
+    },
+    {
+      "appid": 2207490,
+      "name": "工业小镇：放置版",
+      "name_zh": "工业小镇：放置版",
+      "name_en": "Factory Town Idle",
+      "name_ja": "Factory Town Idle",
+      "name_original": "Factory Town Idle",
+      "release_date": "2024-01-08"
+    },
+    {
+      "appid": 1217060,
+      "name": "枪火重生",
+      "name_zh": "枪火重生",
+      "name_en": "Gunfire Reborn",
+      "name_ja": "Gunfire Reborn",
+      "name_original": "Gunfire Reborn",
+      "release_date": "2021-11-17"
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "name_en": "Slay the Spire",
+      "release_date": "2019-01-23"
+    },
+    {
+      "appid": 435150,
+      "name": "神界：原罪2 - 终极版",
+      "name_zh": "神界：原罪2 - 终极版",
+      "name_en": "Divinity: Original Sin 2",
+      "name_ja": "Divinity: Original Sin 2 - Definitive Edition",
+      "name_original": "Divinity: Original Sin 2",
+      "release_date": "2017-09-14"
+    },
+    {
+      "appid": 3681010,
+      "name": "仁王３",
+      "name_zh": "仁王３",
+      "name_en": "Nioh 3",
+      "name_ja": "仁王３",
+      "name_original": "Nioh 3",
+      "release_date": "2026-02-05",
+      "cover_file": "封面/Steam/3681010.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/library_hero.jpg"
+    },
+    {
+      "appid": 570940,
+      "name": "DARK SOULS™: REMASTERED",
+      "name_en": "DARK SOULS™: REMASTERED",
+      "release_date": "2018-05-23"
+    },
+    {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "name_en": "Slay the Spire 2",
+      "release_date": "2026-03-05"
+    },
+    {
+      "appid": 3167020,
+      "name": "逃离鸭科夫",
+      "name_zh": "逃离鸭科夫",
+      "name_en": "Escape From Duckov",
+      "name_ja": "エスケープ フロム ダッコフ",
+      "name_original": "Escape From Duckov",
+      "release_date": "2025-10-16"
+    },
+    {
+      "appid": 466560,
+      "name": "Northgard: Definitive Edition",
+      "name_en": "Northgard: Definitive Edition",
+      "release_date": "2018-03-07"
+    },
+    {
+      "appid": 2246340,
+      "name": "Monster Hunter Wilds",
+      "name_en": "Monster Hunter Wilds",
+      "release_date": "2025-02-27"
+    },
+    {
+      "appid": 3312130,
+      "name": "工业小镇2：天堂岛",
+      "name_zh": "工业小镇2：天堂岛",
+      "name_en": "Factory Town 2: Paradise",
+      "name_ja": "Factory Town 2: Paradise",
+      "name_original": "Factory Town 2: Paradise",
+      "release_date": "2026-07-14"
+    },
+    {
+      "appid": 1903340,
+      "name": "光与影：33号远征队",
+      "name_zh": "光与影：33号远征队",
+      "name_en": "Clair Obscur: Expedition 33",
+      "name_ja": "Clair Obscur: Expedition 33",
+      "name_original": "Clair Obscur: Expedition 33",
+      "release_date": "2025-04-24"
+    },
+    {
+      "appid": 1371980,
+      "name": "《恶意不息》",
+      "name_zh": "《恶意不息》",
+      "name_en": "No Rest for the Wicked",
+      "name_ja": "ノー レスト フォー ザ ウィケッド",
+      "name_original": "No Rest for the Wicked",
+      "release_date": "2024-04-18"
+    },
+    {
+      "appid": 373420,
+      "name": "神界：原罪增强版",
+      "name_zh": "神界：原罪增强版",
+      "name_en": "Divinity: Original Sin Enhanced Edition",
+      "name_ja": "Divinity: Original Sin - Enhanced Edition",
+      "name_original": "Divinity: Original Sin Enhanced Edition",
+      "release_date": "2015-10-27"
+    },
+    {
+      "appid": 457140,
+      "name": "缺氧",
+      "name_zh": "缺氧",
+      "name_en": "Oxygen Not Included",
+      "name_ja": "Oxygen Not Included",
+      "name_original": "Oxygen Not Included",
+      "release_date": "2019-07-30"
+    },
+    {
+      "appid": 367520,
+      "name": "Hollow Knight",
+      "name_en": "Hollow Knight",
+      "release_date": "2017-02-24"
+    },
+    {
+      "appid": 255710,
+      "name": "Cities: Skylines",
+      "name_en": "Cities: Skylines",
+      "release_date": "2015-03-10"
+    },
+    {
+      "appid": 283640,
+      "name": "Salt and Sanctuary",
+      "name_en": "Salt and Sanctuary",
+      "release_date": "2016-05-17"
+    },
+    {
+      "appid": 2427700,
+      "name": "背包乱斗：福西法的宝藏 Backpack Battles",
+      "name_zh": "背包乱斗：福西法的宝藏 Backpack Battles",
+      "name_en": "Backpack Battles",
+      "name_ja": "バックパック・バトル",
+      "name_original": "Backpack Battles",
+      "release_date": "2025-06-13"
+    },
+    {
+      "appid": 2398170,
+      "name": "深地爆破采掘",
+      "name_zh": "深地爆破采掘",
+      "name_en": "BORE BLASTERS",
+      "name_ja": "BORE BLASTERS",
+      "name_original": "BORE BLASTERS",
+      "release_date": "2024-03-08"
+    },
+    {
+      "appid": 248390,
+      "name": "Craft The World",
+      "name_en": "Craft The World",
+      "release_date": "2014-11-24"
+    },
+    {
+      "appid": 289070,
+      "name": "Sid Meier's Civilization VI",
+      "name_en": "Sid Meier's Civilization VI",
+      "release_date": "2016-10-20"
+    },
+    {
+      "appid": 2407270,
+      "name": "AI LIMIT 无限机兵",
+      "name_zh": "AI LIMIT 无限机兵",
+      "name_en": "AI Limit",
+      "name_ja": "AI LIMIT 無限機兵",
+      "name_original": "AI Limit",
+      "release_date": "2025-03-27"
+    },
+    {
+      "appid": 2277560,
+      "name": "明末：渊虚之羽",
+      "name_zh": "明末：渊虚之羽",
+      "name_en": "WUCHANG: Fallen Feathers",
+      "name_ja": "明末：ウツロノハネ",
+      "name_original": "WUCHANG: Fallen Feathers",
+      "release_date": "2025-07-23"
+    },
+    {
+      "appid": 449960,
+      "name": "Book of Demons",
+      "name_en": "Book of Demons",
+      "release_date": "2018-12-13"
+    },
+    {
+      "appid": 1076200,
+      "name": "魔域之书",
+      "name_zh": "魔域之书",
+      "name_en": "Roguebook",
+      "name_original": "Roguebook",
+      "release_date": "2021-06-17"
+    },
+    {
+      "appid": 2820820,
+      "name": "巨人杀手：暗黑之潮",
+      "name_zh": "巨人杀手：暗黑之潮",
+      "name_en": "Jotunnslayer: Hordes of Hel",
+      "name_original": "Jotunnslayer: Hordes of Hel",
+      "release_date": "2025-09-03"
+    },
+    {
+      "appid": 2113040,
+      "name": "夺牌狂飙",
+      "name_zh": "夺牌狂飙",
+      "name_en": "Rungore",
+      "name_original": "Rungore",
+      "release_date": "2024-05-16"
+    },
+    {
+      "appid": 2753900,
+      "name": "王之凝视 (The King is Watching)",
+      "name_zh": "王之凝视 (The King is Watching)",
+      "name_en": "The King is Watching",
+      "name_original": "The King is Watching",
+      "release_date": "2025-07-21"
+    },
+    {
+      "appid": 679900,
+      "name": "Swords & Souls: Neverseen",
+      "name_en": "Swords & Souls: Neverseen",
+      "release_date": "2019-07-22"
+    },
+    {
+      "appid": 2666510,
+      "name": "Rusty's Retirement",
+      "name_en": "Rusty's Retirement",
+      "release_date": "2024-04-26"
+    },
+    {
+      "appid": 1385380,
+      "name": "Across the Obelisk",
+      "name_en": "Across the Obelisk",
+      "release_date": "2022-08-16"
+    },
+    {
+      "appid": 1682060,
+      "name": "尼罗河勇士2",
+      "name_zh": "尼罗河勇士2",
+      "name_en": "Warriors of the Nile 2",
+      "name_original": "Warriors of the Nile 2",
+      "release_date": "2022-08-23"
+    },
+    {
+      "appid": 3105440,
+      "name": "魔法门之英雄无敌：上古纪元 Heroes of Might and Magic: Olden Era",
+      "name_zh": "魔法门之英雄无敌：上古纪元 Heroes of Might and Magic: Olden Era",
+      "name_en": "Heroes of Might and Magic: Olden Era",
+      "name_original": "Heroes of Might and Magic: Olden Era",
+      "release_date": "2026-04-30"
+    },
+    {
+      "appid": 1868140,
+      "name": "潜水员戴夫 DAVE THE DIVER",
+      "name_zh": "潜水员戴夫 DAVE THE DIVER",
+      "name_en": "DAVE THE DIVER",
+      "name_ja": "デイヴ・ザ・ダイバー",
+      "name_original": "DAVE THE DIVER",
+      "release_date": "2023-06-28"
+    },
+    {
+      "appid": 374040,
+      "name": "Portal Knights",
+      "name_en": "Portal Knights",
+      "release_date": "2017-05-18"
+    },
+    {
+      "appid": 1267470,
+      "name": "尼罗河勇士",
+      "name_zh": "尼罗河勇士",
+      "name_en": "Warriors of the Nile",
+      "name_ja": "Warriors of the Nile ~太陽の勇士~",
+      "name_original": "Warriors of the Nile",
+      "release_date": "2020-08-07"
+    },
+    {
+      "appid": 2334730,
+      "name": "Death Must Die",
+      "name_en": "Death Must Die",
+      "release_date": "2023-11-14"
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "name_en": "Monster Train",
+      "release_date": "2020-05-21"
+    },
+    {
+      "appid": 1637320,
+      "name": "Dome Keeper 穹顶守护者",
+      "name_zh": "Dome Keeper 穹顶守护者",
+      "name_en": "Dome Keeper",
+      "name_ja": "Dome Keeper ドームキーパー",
+      "name_original": "Dome Keeper",
+      "release_date": "2022-09-27"
+    },
+    {
+      "appid": 221380,
+      "name": "Age of Empires II (2013)",
+      "name_en": "Age of Empires II (2013)",
+      "release_date": "2013-04-09"
+    },
+    {
+      "appid": 1203620,
+      "name": "雾锁王国 (Enshrouded)",
+      "name_zh": "雾锁王国 (Enshrouded)",
+      "name_en": "Enshrouded",
+      "name_ja": "Enshrouded~霧の王国~",
+      "name_original": "Enshrouded",
+      "release_date": "2024-01-24"
+    },
+    {
+      "appid": 1990110,
+      "name": "咒运魔骰",
+      "name_zh": "咒运魔骰",
+      "name_en": "SpellRogue",
+      "name_ja": "SpellRogue",
+      "name_original": "SpellRogue",
+      "release_date": "2025-04-24"
+    },
+    {
+      "appid": 728880,
+      "name": "Overcooked! 2",
+      "name_en": "Overcooked! 2",
+      "release_date": "2018-08-07"
+    },
+    {
+      "appid": 2904000,
+      "name": "咒语旅团",
+      "name_zh": "咒语旅团",
+      "name_en": "The Spell Brigade",
+      "name_ja": "呪文団",
+      "name_original": "The Spell Brigade",
+      "release_date": "2026-04-29"
+    },
+    {
+      "appid": 1296830,
+      "name": "暖雪 Warm Snow",
+      "name_zh": "暖雪 Warm Snow",
+      "name_en": "暖雪 Warm Snow",
+      "name_ja": "暖雪 Warm Snow",
+      "name_original": "暖雪 Warm Snow",
+      "release_date": "2022-01-18"
+    },
+    {
+      "appid": 271590,
+      "name": "Grand Theft Auto V 传承版",
+      "name_zh": "Grand Theft Auto V 传承版",
+      "name_en": "Grand Theft Auto V Legacy",
+      "name_ja": "グランド・セフト・オートV レガシー",
+      "name_original": "Grand Theft Auto V Legacy",
+      "release_date": "2015-04-13"
+    },
+    {
+      "appid": 570,
+      "name": "Dota 2",
+      "name_en": "Dota 2",
+      "release_date": "2013-07-09"
+    },
+    {
+      "appid": 1127500,
+      "name": "Mini Motorways",
+      "name_en": "Mini Motorways",
+      "release_date": "2021-07-20"
+    },
+    {
+      "appid": 2218750,
+      "name": "Halls of Torment 苦痛殿堂",
+      "name_zh": "Halls of Torment 苦痛殿堂",
+      "name_en": "Halls of Torment",
+      "name_ja": "Halls of Torment",
+      "name_original": "Halls of Torment",
+      "release_date": "2024-09-24"
+    },
+    {
+      "appid": 553420,
+      "name": "TUNIC",
+      "name_en": "TUNIC",
+      "release_date": "2022-03-16"
+    },
+    {
+      "appid": 527230,
+      "name": "为了吾王 / For The King",
+      "name_zh": "为了吾王 / For The King",
+      "name_en": "For The King",
+      "name_ja": "For The King",
+      "name_original": "For The King",
+      "release_date": "2018-04-19"
+    },
+    {
+      "appid": 2321470,
+      "name": "深岩银河：幸存者",
+      "name_zh": "深岩银河：幸存者",
+      "name_en": "Deep Rock Galactic: Survivor",
+      "name_ja": "Deep Rock Galactic: Survivor",
+      "name_original": "Deep Rock Galactic: Survivor",
+      "release_date": "2025-09-17"
+    },
+    {
+      "appid": 4078110,
+      "name": "Suncraft",
+      "name_en": "Suncraft",
+      "release_date": "2026-07-28",
+      "cover_file": "封面/Steam/4078110.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4078110/512b1a9a23afa111a2016ea17d6c8c6db769d145/header.jpg?t=1785537012"
+    },
+    {
+      "appid": 3321460,
+      "name": "红色沙漠",
+      "name_zh": "红色沙漠",
+      "name_en": "Crimson Desert",
+      "name_original": "Crimson Desert",
+      "release_date": "2026-03-19"
+    },
+    {
+      "appid": 569480,
+      "name": "Kingdoms and Castles",
+      "name_en": "Kingdoms and Castles",
+      "release_date": "2017-07-20"
+    },
+    {
+      "appid": 1229240,
+      "name": "宿命残响（Chained Echoes）",
+      "name_zh": "宿命残响（Chained Echoes）",
+      "name_en": "Chained Echoes",
+      "name_original": "Chained Echoes",
+      "release_date": "2022-12-08"
+    },
+    {
+      "appid": 2060160,
+      "name": "编程农场",
+      "name_zh": "编程农场",
+      "name_en": "The Farmer Was Replaced",
+      "name_ja": "農家は Replace() されました",
+      "name_original": "The Farmer Was Replaced",
+      "release_date": "2025-10-10"
+    },
+    {
+      "appid": 506140,
+      "name": "Shop Heroes",
+      "name_en": "Shop Heroes",
+      "release_date": "2016-08-15"
+    },
+    {
+      "appid": 1794680,
+      "name": "Vampire Survivors - 吸血鬼幸存者",
+      "name_zh": "Vampire Survivors - 吸血鬼幸存者",
+      "name_en": "Vampire Survivors",
+      "name_ja": "Vampire Survivors",
+      "name_original": "Vampire Survivors",
+      "release_date": "2022-10-20"
+    },
+    {
+      "appid": 1668690,
+      "name": "斗技场的阿利娜 Alina of the Arena",
+      "name_zh": "斗技场的阿利娜 Alina of the Arena",
+      "name_en": "Alina of the Arena",
+      "name_ja": "Alina of the Arena",
+      "name_original": "Alina of the Arena",
+      "release_date": "2022-10-13"
+    },
+    {
+      "appid": 955740,
+      "name": "Mini Healer",
+      "name_en": "Mini Healer",
+      "release_date": "2020-04-24"
+    },
+    {
+      "appid": 1030300,
+      "name": "Hollow Knight: Silksong",
+      "name_en": "Hollow Knight: Silksong",
+      "release_date": "2025-09-04"
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine：壁纸引擎",
+      "name_zh": "Wallpaper Engine：壁纸引擎",
+      "name_en": "Wallpaper Engine",
+      "name_original": "Wallpaper Engine",
+      "release_date": "2018-11-16"
+    },
+    {
+      "appid": 1634860,
+      "name": "小飞船大冒险 Minishoot' Adventures",
+      "name_zh": "小飞船大冒险 Minishoot' Adventures",
+      "name_en": "Minishoot' Adventures",
+      "name_original": "Minishoot' Adventures",
+      "release_date": "2024-04-02"
+    },
+    {
+      "appid": 1623730,
+      "name": "Palworld / 幻兽帕鲁",
+      "name_zh": "Palworld / 幻兽帕鲁",
+      "name_en": "Palworld",
+      "name_original": "Palworld",
+      "release_date": "2026-07-09"
+    },
+    {
+      "appid": 1948280,
+      "name": "Stacklands",
+      "name_en": "Stacklands",
+      "release_date": "2022-04-08"
+    },
+    {
+      "appid": 3751950,
+      "name": "刺客信条：黑旗 记忆重置",
+      "name_zh": "刺客信条：黑旗 记忆重置",
+      "name_en": "Assassin's Creed Black Flag Resynced",
+      "name_original": "Assassin's Creed Black Flag Resynced",
+      "release_date": "2026-07-09",
+      "cover_file": "封面/Steam/3751950.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751950/777795886ee7d2fc9f1e84aacc75f82baf75defb/header_schinese.jpg?t=1785858422"
+    },
+    {
+      "appid": 2162800,
+      "name": "异形工厂2",
+      "name_zh": "异形工厂2",
+      "name_en": "shapez 2 - Factory",
+      "name_ja": "shapez 2",
+      "name_original": "shapez 2 - Factory",
+      "release_date": "2026-04-23"
+    },
+    {
+      "appid": 1100930,
+      "name": "军团",
+      "name_zh": "军团",
+      "name_en": "Legioncraft",
+      "name_ja": "军团 LEGIONCRAFT",
+      "name_original": "Legioncraft",
+      "release_date": "2022-08-19"
+    },
+    {
+      "appid": 3503440,
+      "name": "咖啡星矿工 Astro Prospector",
+      "name_zh": "咖啡星矿工 Astro Prospector",
+      "name_en": "Astro Prospector",
+      "name_ja": "Astro Prospector",
+      "name_original": "Astro Prospector",
+      "release_date": "2025-07-14",
+      "cover_file": "封面/Steam/3503440.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3503440/625af4b6efdc7cb7cb22dcf992f9ce0ff4bb9350/header_schinese.jpg?t=1786018538"
+    },
+    {
+      "appid": 290340,
+      "name": "Armello",
+      "name_en": "Armello",
+      "release_date": "2015-09-01"
+    },
+    {
+      "appid": 2084000,
+      "name": "将军 对决",
+      "name_zh": "将军 对决",
+      "name_en": "Shogun Showdown",
+      "name_ja": "将軍 対決",
+      "name_original": "Shogun Showdown",
+      "release_date": "2024-09-05"
+    },
+    {
+      "appid": 489520,
+      "name": "随从大师",
+      "name_zh": "随从大师",
+      "name_en": "Minion Masters",
+      "name_ja": "Minion Masters",
+      "name_original": "Minion Masters",
+      "release_date": "2019-05-24"
+    },
+    {
+      "appid": 1135230,
+      "name": "Ember Knights",
+      "name_en": "Ember Knights",
+      "release_date": "2023-07-18"
+    },
+    {
+      "appid": 397060,
+      "name": "Faeria",
+      "name_en": "Faeria",
+      "release_date": "2017-03-08"
+    },
+    {
+      "appid": 666140,
+      "name": "波西亚时光",
+      "name_zh": "波西亚时光",
+      "name_en": "My Time at Portia",
+      "name_ja": "My Time at Portia",
+      "name_original": "My Time at Portia",
+      "release_date": "2019-01-15"
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "name_en": "Cobalt Core",
+      "release_date": "2023-11-08"
+    },
+    {
+      "appid": 3868320,
+      "name": "点击炼金术",
+      "name_zh": "点击炼金术",
+      "name_en": "Forage Wizard",
+      "name_ja": "フォレジ・ウィザード – 樹間の錬金術師",
+      "name_original": "Forage Wizard",
+      "release_date": "2026-05-05",
+      "cover_file": "封面/Steam/3868320.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3868320/8f99ecbe393a3a5c2044f85b9cce8e5bc2fa8a75/header.jpg?t=1783211777"
+    },
+    {
+      "appid": 2067920,
+      "name": "罗格：救世传说",
+      "name_zh": "罗格：救世传说",
+      "name_en": "Rogue: Genesia",
+      "name_ja": "Rogue : Genesia",
+      "name_original": "Rogue: Genesia",
+      "release_date": "2025-03-07"
+    },
+    {
+      "appid": 690640,
+      "name": "Trine 4: The Nightmare Prince",
+      "name_en": "Trine 4: The Nightmare Prince",
+      "release_date": "2019-10-08"
+    },
+    {
+      "appid": 3065170,
+      "name": "Monster Hunter Wilds Beta test",
+      "name_en": "Monster Hunter Wilds Beta test",
+      "release_date": "2025-02-05"
+    },
+    {
+      "appid": 391730,
+      "name": "崩溃大陆",
+      "name_zh": "崩溃大陆",
+      "name_en": "Crashlands",
+      "name_ja": "Crashlands",
+      "name_original": "Crashlands",
+      "release_date": "2016-01-21"
+    },
+    {
+      "appid": 1874490,
+      "name": "魔药经济学：神秘的魔法药水商店",
+      "name_zh": "魔药经济学：神秘的魔法药水商店",
+      "name_en": "Potionomics",
+      "name_ja": "ポーショノミクス シルヴィアの魔法薬店",
+      "name_original": "Potionomics",
+      "release_date": "2022-10-17"
+    },
+    {
+      "appid": 1364780,
+      "name": "Street Fighter™ 6",
+      "name_en": "Street Fighter™ 6",
+      "release_date": "2023-06-01"
+    },
+    {
+      "appid": 2226730,
+      "name": "孤羊战纪",
+      "name_zh": "孤羊战纪",
+      "name_en": "OVIS LOOP",
+      "name_ja": "OVIS LOOP",
+      "name_original": "OVIS LOOP",
+      "release_date": "2025-08-14"
+    },
+    {
+      "appid": 1145350,
+      "name": "Hades II",
+      "name_en": "Hades II",
+      "release_date": "2025-09-25"
+    },
+    {
+      "appid": 1336490,
+      "name": "风暴之城 Against the Storm",
+      "name_zh": "风暴之城 Against the Storm",
+      "name_en": "Against the Storm",
+      "name_ja": "Against the Storm アゲインスト・ザ・ストーム",
+      "name_original": "Against the Storm",
+      "release_date": "2023-12-08"
+    },
+    {
+      "appid": 753420,
+      "name": "Dungreed",
+      "name_en": "Dungreed",
+      "release_date": "2018-02-14"
+    },
+    {
+      "appid": 262060,
+      "name": "Darkest Dungeon®",
+      "name_en": "Darkest Dungeon®",
+      "release_date": "2016-01-19"
+    },
+    {
+      "appid": 2746910,
+      "name": "蜀末：血月三国",
+      "name_zh": "蜀末：血月三国",
+      "name_en": "Three Kingdoms: The Blood Moon",
+      "name_ja": "蜀末：三国血月伝",
+      "name_original": "Three Kingdoms: The Blood Moon",
+      "release_date": "2025-04-02"
+    },
+    {
+      "appid": 2239150,
+      "name": "Thronefall",
+      "name_en": "Thronefall",
+      "release_date": "2024-10-11"
+    },
+    {
+      "appid": 1253920,
+      "name": "Rogue Legacy 2",
+      "name_en": "Rogue Legacy 2",
+      "release_date": "2022-04-28"
+    },
+    {
+      "appid": 2501600,
+      "name": "骰子浪游者",
+      "name_zh": "骰子浪游者",
+      "name_en": "DICEOMANCER",
+      "name_ja": "DICEOMANCER",
+      "name_original": "DICEOMANCER",
+      "release_date": "2024-10-09"
+    },
+    {
+      "appid": 3769130,
+      "name": "Keep on Mining!",
+      "name_en": "Keep on Mining!",
+      "release_date": "2025-07-30",
+      "cover_file": "封面/Steam/3769130.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3769130/320ecc31730377d03c319b411fbf9ee95908d3c2/header.jpg?t=1779084143"
+    },
+    {
+      "appid": 261570,
+      "name": "Ori and the Blind Forest",
+      "name_en": "Ori and the Blind Forest",
+      "release_date": "2015-03-10"
+    },
+    {
+      "appid": 1266430,
+      "name": "迷失幻途",
+      "name_zh": "迷失幻途",
+      "name_en": "Lost In Fantaland",
+      "name_ja": "ロスト イン ファンタランド",
+      "name_original": "Lost In Fantaland",
+      "release_date": "2024-09-26"
+    },
+    {
+      "appid": 2342950,
+      "name": "God Of Weapons",
+      "name_en": "God Of Weapons",
+      "release_date": "2023-09-12"
+    },
+    {
+      "appid": 2622380,
+      "name": "艾尔登法环 黑夜君临",
+      "name_zh": "艾尔登法环 黑夜君临",
+      "name_en": "ELDEN RING NIGHTREIGN",
+      "name_ja": "ELDEN RING NIGHTREIGN",
+      "name_original": "ELDEN RING NIGHTREIGN",
+      "release_date": "2025-05-29"
+    },
+    {
+      "appid": 2140850,
+      "name": "虚妄轮回",
+      "name_zh": "虚妄轮回",
+      "name_en": "Looper Tactics",
+      "name_ja": "Looper Tactics",
+      "name_original": "Looper Tactics",
+      "release_date": "2023-08-28"
+    },
+    {
+      "appid": 219990,
+      "name": "Grim Dawn",
+      "name_en": "Grim Dawn",
+      "release_date": "2016-02-25"
+    },
+    {
+      "appid": 4035270,
+      "name": "Space Rock Breaker",
+      "name_en": "Space Rock Breaker",
+      "release_date": "2025-12-19",
+      "cover_file": "封面/Steam/4035270.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4035270/ae6ee8ad47494f97d78608265a390518b0102632/header_schinese.jpg?t=1785276105"
+    },
+    {
+      "appid": 1809540,
+      "name": "九日",
+      "name_zh": "九日",
+      "name_en": "Nine Sols",
+      "name_ja": "九日ナインソール",
+      "name_original": "Nine Sols",
+      "release_date": "2024-05-28"
+    },
+    {
+      "appid": 2068280,
+      "name": "Nordic Ashes",
+      "name_en": "Nordic Ashes",
+      "release_date": "2024-04-26"
+    },
+    {
+      "appid": 1966900,
+      "name": "黎明前20分钟",
+      "name_zh": "黎明前20分钟",
+      "name_en": "20 Minutes Till Dawn",
+      "name_ja": "20 Minutes Till Dawn",
+      "name_original": "20 Minutes Till Dawn",
+      "release_date": "2023-06-08"
+    },
+    {
+      "appid": 3862670,
+      "name": "龟龟潜海记 Shelldiver",
+      "name_zh": "龟龟潜海记 Shelldiver",
+      "name_en": "Shelldiver",
+      "name_ja": "Shelldiver",
+      "name_original": "Shelldiver",
+      "release_date": "2025-11-16",
+      "cover_file": "封面/Steam/3862670.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3862670/e967f8f5201f55f7b098bf3b9a54c8c8f38012b3/header.jpg?t=1783822739"
+    },
+    {
+      "appid": 916440,
+      "name": "纪元1800",
+      "name_zh": "纪元1800",
+      "name_en": "Anno 1800",
+      "name_ja": "Anno 1800",
+      "name_original": "Anno 1800",
+      "release_date": "2019-04-16"
+    },
+    {
+      "appid": 2849080,
+      "name": "王国保卫战 5：联盟",
+      "name_zh": "王国保卫战 5：联盟",
+      "name_en": "Kingdom Rush 5: Alliance TD",
+      "name_ja": "Kingdom Rush 5: Alliance TD",
+      "name_original": "Kingdom Rush 5: Alliance TD",
+      "release_date": "2024-07-25"
+    },
+    {
+      "appid": 315460,
+      "name": "Dig or Die",
+      "name_en": "Dig or Die",
+      "release_date": "2018-07-10"
+    },
+    {
+      "appid": 2137760,
+      "name": "Crafty Survivors",
+      "name_en": "Crafty Survivors",
+      "release_date": "2025-05-16"
+    },
+    {
+      "appid": 558990,
+      "name": "Opus Magnum",
+      "name_en": "Opus Magnum",
+      "release_date": "2017-12-07"
+    },
+    {
+      "appid": 1127400,
+      "name": "Mindustry",
+      "name_en": "Mindustry",
+      "release_date": "2019-09-26"
+    },
+    {
+      "appid": 1210320,
+      "name": "药剂工艺：炼金模拟器",
+      "name_zh": "药剂工艺：炼金模拟器",
+      "name_en": "Potion Craft: Alchemist Simulator",
+      "name_ja": "Potion Craft: Alchemist Simulator",
+      "name_original": "Potion Craft: Alchemist Simulator",
+      "release_date": "2022-12-13"
+    },
+    {
+      "appid": 2622820,
+      "name": "Dobbel Dungeon",
+      "name_en": "Dobbel Dungeon",
+      "release_date": "2026-02-16"
+    },
+    {
+      "appid": 1263370,
+      "name": "Seek Girl:Fog Ⅰ",
+      "name_en": "Seek Girl:Fog Ⅰ",
+      "release_date": "2020-08-28"
+    },
+    {
+      "appid": 3332600,
+      "name": "虚妄之盒",
+      "name_zh": "虚妄之盒",
+      "name_en": "Cubic Cosmos",
+      "name_ja": "Cubic Cosmos",
+      "name_original": "Cubic Cosmos",
+      "release_date": "2026-04-28"
+    },
+    {
+      "appid": 838350,
+      "name": "太吾绘卷：天幕心帷",
+      "name_zh": "太吾绘卷：天幕心帷",
+      "name_en": "The Scroll of Taiwu : Beyond The Dome",
+      "name_ja": "The Scroll of Taiwu : Beyond The Dome",
+      "name_original": "The Scroll of Taiwu : Beyond The Dome",
+      "release_date": "2026-06-16"
+    },
+    {
+      "appid": 656350,
+      "name": "UnderMine",
+      "name_en": "UnderMine",
+      "release_date": "2020-08-06"
+    },
+    {
+      "appid": 590380,
+      "name": "Into the Breach",
+      "name_en": "Into the Breach",
+      "release_date": "2018-02-27"
+    },
+    {
+      "appid": 367450,
+      "name": "Poly Bridge",
+      "name_en": "Poly Bridge",
+      "release_date": "2016-07-12"
+    },
+    {
+      "appid": 2066020,
+      "name": "灵魂石幸存者",
+      "name_zh": "灵魂石幸存者",
+      "name_en": "Soulstone Survivors",
+      "name_ja": "Soulstone Survivors",
+      "name_original": "Soulstone Survivors",
+      "release_date": "2025-06-17"
+    },
+    {
+      "appid": 1621690,
+      "name": "护核纪元",
+      "name_zh": "护核纪元",
+      "name_en": "Core Keeper",
+      "name_ja": "Core Keeper",
+      "name_original": "Core Keeper",
+      "release_date": "2024-08-27"
+    },
+    {
+      "appid": 548430,
+      "name": "深岩银河",
+      "name_zh": "深岩银河",
+      "name_en": "Deep Rock Galactic",
+      "name_ja": "Deep Rock Galactic",
+      "name_original": "Deep Rock Galactic",
+      "release_date": "2020-05-13"
+    },
+    {
+      "appid": 1318690,
+      "name": "异形工厂（Shapez）",
+      "name_zh": "异形工厂（Shapez）",
+      "name_en": "shapez",
+      "name_ja": "shapez",
+      "name_original": "shapez",
+      "release_date": "2020-06-07"
+    },
+    {
+      "appid": 2824310,
+      "name": "幸运猎人",
+      "name_zh": "幸运猎人",
+      "name_en": "Lucky Hunter",
+      "name_ja": "Lucky Hunter",
+      "name_original": "Lucky Hunter",
+      "release_date": "2024-11-04"
+    },
+    {
+      "appid": 688420,
+      "name": "绝境北地",
+      "name_zh": "绝境北地",
+      "name_en": "Bad North: Jotunn Edition",
+      "name_ja": "Bad North: Jotunn Edition",
+      "name_original": "Bad North: Jotunn Edition",
+      "release_date": "2018-11-16"
+    },
+    {
+      "appid": 3767740,
+      "name": "Outhold",
+      "name_en": "Outhold",
+      "release_date": "2025-12-12",
+      "cover_file": "封面/Steam/3767740.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3767740/41dc55a19600ead12b873781bf6eedfcab299f78/header.jpg?t=1784195362"
+    },
+    {
+      "appid": 434650,
+      "name": "Lost Castle / 失落城堡",
+      "name_zh": "Lost Castle / 失落城堡",
+      "name_en": "Lost Castle",
+      "name_ja": "Lost Castle / 失落城堡",
+      "name_original": "Lost Castle",
+      "release_date": "2016-08-31"
+    },
+    {
+      "appid": 1000010,
+      "name": "不思议的皇冠",
+      "name_zh": "不思议的皇冠",
+      "name_en": "Crown Trick",
+      "name_ja": "Crown Trick / 不思议的皇冠",
+      "name_original": "Crown Trick",
+      "release_date": "2020-10-16"
+    },
+    {
+      "appid": 1902710,
+      "name": "奇怪的RPG",
+      "name_zh": "奇怪的RPG",
+      "name_en": "Weird RPG",
+      "name_ja": "奇怪的RPG",
+      "name_original": "Weird RPG",
+      "release_date": "2022-09-30"
+    },
+    {
+      "appid": 1282730,
+      "name": "循环勇士",
+      "name_zh": "循环勇士",
+      "name_en": "Loop Hero",
+      "name_ja": "Loop Hero",
+      "name_original": "Loop Hero",
+      "release_date": "2021-03-04"
+    },
+    {
+      "appid": 1948800,
+      "name": "弈仙牌",
+      "name_zh": "弈仙牌",
+      "name_en": "Yi Xian: The Cultivation Card Game",
+      "name_ja": "Yi Xian: The Cultivation Card Game",
+      "name_original": "Yi Xian: The Cultivation Card Game",
+      "release_date": "2024-01-21"
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "name_en": "Tiny Glade",
+      "release_date": "2024-09-23"
+    },
+    {
+      "appid": 1617400,
+      "name": "大巴扎 The Bazaar",
+      "name_zh": "大巴扎 The Bazaar",
+      "name_en": "The Bazaar",
+      "name_ja": "The Bazaar",
+      "name_original": "The Bazaar",
+      "release_date": "2025-08-13"
+    },
+    {
+      "appid": 1135810,
+      "name": "Vault of the Void / 虚空穹牢",
+      "name_zh": "Vault of the Void / 虚空穹牢",
+      "name_en": "Vault of the Void",
+      "name_ja": "Vault of the Void",
+      "name_original": "Vault of the Void",
+      "release_date": "2022-10-04"
+    },
+    {
+      "appid": 1466060,
+      "name": "污痕圣杯：阿瓦隆的陨落",
+      "name_zh": "污痕圣杯：阿瓦隆的陨落",
+      "name_en": "Tainted Grail: The Fall of Avalon",
+      "name_ja": "Tainted Grail: The Fall of Avalon",
+      "name_original": "Tainted Grail: The Fall of Avalon",
+      "release_date": "2025-05-23"
+    },
+    {
+      "appid": 955900,
+      "name": "了不起的修仙模拟器",
+      "name_zh": "了不起的修仙模拟器",
+      "name_en": "Amazing Cultivation Simulator",
+      "name_ja": "Amazing Cultivation Simulator",
+      "name_original": "Amazing Cultivation Simulator",
+      "release_date": "2020-11-24"
+    },
+    {
+      "appid": 1687950,
+      "name": "女神异闻录5皇家版",
+      "name_zh": "女神异闻录5皇家版",
+      "name_en": "Persona 5 Royal",
+      "name_ja": "ペルソナ５ ザ・ロイヤル",
+      "name_original": "Persona 5 Royal",
+      "release_date": "2022-10-20"
+    },
+    {
+      "appid": 3808690,
+      "name": "致病本源",
+      "name_zh": "致病本源",
+      "name_en": "Pathogenic",
+      "name_ja": "Pathogenic",
+      "name_original": "Pathogenic",
+      "release_date": "2026-07-16",
+      "cover_file": "封面/Steam/3808690.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3808690/669768c01c73ab352f1e640de14fccf5171ab379/header_schinese.jpg?t=1786026425"
+    },
+    {
+      "appid": 1604030,
+      "name": "夜族崛起",
+      "name_zh": "夜族崛起",
+      "name_en": "V Rising",
+      "name_ja": "V Rising",
+      "name_original": "V Rising",
+      "release_date": "2024-05-08"
+    },
+    {
+      "appid": 774361,
+      "name": "Blasphemous",
+      "name_en": "Blasphemous",
+      "release_date": "2019-09-10"
+    },
+    {
+      "appid": 1455840,
+      "name": "Dorfromantik",
+      "name_en": "Dorfromantik",
+      "release_date": "2022-04-28"
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "name_en": "Celeste",
+      "release_date": "2018-01-25"
+    },
+    {
+      "appid": 1189490,
+      "name": "觅长生",
+      "name_zh": "觅长生",
+      "name_en": "觅长生",
+      "name_ja": "觅长生",
+      "name_original": "觅长生",
+      "release_date": "2023-01-12"
+    },
+    {
+      "appid": 919370,
+      "name": "超载地牢",
+      "name_zh": "超载地牢",
+      "name_en": "Overdungeon",
+      "name_ja": "Overdungeon | オーバーダンジョン",
+      "name_original": "Overdungeon",
+      "release_date": "2019-08-22"
+    },
+    {
+      "appid": 3458620,
+      "name": "轮回修仙传",
+      "name_zh": "轮回修仙传",
+      "name_en": "轮回修仙传",
+      "name_ja": "轮回修仙传",
+      "name_original": "轮回修仙传",
+      "release_date": "2025-11-28"
+    },
+    {
+      "appid": 625960,
+      "name": "紫色晶石",
+      "name_zh": "紫色晶石",
+      "name_en": "Stoneshard",
+      "name_ja": "Stoneshard",
+      "name_original": "Stoneshard",
+      "release_date": "2020-02-06"
+    },
+    {
+      "appid": 2229850,
+      "name": "《命令与征服：红色警戒 2 及尤里的复仇》",
+      "name_zh": "《命令与征服：红色警戒 2 及尤里的复仇》",
+      "name_en": "Command & Conquer: Red Alert™ 2 and Yuri’s Revenge™",
+      "name_ja": "Command & Conquer Red Alert™ 2 and Yuri’s Revenge™",
+      "name_original": "Command & Conquer: Red Alert™ 2 and Yuri’s Revenge™",
+      "release_date": "2024-03-07"
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "name_en": "ANIMAL WELL",
+      "release_date": "2024-05-09"
+    },
+    {
+      "appid": 200710,
+      "name": "Torchlight II",
+      "name_en": "Torchlight II",
+      "release_date": "2012-09-20"
+    },
+    {
+      "appid": 1876890,
+      "name": "逸剑风云决",
+      "name_zh": "逸剑风云决",
+      "name_en": "Wandering Sword",
+      "name_ja": "Wandering Sword",
+      "name_original": "Wandering Sword",
+      "release_date": "2023-09-14"
+    },
+    {
+      "appid": 2185840,
+      "name": "大富翁6",
+      "name_zh": "大富翁6",
+      "name_en": "Richman 6",
+      "name_ja": "Richman 6",
+      "name_original": "Richman 6",
+      "release_date": "2023-03-15"
+    },
+    {
+      "appid": 266840,
+      "name": "Age of Mythology: Extended Edition",
+      "name_en": "Age of Mythology: Extended Edition",
+      "release_date": "2014-05-08"
+    },
+    {
+      "appid": 2501650,
+      "name": "电力拼拼乐 Electrogical",
+      "name_zh": "电力拼拼乐 Electrogical",
+      "name_en": "Electrogical",
+      "name_ja": "エレクトロジカル",
+      "name_original": "Electrogical",
+      "release_date": "2026-04-15"
+    },
+    {
+      "appid": 813780,
+      "name": "Age of Empires II: Definitive Edition",
+      "name_en": "Age of Empires II: Definitive Edition",
+      "release_date": "2019-11-14"
+    },
+    {
+      "appid": 2313700,
+      "name": "康斯坦丝",
+      "name_zh": "康斯坦丝",
+      "name_en": "Constance",
+      "name_ja": "Constance",
+      "name_original": "Constance",
+      "release_date": "2025-11-24"
+    },
+    {
+      "appid": 763890,
+      "name": "漫野奇谭",
+      "name_zh": "漫野奇谭",
+      "name_en": "Wildermyth",
+      "name_ja": "Wildermyth",
+      "name_original": "Wildermyth",
+      "release_date": "2021-06-15"
+    },
+    {
+      "appid": 3117820,
+      "name": "苏丹的游戏",
+      "name_zh": "苏丹的游戏",
+      "name_en": "Sultan's Game",
+      "name_ja": "スルタンのゲーム",
+      "name_original": "Sultan's Game",
+      "release_date": "2025-03-30"
+    },
+    {
+      "appid": 578080,
+      "name": "PUBG: BATTLEGROUNDS",
+      "name_en": "PUBG: BATTLEGROUNDS",
+      "release_date": "2017-12-21"
+    },
+    {
+      "appid": 2525310,
+      "name": "方块公国 (Drop Duchy)",
+      "name_zh": "方块公国 (Drop Duchy)",
+      "name_en": "Drop Duchy",
+      "name_ja": "Drop Duchy",
+      "name_original": "Drop Duchy",
+      "release_date": "2025-05-05"
+    },
+    {
+      "appid": 1105670,
+      "name": "最后的咒语",
+      "name_zh": "最后的咒语",
+      "name_en": "The Last Spell",
+      "name_ja": "The Last Spell",
+      "name_original": "The Last Spell",
+      "release_date": "2023-03-09"
+    },
+    {
+      "appid": 2742830,
+      "name": "Monster Train 2",
+      "name_en": "Monster Train 2",
+      "release_date": "2025-05-21"
+    },
+    {
+      "appid": 2821800,
+      "name": "钻核公司 (Drill Core)",
+      "name_zh": "钻核公司 (Drill Core)",
+      "name_en": "Drill Core",
+      "name_ja": "Drill Core",
+      "name_original": "Drill Core",
+      "release_date": "2025-07-17"
+    },
+    {
+      "appid": 493340,
+      "name": "过山车之星",
+      "name_zh": "过山车之星",
+      "name_en": "Planet Coaster",
+      "name_ja": "プラネットコースター",
+      "name_original": "Planet Coaster",
+      "release_date": "2016-11-17"
+    },
+    {
+      "appid": 323190,
+      "name": "冰汽时代",
+      "name_zh": "冰汽时代",
+      "name_en": "Frostpunk",
+      "name_original": "Frostpunk",
+      "release_date": "2018-04-24"
+    },
+    {
+      "appid": 2408820,
+      "name": "露玛岛",
+      "name_zh": "露玛岛",
+      "name_en": "Luma Island",
+      "name_original": "Luma Island",
+      "release_date": "2024-11-20"
+    },
+    {
+      "appid": 1147560,
+      "name": "小骨：英雄杀手(Skul: The Hero Slayer)",
+      "name_zh": "小骨：英雄杀手(Skul: The Hero Slayer)",
+      "name_en": "Skul: The Hero Slayer",
+      "name_original": "Skul: The Hero Slayer",
+      "release_date": "2021-01-20"
+    },
+    {
+      "appid": 1593030,
+      "name": "伊始之地",
+      "name_zh": "伊始之地",
+      "name_en": "Terra Nil",
+      "name_original": "Terra Nil",
+      "release_date": "2023-03-28"
+    },
+    {
+      "appid": 692850,
+      "name": "Bloodstained: Ritual of the Night",
+      "name_en": "Bloodstained: Ritual of the Night",
+      "release_date": "2019-06-18"
+    },
+    {
+      "appid": 1145360,
+      "name": "Hades",
+      "name_en": "Hades",
+      "release_date": "2020-09-17"
+    },
+    {
+      "appid": 2230280,
+      "name": "方寸文明",
+      "name_zh": "方寸文明",
+      "name_en": "Tiny Civilization",
+      "name_ja": "方寸文明",
+      "name_original": "Tiny Civilization",
+      "release_date": "2022-12-31"
+    },
+    {
+      "appid": 673950,
+      "name": "Farm Together",
+      "name_en": "Farm Together",
+      "release_date": "2018-10-11"
+    },
+    {
+      "appid": 606150,
+      "name": "Moonlighter",
+      "name_en": "Moonlighter",
+      "release_date": "2018-05-29"
+    },
+    {
+      "appid": 3410180,
+      "name": "Overlooting - 掠夺传奇",
+      "name_zh": "Overlooting - 掠夺传奇",
+      "name_en": "Overlooting",
+      "name_ja": "Overlooting",
+      "name_original": "Overlooting",
+      "release_date": "2025-09-01"
+    },
+    {
+      "appid": 571310,
+      "name": "SteamWorld Dig 2",
+      "name_en": "SteamWorld Dig 2",
+      "release_date": "2017-09-22"
+    },
+    {
+      "appid": 1299120,
+      "name": "拼图猫娘2",
+      "name_zh": "拼图猫娘2",
+      "name_en": "Mosaique Neko Waifus 2",
+      "name_ja": "モザイクネコワイフ２",
+      "name_original": "Mosaique Neko Waifus 2",
+      "release_date": "2020-06-05"
+    },
+    {
+      "appid": 1942280,
+      "name": "土豆兄弟(Brotato)",
+      "name_zh": "土豆兄弟(Brotato)",
+      "name_en": "Brotato",
+      "name_ja": "Brotato",
+      "name_original": "Brotato",
+      "release_date": "2023-06-23"
+    },
+    {
+      "appid": 933110,
+      "name": "Age of Empires III: Definitive Edition",
+      "name_en": "Age of Empires III: Definitive Edition",
+      "release_date": "2020-10-15"
+    },
+    {
+      "appid": 2400160,
+      "name": "指尖疾速：打字狂潮",
+      "name_zh": "指尖疾速：打字狂潮",
+      "name_en": "Glyphica: Typing Survival",
+      "name_ja": "Glyphica: Typing Survival",
+      "name_original": "Glyphica: Typing Survival",
+      "release_date": "2024-10-09"
+    },
+    {
+      "appid": 994280,
+      "name": "古剑奇谭三(Gujian3)",
+      "name_zh": "古剑奇谭三(Gujian3)",
+      "name_en": "Gujian3(古剑奇谭三)",
+      "name_ja": "古剣奇譚 ～星夜に謡い継ぐ万世の夢～",
+      "name_original": "Gujian3(古剑奇谭三)",
+      "release_date": "2018-12-14"
+    },
+    {
+      "appid": 2981070,
+      "name": "奥术扳机",
+      "name_zh": "奥术扳机",
+      "name_en": "Arcane Trigger",
+      "name_ja": "Arcane Trigger",
+      "name_original": "Arcane Trigger",
+      "release_date": "2025-11-12"
+    },
+    {
+      "appid": 2428770,
+      "name": "Die in the Dungeon: Origins",
+      "name_en": "Die in the Dungeon: Origins",
+      "release_date": "2023-12-01"
+    },
+    {
+      "appid": 788100,
+      "name": "霓虹深渊",
+      "name_zh": "霓虹深渊",
+      "name_en": "Neon Abyss",
+      "name_ja": "Neon Abyss",
+      "name_original": "Neon Abyss",
+      "release_date": "2020-07-14"
+    },
+    {
+      "appid": 2185060,
+      "name": "双点博物馆",
+      "name_zh": "双点博物馆",
+      "name_en": "Two Point Museum",
+      "name_ja": "ツーポイントミュージアム",
+      "name_original": "Two Point Museum",
+      "release_date": "2025-03-04"
+    },
+    {
+      "appid": 1201540,
+      "name": "地狱卡牌 Hellcard",
+      "name_zh": "地狱卡牌 Hellcard",
+      "name_en": "HELLCARD",
+      "name_ja": "HELLCARD",
+      "name_original": "HELLCARD",
+      "release_date": "2024-02-01"
+    },
+    {
+      "appid": 1419730,
+      "name": "Seek Girl Ⅵ",
+      "name_en": "Seek Girl Ⅵ",
+      "release_date": "2020-09-30"
+    },
+    {
+      "appid": 2071280,
+      "name": "Ravenswatch 鸦卫奇旅",
+      "name_zh": "Ravenswatch 鸦卫奇旅",
+      "name_en": "Ravenswatch",
+      "name_ja": "Ravenswatch",
+      "name_original": "Ravenswatch",
+      "release_date": "2024-09-26"
+    },
+    {
+      "appid": 1718570,
+      "name": "ASTLIBRA ～生きた証～ Revision",
+      "name_en": "ASTLIBRA ～生きた証～ Revision"
+    },
+    {
+      "appid": 1915510,
+      "name": "Yao-Guai Hunter",
+      "name_en": "Yao-Guai Hunter"
+    },
+    {
+      "appid": 418530,
+      "name": "Spelunky 2",
+      "name_en": "Spelunky 2"
+    },
+    {
+      "appid": 2103130,
+      "name": "Matchmaking Inc.",
+      "name_en": "Matchmaking Inc."
+    },
+    {
+      "appid": 17480,
+      "name": "Command & Conquer™ Red Alert™ 3",
+      "name_en": "Command & Conquer™ Red Alert™ 3"
+    },
+    {
+      "appid": 361280,
+      "name": "Turmoil",
+      "name_en": "Turmoil"
+    },
+    {
+      "appid": 2002220,
+      "name": "Keeper's Toll",
+      "name_en": "Keeper's Toll"
+    },
+    {
+      "appid": 2719750,
+      "name": "Star Birds",
+      "name_en": "Star Birds"
+    },
+    {
+      "appid": 2779120,
+      "name": "Modulus: Factory Automation",
+      "name_en": "Modulus: Factory Automation"
+    },
+    {
+      "appid": 937310,
+      "name": "Infinitode 2",
+      "name_en": "Infinitode 2"
+    },
+    {
+      "appid": 268910,
+      "name": "Cuphead",
+      "name_en": "Cuphead",
+      "release_date": "2017-09-29"
+    },
+    {
+      "appid": 1283700,
+      "name": "SUPERVIVE",
+      "name_en": "SUPERVIVE"
+    },
+    {
+      "appid": 726110,
+      "name": "Overcrowd: A Commute 'Em Up",
+      "name_en": "Overcrowd: A Commute 'Em Up"
+    },
+    {
+      "appid": 1150530,
+      "name": "Wizard with a Gun",
+      "name_en": "Wizard with a Gun"
+    },
+    {
+      "appid": 1934680,
+      "name": "Age of Mythology: Retold",
+      "name_en": "Age of Mythology: Retold"
+    },
+    {
+      "appid": 1952370,
+      "name": "Oblivion Override",
+      "name_en": "Oblivion Override"
+    },
+    {
+      "appid": 105600,
+      "name": "Terraria",
+      "name_en": "Terraria"
+    },
+    {
+      "appid": 1291340,
+      "name": "Townscaper",
+      "name_en": "Townscaper"
+    },
+    {
+      "appid": 311690,
+      "name": "Enter the Gungeon",
+      "name_en": "Enter the Gungeon"
+    },
+    {
+      "appid": 932850,
+      "name": "Simmiland",
+      "name_en": "Simmiland"
+    },
+    {
+      "appid": 361420,
+      "name": "ASTRONEER",
+      "name_en": "ASTRONEER"
+    },
+    {
+      "appid": 1046030,
+      "name": "ISLANDERS",
+      "name_en": "ISLANDERS"
+    },
+    {
+      "appid": 1120810,
+      "name": "Eastern Exorcist",
+      "name_en": "Eastern Exorcist"
+    },
+    {
+      "appid": 230410,
+      "name": "Warframe",
+      "name_en": "Warframe"
+    },
+    {
+      "appid": 1094520,
+      "name": "Sands of Salzaar",
+      "name_en": "Sands of Salzaar"
+    },
+    {
+      "appid": 3509230,
+      "name": "Gambonanza",
+      "name_en": "Gambonanza"
+    },
+    {
+      "appid": 1368850,
+      "name": "Cursed Treasure 2 Ultimate Edition",
+      "name_en": "Cursed Treasure 2 Ultimate Edition"
+    },
+    {
+      "appid": 1501750,
+      "name": "Lords of the Fallen",
+      "name_en": "Lords of the Fallen"
+    },
+    {
+      "appid": 2356780,
+      "name": "Dungeon Clawler",
+      "name_en": "Dungeon Clawler"
+    },
+    {
+      "appid": 1730250,
+      "name": "Pan'orama",
+      "name_en": "Pan'orama"
+    },
+    {
+      "appid": 1150090,
+      "name": "Learning Factory",
+      "name_en": "Learning Factory"
+    },
+    {
+      "appid": 3720420,
+      "name": "Demon Lord: Just a Block",
+      "name_en": "Demon Lord: Just a Block",
+      "cover_file": "封面/Steam/3720420.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3720420/50e64cb08d9dd17375b12482c64a15df5444b068/header_schinese.jpg?t=1785911083"
+    },
+    {
+      "appid": 327030,
+      "name": "Worms W.M.D",
+      "name_en": "Worms W.M.D"
+    },
+    {
+      "appid": 1062810,
+      "name": "Inkbound",
+      "name_en": "Inkbound"
+    },
+    {
+      "appid": 2458940,
+      "name": "Farm Keeper",
+      "name_en": "Farm Keeper"
+    },
+    {
+      "appid": 834740,
+      "name": "Circle Empires",
+      "name_en": "Circle Empires"
+    },
+    {
+      "appid": 115800,
+      "name": "Owlboy",
+      "name_en": "Owlboy"
+    },
+    {
+      "appid": 241600,
+      "name": "Rogue Legacy",
+      "name_en": "Rogue Legacy"
+    },
+    {
+      "appid": 3114410,
+      "name": "Skill Legends Royale",
+      "name_en": "Skill Legends Royale"
+    },
+    {
+      "appid": 17390,
+      "name": "Spore",
+      "name_en": "Spore"
+    },
+    {
+      "appid": 346010,
+      "name": "Besiege",
+      "name_en": "Besiege"
+    },
+    {
+      "appid": 1172450,
+      "name": "Carto",
+      "name_en": "Carto"
+    },
+    {
+      "appid": 2097570,
+      "name": "StarVaders",
+      "name_en": "StarVaders"
+    },
+    {
+      "appid": 334310,
+      "name": "Plebby Quest: The Crusades",
+      "name_en": "Plebby Quest: The Crusades"
+    },
+    {
+      "appid": 867210,
+      "name": "Songs of Conquest",
+      "name_en": "Songs of Conquest"
+    },
+    {
+      "appid": 878750,
+      "name": "Hentai Girl",
+      "name_en": "Hentai Girl"
+    },
+    {
+      "appid": 3265700,
+      "name": "Vampire Crawlers",
+      "name_en": "Vampire Crawlers",
+      "cover_file": "封面/Steam/3265700.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3265700/5590e42cab09dacabee973dd2c3e27ef12ed4950/header.jpg?t=1776925935"
+    },
+    {
+      "appid": 907680,
+      "name": "Wwbit",
+      "name_en": "Wwbit",
+      "cover_file": "封面/Steam/907680.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/907680/header.jpg?t=1733325403"
+    },
+    {
+      "appid": 892970,
+      "name": "Valheim",
+      "name_en": "Valheim"
+    },
+    {
+      "appid": 1468810,
+      "name": "鬼谷八荒 Tale of Immortal",
+      "name_en": "鬼谷八荒 Tale of Immortal"
+    },
+    {
+      "appid": 963690,
+      "name": "Hentai Girl Hime",
+      "name_en": "Hentai Girl Hime"
+    },
+    {
+      "appid": 1267910,
+      "name": "Melvor Idle",
+      "name_en": "Melvor Idle"
+    },
+    {
+      "appid": 1588550,
+      "name": "Cairn",
+      "name_en": "Cairn"
+    },
+    {
+      "appid": 4225940,
+      "name": "SIFU Kidnapped! Adventure in the Women's Kingdom",
+      "name_en": "SIFU Kidnapped! Adventure in the Women's Kingdom",
+      "cover_file": "封面/Steam/4225940.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4225940/02d5691dfcf9f30474281a76934f53c17467cbb0/header_schinese.jpg?t=1773207976"
+    },
+    {
+      "appid": 881100,
+      "name": "Noita",
+      "name_en": "Noita"
+    },
+    {
+      "appid": 2343600,
+      "name": "Endgame of Devil",
+      "name_en": "Endgame of Devil"
+    },
+    {
+      "appid": 981430,
+      "name": "Gordian Quest",
+      "name_en": "Gordian Quest"
+    },
+    {
+      "appid": 2693930,
+      "name": "Dice & Fold",
+      "name_en": "Dice & Fold"
+    },
+    {
+      "appid": 1256670,
+      "name": "Library Of Ruina",
+      "name_en": "Library Of Ruina"
+    },
+    {
+      "appid": 2767030,
+      "name": "Marvel Rivals",
+      "name_en": "Marvel Rivals"
+    },
+    {
+      "appid": 513560,
+      "name": "Hunger Dungeon",
+      "name_en": "Hunger Dungeon"
+    },
+    {
+      "appid": 1397920,
+      "name": "Mr.Mine",
+      "name_en": "Mr.Mine"
+    },
+    {
+      "appid": 1875060,
+      "name": "Reus 2",
+      "name_en": "Reus 2"
+    },
+    {
+      "appid": 2348100,
+      "name": "YEAH! YOU WANT \"THOSE GAMES,\" RIGHT? SO HERE YOU GO! NOW, LET'S SEE YOU CLEAR THEM!",
+      "name_en": "YEAH! YOU WANT \"THOSE GAMES,\" RIGHT? SO HERE YOU GO! NOW, LET'S SEE YOU CLEAR THEM!"
+    },
+    {
+      "appid": 421040,
+      "name": "Plantera",
+      "name_en": "Plantera"
+    },
+    {
+      "appid": 2076580,
+      "name": "Pepper Grinder",
+      "name_en": "Pepper Grinder"
+    },
+    {
+      "appid": 460950,
+      "name": "Katana ZERO",
+      "name_en": "Katana ZERO"
+    },
+    {
+      "appid": 1866880,
+      "name": "Cultivation Story: Reincarnation",
+      "name_en": "Cultivation Story: Reincarnation"
+    },
+    {
+      "appid": 1887840,
+      "name": "Another Crab's Treasure",
+      "name_en": "Another Crab's Treasure"
+    },
+    {
+      "appid": 250900,
+      "name": "The Binding of Isaac: Rebirth",
+      "name_en": "The Binding of Isaac: Rebirth"
+    },
+    {
+      "appid": 300570,
+      "name": "Infinifactory",
+      "name_en": "Infinifactory"
+    },
+    {
+      "appid": 1618380,
+      "name": "Spellmasons",
+      "name_en": "Spellmasons"
+    },
+    {
+      "appid": 965580,
+      "name": "Root",
+      "name_en": "Root"
+    },
+    {
+      "appid": 330020,
+      "name": "Children of Morta",
+      "name_en": "Children of Morta"
+    },
+    {
+      "appid": 230230,
+      "name": "Divinity: Original Sin (Classic)",
+      "name_en": "Divinity: Original Sin (Classic)"
+    },
+    {
+      "appid": 1444480,
+      "name": "Turing Complete",
+      "name_en": "Turing Complete"
+    },
+    {
+      "appid": 1509510,
+      "name": "Settlement Survival",
+      "name_en": "Settlement Survival"
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "name_en": "Balatro"
+    },
+    {
+      "appid": 219740,
+      "name": "Don't Starve",
+      "name_en": "Don't Starve"
+    },
+    {
+      "appid": 286160,
+      "name": "Tabletop Simulator",
+      "name_en": "Tabletop Simulator"
+    },
+    {
+      "appid": 1195290,
+      "name": "Moncage",
+      "name_en": "Moncage"
+    },
+    {
+      "appid": 2459550,
+      "name": "Emberward",
+      "name_en": "Emberward"
+    },
+    {
+      "appid": 1017900,
+      "name": "Age of Empires: Definitive Edition",
+      "name_en": "Age of Empires: Definitive Edition"
+    },
+    {
+      "appid": 24800,
+      "name": "Command & Conquer™ Red Alert™ 3 - Uprising",
+      "name_en": "Command & Conquer™ Red Alert™ 3 - Uprising"
+    },
+    {
+      "appid": 47700,
+      "name": "Command & Conquer™ 4 Tiberian Twilight",
+      "name_en": "Command & Conquer™ 4 Tiberian Twilight"
+    },
+    {
+      "appid": 322330,
+      "name": "Don't Starve Together",
+      "name_en": "Don't Starve Together"
+    },
+    {
+      "appid": 347620,
+      "name": "Gaokao.Love.100Days",
+      "name_en": "Gaokao.Love.100Days"
+    },
+    {
+      "appid": 599140,
+      "name": "Graveyard Keeper",
+      "name_en": "Graveyard Keeper"
+    },
+    {
+      "appid": 671440,
+      "name": "Rise of Industry",
+      "name_en": "Rise of Industry"
+    },
+    {
+      "appid": 1494560,
+      "name": "Rogue Voltage",
+      "name_en": "Rogue Voltage"
+    },
+    {
+      "appid": 24790,
+      "name": "Command & Conquer 3: Tiberium Wars™",
+      "name_en": "Command & Conquer 3: Tiberium Wars™"
+    },
+    {
+      "appid": 24810,
+      "name": "Command & Conquer 3: Kane's Wrath™",
+      "name_en": "Command & Conquer 3: Kane's Wrath™"
+    },
+    {
+      "appid": 212680,
+      "name": "FTL: Faster Than Light",
+      "name_en": "FTL: Faster Than Light"
+    },
+    {
+      "appid": 252410,
+      "name": "SteamWorld Dig",
+      "name_en": "SteamWorld Dig"
+    },
+    {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "name_en": "Mount & Blade II: Bannerlord"
+    },
+    {
+      "appid": 275850,
+      "name": "No Man's Sky",
+      "name_en": "No Man's Sky"
+    },
+    {
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt",
+      "name_en": "The Witcher 3: Wild Hunt"
+    },
+    {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "name_en": "ARK: Survival Evolved"
+    },
+    {
+      "appid": 407530,
+      "name": "ARK: Survival Of The Fittest",
+      "name_en": "ARK: Survival Of The Fittest",
+      "cover_file": "封面/Steam/407530.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/407530/header.jpg?t=1671847794"
+    },
+    {
+      "appid": 418240,
+      "name": "Shadow Tactics: Blades of the Shogun",
+      "name_en": "Shadow Tactics: Blades of the Shogun"
+    },
+    {
+      "appid": 504210,
+      "name": "SHENZHEN I/O",
+      "name_en": "SHENZHEN I/O"
+    },
+    {
+      "appid": 613100,
+      "name": "House Flipper",
+      "name_en": "House Flipper"
+    },
+    {
+      "appid": 619820,
+      "name": "Heroes of Hammerwatch II",
+      "name_en": "Heroes of Hammerwatch II"
+    },
+    {
+      "appid": 669330,
+      "name": "Mechabellum",
+      "name_en": "Mechabellum"
+    },
+    {
+      "appid": 736190,
+      "name": "Chinese Parents",
+      "name_en": "Chinese Parents"
+    },
+    {
+      "appid": 780310,
+      "name": "The Riftbreaker",
+      "name_en": "The Riftbreaker"
+    },
+    {
+      "appid": 814370,
+      "name": "Monster Sanctuary",
+      "name_en": "Monster Sanctuary"
+    },
+    {
+      "appid": 871930,
+      "name": "Gladiabots",
+      "name_en": "Gladiabots"
+    },
+    {
+      "appid": 874390,
+      "name": "The Battle of Polytopia",
+      "name_en": "The Battle of Polytopia"
+    },
+    {
+      "appid": 927890,
+      "name": "Hentai Girl Linda",
+      "name_en": "Hentai Girl Linda"
+    },
+    {
+      "appid": 972660,
+      "name": "Spiritfarer®: Farewell Edition",
+      "name_en": "Spiritfarer®: Farewell Edition"
+    },
+    {
+      "appid": 1035510,
+      "name": "Ultimate Zombie Defense",
+      "name_en": "Ultimate Zombie Defense"
+    },
+    {
+      "appid": 1057090,
+      "name": "Ori and the Will of the Wisps",
+      "name_en": "Ori and the Will of the Wisps"
+    },
+    {
+      "appid": 1062090,
+      "name": "Timberborn",
+      "name_en": "Timberborn"
+    },
+    {
+      "appid": 1092790,
+      "name": "Inscryption",
+      "name_en": "Inscryption"
+    },
+    {
+      "appid": 1124180,
+      "name": "Rail Route",
+      "name_en": "Rail Route"
+    },
+    {
+      "appid": 1189100,
+      "name": "Rise Of The White Sun",
+      "name_en": "Rise Of The White Sun"
+    },
+    {
+      "appid": 1270580,
+      "name": "Mind Over Magic",
+      "name_en": "Mind Over Magic"
+    },
+    {
+      "appid": 1284190,
+      "name": "The Planet Crafter",
+      "name_en": "The Planet Crafter"
+    },
+    {
+      "appid": 1488200,
+      "name": "Symphony of War: The Nephilim Saga",
+      "name_en": "Symphony of War: The Nephilim Saga"
+    },
+    {
+      "appid": 1511780,
+      "name": "Last Call BBS",
+      "name_en": "Last Call BBS"
+    },
+    {
+      "appid": 1545560,
+      "name": "Shadow Gambit: The Cursed Crew",
+      "name_en": "Shadow Gambit: The Cursed Crew"
+    },
+    {
+      "appid": 1594320,
+      "name": "Captain of Industry",
+      "name_en": "Captain of Industry"
+    },
+    {
+      "appid": 1599600,
+      "name": "PlateUp!",
+      "name_en": "PlateUp!"
+    },
+    {
+      "appid": 1669980,
+      "name": "Volcano Princess",
+      "name_en": "Volcano Princess"
+    },
+    {
+      "appid": 1769830,
+      "name": "As We Descend",
+      "name_en": "As We Descend"
+    },
+    {
+      "appid": 1815570,
+      "name": "Aces and Adventures",
+      "name_en": "Aces and Adventures"
+    },
+    {
+      "appid": 1822060,
+      "name": "Those Who Rule",
+      "name_en": "Those Who Rule"
+    },
+    {
+      "appid": 1894430,
+      "name": "Plan B: Terraform",
+      "name_en": "Plan B: Terraform"
+    },
+    {
+      "appid": 1931770,
+      "name": "Chants of Sennaar",
+      "name_en": "Chants of Sennaar"
+    },
+    {
+      "appid": 1951230,
+      "name": "Pizza Possum",
+      "name_en": "Pizza Possum"
+    },
+    {
+      "appid": 1967430,
+      "name": "Ghost Trick: Phantom Detective",
+      "name_en": "Ghost Trick: Phantom Detective"
+    },
+    {
+      "appid": 2026820,
+      "name": "Die in the Dungeon",
+      "name_en": "Die in the Dungeon"
+    },
+    {
+      "appid": 2056210,
+      "name": "LONESTAR",
+      "name_en": "LONESTAR"
+    },
+    {
+      "appid": 2114740,
+      "name": "Blasphemous 2",
+      "name_en": "Blasphemous 2"
+    },
+    {
+      "appid": 2147380,
+      "name": "Heroes of Science and Fiction",
+      "name_en": "Heroes of Science and Fiction"
+    },
+    {
+      "appid": 2229830,
+      "name": "Command & Conquer™ and The Covert Operations™",
+      "name_en": "Command & Conquer™ and The Covert Operations™"
+    },
+    {
+      "appid": 2229840,
+      "name": "Command & Conquer: Red Alert™, Counterstrike™ and The Aftermath™",
+      "name_en": "Command & Conquer: Red Alert™, Counterstrike™ and The Aftermath™"
+    },
+    {
+      "appid": 2229870,
+      "name": "Command & Conquer™: Generals",
+      "name_en": "Command & Conquer™: Generals"
+    },
+    {
+      "appid": 2229880,
+      "name": "Command & Conquer™ Tiberian Sun™ and Firestorm™",
+      "name_en": "Command & Conquer™ Tiberian Sun™ and Firestorm™"
+    },
+    {
+      "appid": 2229890,
+      "name": "Command & Conquer™: Renegade",
+      "name_en": "Command & Conquer™: Renegade"
+    },
+    {
+      "appid": 2436940,
+      "name": "Sephiria",
+      "name_en": "Sephiria"
+    },
+    {
+      "appid": 2458530,
+      "name": "魔女的夜宴",
+      "name_en": "魔女的夜宴"
+    },
+    {
+      "appid": 2473480,
+      "name": "Tails of Iron 2: Whiskers of Winter",
+      "name_en": "Tails of Iron 2: Whiskers of Winter"
+    },
+    {
+      "appid": 2555430,
+      "name": "TRADESMAN: Deal to Dealer",
+      "name_en": "TRADESMAN: Deal to Dealer"
+    },
+    {
+      "appid": 2732960,
+      "name": "Command & Conquer™ Generals Zero Hour",
+      "name_en": "Command & Conquer™ Generals Zero Hour"
+    },
+    {
+      "appid": 2738490,
+      "name": "Sol Cesto",
+      "name_en": "Sol Cesto"
+    },
+    {
+      "appid": 3003460,
+      "name": "Bang Bang Barrage",
+      "name_en": "Bang Bang Barrage"
+    },
+    {
+      "appid": 3081280,
+      "name": "Wretch: Divine Ascent",
+      "name_en": "Wretch: Divine Ascent"
+    },
+    {
+      "appid": 3110760,
+      "name": "Alabaster Dawn",
+      "name_en": "Alabaster Dawn"
+    },
+    {
+      "appid": 3177890,
+      "name": "Rana Card",
+      "name_en": "Rana Card"
+    },
+    {
+      "appid": 3199360,
+      "name": "Skull Horde",
+      "name_en": "Skull Horde"
+    },
+    {
+      "appid": 3202030,
+      "name": "龙胤立志传",
+      "name_en": "龙胤立志传"
+    },
+    {
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "name_en": "Grand Theft Auto V Enhanced"
+    },
+    {
+      "appid": 3242950,
+      "name": "Outworld Station",
+      "name_en": "Outworld Station"
+    },
+    {
+      "appid": 3338950,
+      "name": "The Scouring",
+      "name_en": "The Scouring"
+    },
+    {
+      "appid": 3447040,
+      "name": "Sora no Kiseki the 1st",
+      "name_en": "Sora no Kiseki the 1st"
+    },
+    {
+      "appid": 3475870,
+      "name": "Gods, Death & Reapers Playtest",
+      "name_en": "Gods, Death & Reapers Playtest"
+    },
+    {
+      "appid": 3478050,
+      "name": "Road to Empress I",
+      "name_en": "Road to Empress I",
+      "cover_file": "封面/Steam/3478050.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3478050/736c1da0a7a93c2d96c3308d3c393ad154575a77/header_schinese.jpg?t=1783058959"
+    },
+    {
+      "appid": 3682050,
+      "name": "Sickly Days and Summer Traces",
+      "name_en": "Sickly Days and Summer Traces",
+      "cover_file": "封面/Steam/3682050.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3682050/ea25fdf7319fe1bfcda9b9239199aef0e06bce51/header_schinese.jpg?t=1751094481"
+    },
+    {
+      "appid": 3802470,
+      "name": "Turnbound",
+      "name_en": "Turnbound",
+      "cover_file": "封面/Steam/3802470.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3802470/5c489afde5f5a14101202f916913f6e7b062d37f/header_schinese.jpg?t=1783655441"
+    },
+    {
+      "appid": 3959590,
+      "name": "Typing Break",
+      "name_en": "Typing Break",
+      "cover_file": "封面/Steam/3959590.jpg",
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3959590/c956164db31eed56abc0cb9d15d93590bdeea033/header_schinese.jpg?t=1769673578"
+    }
+  ]
+}
